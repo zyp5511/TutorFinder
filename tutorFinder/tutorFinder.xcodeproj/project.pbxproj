@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3669CB9C1CB341E200308F98 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CB9B1CB341E200308F98 /* SignUpViewController.swift */; };
+		3669CBA01CB3553100308F98 /* MainPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CB9F1CB3553100308F98 /* MainPageTableViewController.swift */; };
+		3669CBA21CB3584E00308F98 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */; };
+		3669CBA41CB3597400308F98 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA31CB3597400308F98 /* InboxTableViewController.swift */; };
 		36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */; };
 		FBF9EE441C84E91A001E3F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */; };
 		FBF9EE461C84E91A001E3F2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EE451C84E91A001E3F2D /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		3669CB9B1CB341E200308F98 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3669CB9F1CB3553100308F98 /* MainPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageTableViewController.swift; sourceTree = "<group>"; };
+		3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		3669CBA31CB3597400308F98 /* InboxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
 		36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FBF9EE401C84E91A001E3F2D /* tutorFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		FBF9EE371C84E91A001E3F2D = {
 			isa = PBXGroup;
 			children = (
+				3669CB9F1CB3553100308F98 /* MainPageTableViewController.swift */,
 				FBF9EE421C84E91A001E3F2D /* tutorFinder */,
 				FBF9EE571C84E91A001E3F2D /* tutorFinderTests */,
 				FBF9EE621C84E91A001E3F2D /* tutorFinderUITests */,
@@ -104,6 +111,8 @@
 				FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */,
 				FBF9EE451C84E91A001E3F2D /* ViewController.swift */,
 				FBF9EE471C84E91A001E3F2D /* Main.storyboard */,
+				3669CBA31CB3597400308F98 /* InboxTableViewController.swift */,
+				3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */,
 				3669CB9B1CB341E200308F98 /* SignUpViewController.swift */,
 				36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */,
 				FBF9EE4A1C84E91A001E3F2D /* Assets.xcassets */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3669CBA41CB3597400308F98 /* InboxTableViewController.swift in Sources */,
 				36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */,
+				3669CBA21CB3584E00308F98 /* FilterTableViewController.swift in Sources */,
 				FBF9EE461C84E91A001E3F2D /* ViewController.swift in Sources */,
 				3669CB9C1CB341E200308F98 /* SignUpViewController.swift in Sources */,
+				3669CBA01CB3553100308F98 /* MainPageTableViewController.swift in Sources */,
 				FBF9EE441C84E91A001E3F2D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

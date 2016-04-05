@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UXa-9f-QXw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UXa-9f-QXw">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -321,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="2894" y="240"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Main Page Table View Controller-->
         <scene sceneID="WZF-O0-w3D">
             <objects>
-                <tableViewController id="ufF-gs-RZn" sceneMemberID="viewController">
+                <tableViewController id="ufF-gs-RZn" customClass="MainPageTableViewController" customModule="tutorFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="EvW-r6-IoD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,23 +414,14 @@
             </objects>
             <point key="canvasLocation" x="3512" y="231"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Filter Table View Controller-->
         <scene sceneID="nNk-Di-aPB">
             <objects>
-                <tableViewController id="2ZI-8O-o84" sceneMemberID="viewController">
+                <tableViewController id="2ZI-8O-o84" customClass="FilterTableViewController" customModule="tutorFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="mfs-Ic-RaY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="bAI-qw-SFP">
-                            <rect key="frame" x="0.0" y="201" width="600" height="49"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <items>
-                                <tabBarItem systemItem="favorites" id="hay-Yl-iY8"/>
-                                <tabBarItem systemItem="more" id="1ml-GF-io4"/>
-                            </items>
-                        </tabBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="OXW-O1-b8C">
                                 <rect key="frame" x="0.0" y="28" width="600" height="173"/>
@@ -462,10 +453,10 @@
             </objects>
             <point key="canvasLocation" x="3279" y="1206"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Inbox Table View Controller-->
         <scene sceneID="g1H-SX-yTU">
             <objects>
-                <tableViewController id="ofu-1P-YiV" sceneMemberID="viewController">
+                <tableViewController id="ofu-1P-YiV" customClass="InboxTableViewController" customModule="tutorFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="139" sectionHeaderHeight="28" sectionFooterHeight="28" id="qV7-lh-nVJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
