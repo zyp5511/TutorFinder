@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UXa-9f-QXw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UXa-9f-QXw">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +32,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="313"/>
+            <point key="canvasLocation" x="1270" y="332"/>
         </scene>
         <!--LogIn Page-->
         <scene sceneID="wG7-18-n1D">
@@ -72,6 +72,8 @@
                                 <rect key="frame" x="186" y="429" width="130" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="255-BO-2Vy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="3vt-tm-lYS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="uBB-AZ-HOZ"/>
                                     <constraint firstAttribute="height" constant="30" id="zRy-WP-KHm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,7 +88,7 @@
                                     <constraint firstAttribute="height" constant="30" id="SeI-RG-IcT"/>
                                     <constraint firstAttribute="width" constant="46" id="zno-0A-Mxl"/>
                                 </constraints>
-                                <state key="normal" title="login"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButton:" destination="AUA-r3-iP2" eventType="touchUpInside" id="7YM-sK-xeL"/>
                                 </connections>
@@ -108,16 +110,16 @@
                                     <constraint firstAttribute="width" constant="240" id="zXU-x4-SQg"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCY-qH-5l2">
-                                <rect key="frame" x="105" y="512" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DoU-8f-2B8"/>
-                                    <constraint firstAttribute="width" constant="46" id="hgc-lZ-CLb"/>
-                                </constraints>
-                                <state key="normal" title="sign up"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCY-qH-5l2">
+                                <rect key="frame" x="100" y="512" width="56" height="30"/>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signupButton:" destination="AUA-r3-iP2" eventType="touchUpInside" id="iBk-88-I7c"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57f-xH-gMz">
+                                <rect key="frame" x="194" y="467" width="115" height="30"/>
+                                <state key="normal" title="Forget Password"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99949450705550036" blue="0.97495353959032549" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,9 +128,12 @@
                             <constraint firstItem="shi-bt-MGm" firstAttribute="centerX" secondItem="bfS-iO-Tub" secondAttribute="centerX" constant="-104" id="2Aq-Jx-Ak1"/>
                             <constraint firstItem="zNK-fO-tB3" firstAttribute="centerX" secondItem="bfS-iO-Tub" secondAttribute="centerX" id="4UN-jx-dMb"/>
                             <constraint firstItem="ddL-Uh-wu1" firstAttribute="leading" secondItem="shi-bt-MGm" secondAttribute="trailing" constant="40" id="5pm-f1-EYR"/>
+                            <constraint firstItem="57f-xH-gMz" firstAttribute="top" secondItem="aon-iD-7ZT" secondAttribute="bottom" constant="8" id="7iF-pc-IPE"/>
                             <constraint firstItem="aon-iD-7ZT" firstAttribute="top" secondItem="ddL-Uh-wu1" secondAttribute="bottom" constant="57" id="Cw4-Ol-I4j"/>
+                            <constraint firstItem="57f-xH-gMz" firstAttribute="centerX" secondItem="bfS-iO-Tub" secondAttribute="centerX" constant="44.5" id="JTF-gv-vOg"/>
                             <constraint firstItem="zNK-fO-tB3" firstAttribute="centerX" secondItem="bfS-iO-Tub" secondAttribute="centerX" id="Jp8-Lb-PLn"/>
                             <constraint firstItem="Y91-bZ-MF4" firstAttribute="top" secondItem="aon-iD-7ZT" secondAttribute="bottom" constant="53" id="OsG-AO-nKO"/>
+                            <constraint firstItem="aon-iD-7ZT" firstAttribute="top" secondItem="ddL-Uh-wu1" secondAttribute="bottom" constant="57" id="Ukw-bk-kNY"/>
                             <constraint firstItem="hCY-qH-5l2" firstAttribute="top" secondItem="A2x-eX-Tm1" secondAttribute="bottom" constant="58" id="WfM-ZF-J7M"/>
                             <constraint firstItem="shi-bt-MGm" firstAttribute="centerX" secondItem="bfS-iO-Tub" secondAttribute="centerX" constant="-104" id="XHU-dG-e8R"/>
                             <constraint firstItem="shi-bt-MGm" firstAttribute="top" secondItem="zNK-fO-tB3" secondAttribute="bottom" constant="91" id="kDM-FU-jpg"/>
@@ -148,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="245"/>
+            <point key="canvasLocation" x="2298" y="250"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="0JI-GX-QU7">
