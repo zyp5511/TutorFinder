@@ -8,8 +8,13 @@
 
 import UIKit
 
-class FilterTableViewController: UITableViewController {
+class FilterTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    
+    let filterTitle  = ["Distance", "Gender","Education","Feild"]
+    var pickOption = [ ["one", "two"], ["three", "seven"], ["fifteen","a"],["v","b","d"]]
+    var i = -1;
+    //var pickerTextField ;
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,24 +34,48 @@ class FilterTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 4
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
+        i = indexPath.row;
+        
+        
+        let cellLabel = UILabel();
+        cellLabel.text = filterTitle [indexPath.row];
+        cellLabel.tag = 1;
+        
+        let cellTextField = UITextField() ;
+        //pickerTextField = cellTextField
+        var pickerView = UIPickerView()
+        pickerView.delegate = self
+        
+        cellTextField.inputView = pickerView;
+        
         // Configure the cell...
 
         return cell
     }
-    */
-
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickOption[i].count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickOption[i][row]
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //pickerTextField.text = pickOption[i][row]
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
