@@ -15,8 +15,12 @@ class EditingTableViewController: UITableViewController {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var rate1: UIImageView!
     
-   
-    
+    @IBOutlet weak var name2: UITextField!
+    @IBOutlet weak var email3: UITextField!
+    @IBOutlet weak var school4: UITextField!
+    @IBOutlet weak var education: UITextField!
+    @IBOutlet weak var subject6: UIView!
+    @IBOutlet weak var description7: UITextView!
 
     
     override func viewDidLoad() {

@@ -12,6 +12,20 @@ class ProfileTableViewController: UITableViewController {
 
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var name1: UILabel!
+    @IBOutlet weak var gender1: UIImageView!
+    @IBOutlet weak var rate1: UIImageView!
+    @IBOutlet weak var name2: UILabel!
+    @IBOutlet weak var email3: UILabel!
+    @IBOutlet weak var school4: UILabel!
+    @IBOutlet weak var education5: UILabel!
+    @IBOutlet weak var subject6: UILabel!
+    
+    @IBOutlet weak var social7a: UIImageView!
+    @IBOutlet weak var social7b: UIImageView!
+    @IBOutlet weak var social7c: UIImageView!
+    @IBOutlet weak var availability8: UITextView!
+    @IBOutlet weak var description9: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         name1.text = "Jiwei"
@@ -45,7 +59,15 @@ class ProfileTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        //border ajustment
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.darkGrayColor().CGColor
+        border.frame = CGRect(x: 0, y: cell.frame.size.height - width, width: cell.frame.size.width, height: cell.frame.size.height)
+        
+        border.borderWidth = width
+        cell.layer.addSublayer(border)
+        cell.layer.masksToBounds = true
         return cell
     }
     */

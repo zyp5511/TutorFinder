@@ -11,8 +11,11 @@ import UIKit
 class FilterTableViewController: UITableViewController{
 
     
-    let filterTitle  = ["Distance", "Gender","Education","Feild"]
-        //var pickerTextField ;
+    let col1 = ["Distance", "Gender","Education","Feild"]
+    let col2 = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
+                ["Female", "Male", "Unknown" ],
+                ["Ph.D", "Master", "Bachelor"],
+                ["CS","Electrical Engineer"]]
 
 
     // MARK: - Table view data source
@@ -31,10 +34,21 @@ class FilterTableViewController: UITableViewController{
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FilterCell", forIndexPath: indexPath) as! filterCell
         
-        cell.label1?.text = filterTitle[indexPath.row];
-        cell.label2?.text = filterTitle[indexPath.row];
-    
-
+        /*border ajustment
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.darkGrayColor().CGColor
+        border.frame = CGRect(x: 0, y: cell.frame.size.height - width, width: cell.frame.size.width, height: cell.frame.size.height)
+        
+        border.borderWidth = width
+        cell.layer.addSublayer(border)
+        cell.layer.masksToBounds = true
+        */
+        
+        //value 
+        cell.label1?.text = col1[indexPath.row];
+        cell.label2?.text = col2[indexPath.row][0];
+        
         return cell
     }
     /*
