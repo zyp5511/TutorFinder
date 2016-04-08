@@ -14,6 +14,7 @@
 		3669CBA61CB365C600308F98 /* EditingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA51CB365C600308F98 /* EditingTableViewController.swift */; };
 		3669CBA81CB3660600308F98 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */; };
 		36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */; };
+		C20391161CB589AB0050C04B /* tutorfinder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C20391151CB589AB0050C04B /* tutorfinder.jpeg */; };
 		C2F7C5281CB498270031523C /* SGnJH4T.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5271CB498270031523C /* SGnJH4T.jpg */; };
 		C2F7C52A1CB498630031523C /* cute1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5291CB498630031523C /* cute1.jpg */; };
 		C2F7C52C1CB4AE080031523C /* filterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7C52B1CB4AE080031523C /* filterCell.swift */; };
@@ -62,6 +63,7 @@
 		3669CBA51CB365C600308F98 /* EditingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingTableViewController.swift; sourceTree = "<group>"; };
 		3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C20391151CB589AB0050C04B /* tutorfinder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutorfinder.jpeg; sourceTree = SOURCE_ROOT; };
 		C2F7C5271CB498270031523C /* SGnJH4T.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SGnJH4T.jpg; sourceTree = SOURCE_ROOT; };
 		C2F7C5291CB498630031523C /* cute1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute1.jpg; sourceTree = SOURCE_ROOT; };
 		C2F7C52B1CB4AE080031523C /* filterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterCell.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		FBF9EE421C84E91A001E3F2D /* tutorFinder */ = {
 			isa = PBXGroup;
 			children = (
+				C20391151CB589AB0050C04B /* tutorfinder.jpeg */,
 				C2F7C53F1CB4CADE0031523C /* emptystart.png */,
 				C2F7C5401CB4CADE0031523C /* fullstar.png */,
 				C2F7C5411CB4CADE0031523C /* halfstart.png */,
@@ -302,6 +305,7 @@
 				C2F7C52A1CB498630031523C /* cute1.jpg in Resources */,
 				C2F7C53C1CB4C7D80031523C /* unknow.png in Resources */,
 				FBF9EE4B1C84E91A001E3F2D /* Assets.xcassets in Resources */,
+				C20391161CB589AB0050C04B /* tutorfinder.jpeg in Resources */,
 				C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */,
 				C2F7C5441CB4CADE0031523C /* halfstart.png in Resources */,
 				C2F7C5421CB4CADE0031523C /* emptystart.png in Resources */,
