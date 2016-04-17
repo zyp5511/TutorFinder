@@ -25,6 +25,18 @@ class RestAPIManage{
                 print(error?.localizedDescription)
             }
             else {
+              //  var error: NSError?
+                
+                // array of dictionary
+                var studentData = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? Array
+                // initialize as empty array of element Student
+                var studs = [Student]()
+                for stud in studentData{
+                    let stud = studentData(data: student as NSDictionary) // pull information for each student
+                    studs.append(stud)
+                }
+                
+                
                 
             }
         }
