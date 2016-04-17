@@ -25,9 +25,6 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let api = RestAPIManage()
-        api.loadStudent(nil)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import LoopBack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    
+    static let adapter = LBRESTAdapter(URL: NSURL(string: "http://localhost:3000"))
+    static let studentsRepo = adapter.repositoryWithClass(StudentsRepo) as! StudentsRepo
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
