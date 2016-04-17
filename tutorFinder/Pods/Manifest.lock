@@ -1,0 +1,19 @@
+PODS:
+  - LoopBack (1.3.0)
+
+DEPENDENCIES:
+  - LoopBack (from `https://github.com/strongloop/loopback-sdk-ios.git`)
+
+EXTERNAL SOURCES:
+  LoopBack:
+    :git: https://github.com/strongloop/loopback-sdk-ios.git
+
+CHECKOUT OPTIONS:
+  LoopBack:
+    :commit: 47c649db69b3dd6836b7303a3f25d0e0c7086f7e
+    :git: https://github.com/strongloop/loopback-sdk-ios.git
+
+SPEC CHECKSUMS:
+  LoopBack: 0ae752b0c1d3f572e1d949945a7651f61c433f9e
+
+COCOAPODS: 0.39.0

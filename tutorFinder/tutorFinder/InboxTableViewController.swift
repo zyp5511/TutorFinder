@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LoopBack
 
 class InboxTableViewController: UITableViewController {
 

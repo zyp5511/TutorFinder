@@ -1,0 +1,19 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '9.1'
+# Uncomment this line if you're using Swift
+
+pod 'LoopBack', :git => 'https://github.com/strongloop/loopback-sdk-ios.git'
+use_frameworks!
+
+target 'tutorFinder' do
+
+end
+
+target 'tutorFinderTests' do
+
+end
+
+target 'tutorFinderUITests' do
+
+end
+
