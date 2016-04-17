@@ -14,7 +14,7 @@ class Students : LBPersistedModel {
 
     var degree: String!
     var description1: String!
-    var location: String!
+    var location: NSObject!  //not sure
     //   "lat": 0,
     //   "lng": 0
     var gender: String!
@@ -23,13 +23,14 @@ class Students : LBPersistedModel {
     var name: String!
     var realm: String!
     var username: String!
-    //    var credentials : [String]()!
-    //   var challenges: [String]()!
+    var credentials : NSObject!
+    var challenges: NSObject!
     var email : String!
     var emailVerified : NSNumber!  //bool
     var status : String!
     var created: String!
     var lastUpdated: String!
     var id : NSNumber!  //int
+    
 }
  

@@ -327,7 +327,7 @@
         <!--Tutor-->
         <scene sceneID="WZF-O0-w3D">
             <objects>
-                <tableViewController id="ufF-gs-RZn" customClass="MainPageTableViewController" customModule="tutorFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ufF-gs-RZn" customClass="TutorTableViewController" customModule="tutorFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="EvW-r6-IoD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,7 +338,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="GJI-GH-RbH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="GJI-GH-RbH" customClass="TutorTableViewCell" customModule="tutorFinder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GJI-GH-RbH" id="mEH-30-rOM">
@@ -367,9 +367,6 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zft-dI-6W4">
                                             <rect key="frame" x="509" y="32" width="16" height="16"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-sq-bUs">
-                                            <rect key="frame" x="337" y="34" width="46" height="33"/>
-                                        </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHg-ZU-FSh">
                                             <rect key="frame" x="461" y="54" width="16" height="16"/>
                                         </imageView>
@@ -394,12 +391,21 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-sq-bUs">
+                                            <rect key="frame" x="341" y="37" width="46" height="33"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="yKt-2F-4Tr" firstAttribute="centerY" secondItem="mEH-30-rOM" secondAttribute="centerY" id="Vln-AQ-n4M"/>
                                         <constraint firstItem="yKt-2F-4Tr" firstAttribute="leading" secondItem="mEH-30-rOM" secondAttribute="leadingMargin" constant="17" id="czt-nH-9mi"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="availability" destination="0Cs-56-Qy2" id="GOY-NV-qIW"/>
+                                    <outlet property="avatar" destination="yKt-2F-4Tr" id="5P3-6m-7d7"/>
+                                    <outlet property="name" destination="rRZ-oC-fid" id="VaX-Zj-aiR"/>
+                                    <outlet property="rating" destination="ZYM-sq-bUs" id="2F1-Fd-7fI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -993,7 +999,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0X3-xY-CAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2975" y="1135"/>
+            <point key="canvasLocation" x="2961" y="1078"/>
         </scene>
         <!--Inbox Table View Controller-->
         <scene sceneID="g1H-SX-yTU">
