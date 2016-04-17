@@ -13,6 +13,7 @@
 		3669CBA41CB3597400308F98 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA31CB3597400308F98 /* InboxTableViewController.swift */; };
 		3669CBA61CB365C600308F98 /* EditingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA51CB365C600308F98 /* EditingTableViewController.swift */; };
 		3669CBA81CB3660600308F98 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */; };
+		36D8DFFD1CC4160F00A367C2 /* UserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D8DFFC1CC4160F00A367C2 /* UserPhoto.swift */; };
 		36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */; };
 		C20391161CB589AB0050C04B /* tutorfinder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C20391151CB589AB0050C04B /* tutorfinder.jpeg */; };
 		C24298281CC1B9BF00C4D556 /* student.json in Resources */ = {isa = PBXBuildFile; fileRef = C24298271CC1B9BF00C4D556 /* student.json */; };
@@ -65,6 +66,7 @@
 		3669CBA31CB3597400308F98 /* InboxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
 		3669CBA51CB365C600308F98 /* EditingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingTableViewController.swift; sourceTree = "<group>"; };
 		3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		36D8DFFC1CC4160F00A367C2 /* UserPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPhoto.swift; sourceTree = "<group>"; };
 		36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C20391151CB589AB0050C04B /* tutorfinder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutorfinder.jpeg; sourceTree = SOURCE_ROOT; };
 		C24298271CC1B9BF00C4D556 /* student.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = student.json; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				C242982F1CC1C7A100C4D556 /* Student.swift */,
 				C24298271CC1B9BF00C4D556 /* student.json */,
+				36D8DFFC1CC4160F00A367C2 /* UserPhoto.swift */,
 			);
 			name = json;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3669CBA81CB3660600308F98 /* ProfileTableViewController.swift in Sources */,
+				36D8DFFD1CC4160F00A367C2 /* UserPhoto.swift in Sources */,
 				C2F7C5301CB4C0FD0031523C /* Tutor.swift in Sources */,
 				3669CBA41CB3597400308F98 /* InboxTableViewController.swift in Sources */,
 				36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */,
