@@ -11,7 +11,7 @@ import LoopBack
 
 class StudentsRepo : LBPersistedModelRepository     {
     override init() {
-        super.init(className: "students")
+        super.init(className: "Students")
     }
     class func repository() -> StudentsRepo {
         return StudentsRepo()

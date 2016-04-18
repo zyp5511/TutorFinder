@@ -11,14 +11,14 @@ import LoopBack
 
 class TutorTableViewController: UITableViewController {
     
-    var students = [Students]()
+    var students = [Student]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         AppDelegate.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> () in
-            self.students = fetchedStudents as! [Students]
+            self.students = fetchedStudents as! [Student]
             self.tableView.reloadData()
             }, failure: { (error: NSError!) -> Void in
                 NSLog(error.description)

@@ -12,7 +12,7 @@ class FilterDetailTableViewController: UITableViewController {
     
     var category = 0;
     var rowNum = 0;
-    let details = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
+    var details = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
                 ["Female", "Male", "Unknown" ],
                 ["Ph.D", "Master", "Bachelor"],
                 ["CS","Electrical Engineer"]]
@@ -60,16 +60,17 @@ class FilterDetailTableViewController: UITableViewController {
         return cell
     }
     
-    
+   /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "filterback"){
             let selectedrow = self.tableView.indexPathForSelectedRow?.row
             
             if let dest = segue.destinationViewController as? FilterTableViewController {
-                 dest.value[category] = selectedrow!
+              //   dest.value[category] = selectedrow!
             }
         }
-    }
+    }*/
+    
 
     /*
     // Override to support conditional editing of the table view.
