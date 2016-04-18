@@ -17,7 +17,7 @@ class TutorTableViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        AppDelegate.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> Void in
+        AppDelegate.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> () in
             self.students = fetchedStudents as! [Students]
             self.tableView.reloadData()
             }, failure: { (error: NSError!) -> Void in
@@ -46,8 +46,9 @@ class TutorTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("tutor", forIndexPath: indexPath) as! TutorTableViewCell
-        cell.name.text = students[indexPath.row].name
-        cell.availability.text = String(students[indexPath.row].gender)
+        cell.name.text = students[indexPath.row].name as String
+    
+        cell.availability.text = students[indexPath.row].gender  as String
         return cell
         
     }

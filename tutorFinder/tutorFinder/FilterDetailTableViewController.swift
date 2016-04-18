@@ -1,23 +1,37 @@
 //
-//  FilterTableViewController.swift
+//  FilterDetailTableViewController.swift
 //  tutorFinder
 //
-//  Created by Zihan Zhang on 4/4/16.
+//  Created by D.O. on 4/17/16.
 //  Copyright © 2016 ZhangYipeng. All rights reserved.
 //
 
 import UIKit
 
-class FilterTableViewController: UITableViewController{
-
+class FilterDetailTableViewController: UITableViewController {
     
-    let col1 = ["Distance", "Gender","Education","Feild"]
-    let col2 = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
+    var category = 0;
+    var rowNum = 0;
+    let details = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
                 ["Female", "Male", "Unknown" ],
                 ["Ph.D", "Master", "Bachelor"],
                 ["CS","Electrical Engineer"]]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    let value = [0,0,0,0]    //distance, gender, degree, major
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -27,41 +41,36 @@ class FilterTableViewController: UITableViewController{
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        switch(category){
+            case 0: rowNum = 4;
+            case 1: rowNum = 3;
+            case 2: rowNum = 3;
+            case 3: rowNum = 50;
+            default: rowNum = 0;
+        }
+        return rowNum
     }
 
     
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FilterCell", forIndexPath: indexPath) as! filterCell
-        
-        /*border ajustment
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.darkGrayColor().CGColor
-        border.frame = CGRect(x: 0, y: cell.frame.size.height - width, width: cell.frame.size.width, height: cell.frame.size.height)
-        
-        border.borderWidth = width
-        cell.layer.addSublayer(border)
-        cell.layer.masksToBounds = true
-        */
-        
-        //value 
-        cell.label1?.text = col1[indexPath.row];
-        cell.label2?.text = col2[indexPath.row][value[indexPath.row]];
+        let cell = tableView.dequeueReusableCellWithIdentifier("FilterDetail")!
+        cell.textLabel?.text = details[rowNum][indexPath.row]
+
         return cell
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "filterSelect"){
+        if (segue.identifier == "filterback"){
             let selectedrow = self.tableView.indexPathForSelectedRow?.row
             
-            if let dest = segue.destinationViewController as? FilterDetailTableViewController{
-                dest.category = selectedrow!
+            if let dest = segue.destinationViewController as? FilterTableViewController {
+                 dest.value[category] = selectedrow!
             }
         }
     }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
