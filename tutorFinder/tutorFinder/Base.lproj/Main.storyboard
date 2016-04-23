@@ -81,7 +81,6 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signupButton:" destination="AUA-r3-iP2" eventType="touchUpInside" id="iBk-88-I7c"/>
-                                    <segue destination="vKZ-le-1IP" kind="show" id="ZXt-Xt-Ihb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57f-xH-gMz">
@@ -144,6 +143,7 @@
                         <outlet property="password" destination="aon-iD-7ZT" id="xs6-cs-BPg"/>
                         <outlet property="username" destination="ddL-Uh-wu1" id="nah-rn-syk"/>
                         <segue destination="Ftn-Bd-Na3" kind="show" identifier="loginSuccess" id="oNo-W3-I21"/>
+                        <segue destination="vKZ-le-1IP" kind="show" identifier="toSignUp" id="FT2-2X-7h8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>

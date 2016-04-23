@@ -19,11 +19,12 @@ class Student : LBUser {
     //   "lat": 0,
     //   "lng": 0
     var gender: String!
-    var tutor: Bool!
-    var rating: Double!
+    var tutor: NSNumber!  //bool
+    var rating: NSNumber! // Num
     var name: String!
-    
+    var avaliability : String!
     // realm, username, credential, chanllege, emailVerified,email, status, created, lastUpdated, id
     // are all include in LBUser
+
 }
  
