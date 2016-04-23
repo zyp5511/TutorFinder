@@ -49,71 +49,59 @@ class TutorTableViewController: UITableViewController {
         
         let object = students[indexPath.row] as Student
         
-        let rating = object.rating
-       
-        if (rating == nil){
+        let rate = object.rating
+        let rating = Int(rate)
+        
+      
+        if rating == 0 {
             cell.rating1.image = UIImage(named: "emptystart.png")
-            cell.rating2.image = UIImage(named: "emptystart.png")
-            cell.rating3.image = UIImage(named: "emptystart.png")
-            cell.rating4.image = UIImage(named: "emptystart.png")
-            cell.rating5.image = UIImage(named: "emptystart.png")
-            
-        }
-        else {
-        if (rating == 0 ){
-            cell.rating1.image = UIImage(named: "emptystart.png")
-        }
-        else if (rating == 5){
-           cell.rating1.image = UIImage(named:"halfstart.png")
         }
         else {
             cell.rating1.image = UIImage(named:"fullstar.png")
         }
         
-        if (rating <= 1 ){
+        if rating <= 1 {
             cell.rating2.image = UIImage(named: "emptystart.png")
-        }
-        else if (rating == 5){
-            cell.rating2.image = UIImage(named:"halfstart.png")
         }
         else {
             cell.rating2.image = UIImage(named:"fullstar.png")
         }
         
-        if (rating <= 2 ){
+        if rating <= 2 {
             cell.rating3.image = UIImage(named: "emptystart.png")
-        }
-        else if (rating == 5){
-            cell.rating3.image = UIImage(named:"halfstart.png")
         }
         else {
             cell.rating3.image = UIImage(named:"fullstar.png")
         }
         
-        if (rating <= 3 ){
+        if rating <= 3 {
             cell.rating4.image = UIImage(named: "emptystart.png")
-        }
-        else if (rating == 5){
-            cell.rating4.image = UIImage(named:"halfstart.png")
         }
         else {
             cell.rating4.image = UIImage(named:"fullstar.png")
         }
         
-        if (rating <= 4 ){
+        if rating <= 4 {
             cell.rating5.image = UIImage(named: "emptystart.png")
-        }
-        else if (rating == 5){
-            cell.rating5.image = UIImage(named:"halfstart.png")
         }
         else {
             cell.rating5.image = UIImage(named:"fullstar.png")
         }
-        }
         
+        
+        print(object.degree)
+      //  print(object.avaliability)
+        print(object.rating)
+        print(object.status)
         cell.name.text = object.name as String
     
-        cell.availability.text = object.email  as String
+       // let time = object.avaliability
+       // if time.isEmpty{
+           cell.availability.text = "Empty"
+       // }
+       // else{
+        //    cell.availability.text = time
+       // }
         
         return cell
         
