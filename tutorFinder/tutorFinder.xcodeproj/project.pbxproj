@@ -28,7 +28,7 @@
 		C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5311CB4C72A0031523C /* square-facebook-512.png */; };
 		C2F7C5351CB4C72A0031523C /* twitter_letter-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */; };
 		C2F7C5361CB4C72A0031523C /* WeChat-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */; };
-		C2F7C53A1CB4C7D80031523C /* Hermaphrodite_symbol.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5371CB4C7D80031523C /* Hermaphrodite_symbol.svg.png */; };
+		C2F7C53A1CB4C7D80031523C /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5371CB4C7D80031523C /* female.png */; };
 		C2F7C53B1CB4C7D80031523C /* male.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5381CB4C7D80031523C /* male.jpeg */; };
 		C2F7C53C1CB4C7D80031523C /* unknow.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5391CB4C7D80031523C /* unknow.png */; };
 		C2F7C5421CB4CADE0031523C /* emptystart.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C53F1CB4CADE0031523C /* emptystart.png */; };
@@ -83,7 +83,7 @@
 		C2F7C5311CB4C72A0031523C /* square-facebook-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-facebook-512.png"; sourceTree = SOURCE_ROOT; };
 		C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter_letter-512.png"; sourceTree = SOURCE_ROOT; };
 		C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeChat-Icon.png"; sourceTree = SOURCE_ROOT; };
-		C2F7C5371CB4C7D80031523C /* Hermaphrodite_symbol.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hermaphrodite_symbol.svg.png; sourceTree = SOURCE_ROOT; };
+		C2F7C5371CB4C7D80031523C /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = SOURCE_ROOT; };
 		C2F7C5381CB4C7D80031523C /* male.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = male.jpeg; sourceTree = SOURCE_ROOT; };
 		C2F7C5391CB4C7D80031523C /* unknow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknow.png; sourceTree = SOURCE_ROOT; };
 		C2F7C53F1CB4CADE0031523C /* emptystart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptystart.png; sourceTree = SOURCE_ROOT; };
@@ -186,7 +186,7 @@
 				C2F7C53F1CB4CADE0031523C /* emptystart.png */,
 				C2F7C5411CB4CADE0031523C /* halfstart.png */,
 				C2F7C5401CB4CADE0031523C /* fullstar.png */,
-				C2F7C5371CB4C7D80031523C /* Hermaphrodite_symbol.svg.png */,
+				C2F7C5371CB4C7D80031523C /* female.png */,
 				C2F7C5381CB4C7D80031523C /* male.jpeg */,
 				C2F7C5391CB4C7D80031523C /* unknow.png */,
 				C2F7C5311CB4C72A0031523C /* square-facebook-512.png */,
@@ -345,7 +345,7 @@
 				C2F7C5281CB498270031523C /* SGnJH4T.jpg in Resources */,
 				FBF9EE4E1C84E91A001E3F2D /* LaunchScreen.storyboard in Resources */,
 				C2F7C52E1CB4B9DF0031523C /* facebook-avatar.jpg in Resources */,
-				C2F7C53A1CB4C7D80031523C /* Hermaphrodite_symbol.svg.png in Resources */,
+				C2F7C53A1CB4C7D80031523C /* female.png in Resources */,
 				C2F7C53B1CB4C7D80031523C /* male.jpeg in Resources */,
 				C2F7C5431CB4CADE0031523C /* fullstar.png in Resources */,
 				C2F7C52A1CB498630031523C /* cute1.jpg in Resources */,

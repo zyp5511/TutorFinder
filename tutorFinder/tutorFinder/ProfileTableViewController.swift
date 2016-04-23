@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import LoopBack
 
 class ProfileTableViewController: UITableViewController {
-
+    var student = Student()
+    
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var name1: UILabel!
     @IBOutlet weak var gender1: UIImageView!
@@ -28,7 +30,100 @@ class ProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        name1.text = "Jiwei"
+        
+        name2.text = student.name
+        if (student.gender == "male")
+        {
+            gender1.image = UIImage(named:"male.jpeg")
+        }
+        else
+        {
+            gender1.image = UIImage(named:"female.png")
+        }
+        email3.text = student.email
+        education5 = student.degree
+        description9 = student.description1
+        let rating = student.rating
+        
+        
+        if (rating == nil)
+        {
+            cell.rating1.image = UIImage(named: "emptystart.png")
+            cell.rating2.image = UIImage(named: "emptystart.png")
+            cell.rating3.image = UIImage(named: "emptystart.png")
+            cell.rating4.image = UIImage(named: "emptystart.png")
+            cell.rating5.image = UIImage(named: "emptystart.png")
+            
+        }
+        else
+        {
+            if (rating == 0 )
+            {
+                cell.rating1.image = UIImage(named: "emptystart.png")
+            }
+            else if (rating == 5)
+            {
+                cell.rating1.image = UIImage(named:"halfstart.png")
+            }
+            else
+            {
+                cell.rating1.image = UIImage(named:"fullstar.png")
+            }
+            
+            if (rating <= 1 )
+            {
+                cell.rating2.image = UIImage(named: "emptystart.png")
+            }
+            else if (rating == 5)
+            {
+                cell.rating2.image = UIImage(named:"halfstart.png")
+            }
+            else
+            {
+                cell.rating2.image = UIImage(named:"fullstar.png")
+            }
+            
+            if (rating <= 2 )
+            {
+                cell.rating3.image = UIImage(named: "emptystart.png")
+            }
+            else if (rating == 5)
+            {
+                cell.rating3.image = UIImage(named:"halfstart.png")
+            }
+            else
+            {
+                cell.rating3.image = UIImage(named:"fullstar.png")
+            }
+            
+            if (rating <= 3 )
+            {
+                cell.rating4.image = UIImage(named: "emptystart.png")
+            }
+            else if (rating == 5)
+            {
+                cell.rating4.image = UIImage(named:"halfstart.png")
+            }
+            else
+            {
+                cell.rating4.image = UIImage(named:"fullstar.png")
+            }
+            
+            if (rating <= 4 )
+            {
+                cell.rating5.image = UIImage(named: "emptystart.png")
+            }
+            else if (rating == 5)
+            {
+                cell.rating5.image = UIImage(named:"halfstart.png")
+            }
+            else
+            {
+                cell.rating5.image = UIImage(named:"fullstar.png")
+            }
+        }
+        
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
