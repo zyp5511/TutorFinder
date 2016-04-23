@@ -46,9 +46,11 @@ class TutorTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("tutor", forIndexPath: indexPath) as! TutorTableViewCell
-        cell.name.text = students[indexPath.row].name as String
+        
+        let object = students[indexPath.row] as Student
+        cell.name.text = object.name as String
     
-        cell.availability.text = students[indexPath.row].gender  as String
+        cell.availability.text = object.gender  as String
         return cell
         
     }

@@ -9,11 +9,14 @@
 import Foundation
 import LoopBack
 
-class StudentsRepo : LBPersistedModelRepository     {
+class StudentsRepo : LBUserRepository     {
     override init() {
         super.init(className: "Students")
+        self.modelClass = Student.self
     }
-    class func repository() -> StudentsRepo {
-        return StudentsRepo()
+
+    override init!(className name: String!) {
+        super.init(className: "Students")
+        self.modelClass = Student.self
     }
 }

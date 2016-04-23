@@ -10,7 +10,7 @@ import Foundation
 import LoopBack
 
 
-class Student : LBPersistedModel {
+class Student : LBUser {
 
     //var degree: String!
     //var description1: String!
