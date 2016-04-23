@@ -56,18 +56,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddL-Uh-wu1">
-                                <rect key="frame" x="186" y="298" width="130" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="1NW-fz-S6J"/>
-                                    <constraint firstAttribute="height" constant="30" id="xTv-Ld-l4H"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="userName:" destination="AUA-r3-iP2" eventType="editingDidEnd" id="eRW-om-MJB"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aon-iD-7ZT">
                                 <rect key="frame" x="186" y="385" width="130" height="30"/>
                                 <constraints>
@@ -78,9 +66,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="password:" destination="AUA-r3-iP2" eventType="editingDidEnd" id="VRC-26-kg5"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2x-eX-Tm1">
                                 <rect key="frame" x="65" y="389" width="77" height="21"/>
@@ -112,6 +97,7 @@
                                 </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="checkLogin:" destination="AUA-r3-iP2" eventType="touchUpInside" id="14a-TL-UpS"/>
                                     <action selector="loginButton:" destination="AUA-r3-iP2" eventType="touchUpInside" id="7YM-sK-xeL"/>
                                     <segue destination="Ftn-Bd-Na3" kind="show" id="dqi-Yy-X2t"/>
                                 </connections>
@@ -123,6 +109,15 @@
                                     <constraint firstAttribute="width" constant="240" id="zXU-x4-SQg"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddL-Uh-wu1">
+                                <rect key="frame" x="179" y="304" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="1NW-fz-S6J"/>
+                                    <constraint firstAttribute="height" constant="30" id="xTv-Ld-l4H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99949450705550036" blue="0.97495353959032549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -149,8 +144,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="checkLogin" destination="Y91-bZ-MF4" id="NDV-GA-Tno"/>
                         <outlet property="password" destination="aon-iD-7ZT" id="xs6-cs-BPg"/>
-                        <outlet property="userName" destination="ddL-Uh-wu1" id="3wx-9p-qKu"/>
+                        <outlet property="username" destination="ddL-Uh-wu1" id="nah-rn-syk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>

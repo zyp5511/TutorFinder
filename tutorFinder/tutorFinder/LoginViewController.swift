@@ -16,35 +16,19 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var userName: UITextField!
-    
-    
+    @IBOutlet weak var username: UITextField!
+   
     @IBOutlet weak var password: UITextField!
     
-    
-    @IBAction func loginButton(sender: AnyObject) {
-        
-    }
-   
-    @IBAction func signupButton(sender: AnyObject) {
-        sender.setTitle("login", forState: .Normal)
-    }
 
     
-    func loginSuccessful(uName: String, uPassword: String)->Bool{
-        //query database. Hard code. Need change
-        let dbUserName = "test"
-        let dbPassword = "test"
-        if(userName.text == dbUserName && password == dbPassword)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+
+    @IBAction func checkLogin(sender: AnyObject) {
+        
+        let wrongMessage =
     
     }
+    
 
     
     override func didReceiveMemoryWarning() {
