@@ -48,15 +48,78 @@ class TutorTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("tutor", forIndexPath: indexPath) as! TutorTableViewCell
         
         let object = students[indexPath.row] as Student
+        
+        let rating = object.rating
+       
+        if (rating == nil){
+            cell.rating1.image = UIImage(named: "emptystart.png")
+            cell.rating2.image = UIImage(named: "emptystart.png")
+            cell.rating3.image = UIImage(named: "emptystart.png")
+            cell.rating4.image = UIImage(named: "emptystart.png")
+            cell.rating5.image = UIImage(named: "emptystart.png")
+            
+        }
+        else {
+        if (rating == 0 ){
+            cell.rating1.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5){
+           cell.rating1.image = UIImage(named:"halfstart.png")
+        }
+        else {
+            cell.rating1.image = UIImage(named:"fullstar.png")
+        }
+        
+        if (rating <= 1 ){
+            cell.rating2.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5){
+            cell.rating2.image = UIImage(named:"halfstart.png")
+        }
+        else {
+            cell.rating2.image = UIImage(named:"fullstar.png")
+        }
+        
+        if (rating <= 2 ){
+            cell.rating3.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5){
+            cell.rating3.image = UIImage(named:"halfstart.png")
+        }
+        else {
+            cell.rating3.image = UIImage(named:"fullstar.png")
+        }
+        
+        if (rating <= 3 ){
+            cell.rating4.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5){
+            cell.rating4.image = UIImage(named:"halfstart.png")
+        }
+        else {
+            cell.rating4.image = UIImage(named:"fullstar.png")
+        }
+        
+        if (rating <= 4 ){
+            cell.rating5.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5){
+            cell.rating5.image = UIImage(named:"halfstart.png")
+        }
+        else {
+            cell.rating5.image = UIImage(named:"fullstar.png")
+        }
+        }
+        
         cell.name.text = object.name as String
     
         cell.availability.text = object.email  as String
+        
         return cell
         
     }
     
-    
-    /*
+       /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.

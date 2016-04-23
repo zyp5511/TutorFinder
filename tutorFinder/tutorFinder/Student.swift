@@ -19,28 +19,11 @@ class Student : LBUser {
     //   "lat": 0,
     //   "lng": 0
     var gender: String!
-   //var tutor: NSNumber!  //bool
- //   var rating: NSNumber! //int
+    var tutor: Bool!
+    var rating: Double!
     var name: String!
-   // var realm: String!
-   // var username: String!
-    //  var credentials : NSObject!
-    // var challenges: NSObject!
-   // var email : String!
-   //  var emailVerified : NSNumber!  //bool
-   // var status : String!
-  //  var created: String!
-   // var lastUpdated: String!
-    //var id : NSNumber!  //int
-    "realm": "string",
-    "username": "string",
-    "credentials": {},
-    "challenges": {},
-    "email": "string",
-    "emailVerified": true,
-    "status": "string",
-    "created": "2016-04-23",
-    "lastUpdated": "2016-04-23",
-    "id": 0
+    
+    // realm, username, credential, chanllege, emailVerified,email, status, created, lastUpdated, id
+    // are all include in LBUser
 }
  

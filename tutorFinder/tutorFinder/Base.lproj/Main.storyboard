@@ -389,8 +389,24 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-sq-bUs">
-                                            <rect key="frame" x="321" y="26" width="46" height="33"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oad-Ar-awo">
+                                            <rect key="frame" x="312" y="29" width="25" height="31"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pL-t6-kQ7">
+                                            <rect key="frame" x="335" y="29" width="25" height="31"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHA-F5-uHi">
+                                            <rect key="frame" x="357" y="29" width="25" height="31"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8UB-bT-Fre">
+                                            <rect key="frame" x="381" y="29" width="25" height="31"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-sq-bUs">
+                                            <rect key="frame" x="289" y="29" width="25" height="31"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="31" id="O9u-lt-GeS"/>
+                                                <constraint firstAttribute="width" constant="29" id="hAD-Wc-UGX"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -398,7 +414,11 @@
                                     <outlet property="availability" destination="0Cs-56-Qy2" id="GOY-NV-qIW"/>
                                     <outlet property="avatar" destination="yKt-2F-4Tr" id="5P3-6m-7d7"/>
                                     <outlet property="name" destination="rRZ-oC-fid" id="VaX-Zj-aiR"/>
-                                    <outlet property="rating" destination="ZYM-sq-bUs" id="2F1-Fd-7fI"/>
+                                    <outlet property="rating1" destination="ZYM-sq-bUs" id="MQe-if-Yyn"/>
+                                    <outlet property="rating2" destination="oad-Ar-awo" id="tYX-xh-EQV"/>
+                                    <outlet property="rating3" destination="7pL-t6-kQ7" id="1BH-kd-llz"/>
+                                    <outlet property="rating4" destination="FHA-F5-uHi" id="ld5-jy-G6k"/>
+                                    <outlet property="rating5" destination="8UB-bT-Fre" id="t8p-73-Z1R"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -419,7 +439,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2z-W1-cil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4243" y="724"/>
+            <point key="canvasLocation" x="4349" y="706"/>
         </scene>
         <!--Editing-->
         <scene sceneID="tdQ-nQ-hFq">

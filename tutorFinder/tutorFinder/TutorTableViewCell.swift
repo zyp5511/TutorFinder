@@ -21,8 +21,13 @@ class TutorTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     
     @IBOutlet weak var availability: UILabel!
+
+    @IBOutlet weak var rating1: UIImageView!
+    @IBOutlet weak var rating2: UIImageView!
+    @IBOutlet weak var rating3: UIImageView!
+    @IBOutlet weak var rating4: UIImageView!
+    @IBOutlet weak var rating5: UIImageView!
     
-    @IBOutlet weak var rating: UIImageView!
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
