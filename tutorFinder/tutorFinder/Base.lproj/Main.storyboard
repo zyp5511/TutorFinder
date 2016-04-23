@@ -97,9 +97,7 @@
                                 </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="checkLogin:" destination="AUA-r3-iP2" eventType="touchUpInside" id="14a-TL-UpS"/>
-                                    <action selector="loginButton:" destination="AUA-r3-iP2" eventType="touchUpInside" id="7YM-sK-xeL"/>
-                                    <segue destination="Ftn-Bd-Na3" kind="show" id="dqi-Yy-X2t"/>
+                                    <action selector="check:" destination="AUA-r3-iP2" eventType="touchUpInside" id="FB5-tJ-pld"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorfinder.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="zNK-fO-tB3">
@@ -109,8 +107,8 @@
                                     <constraint firstAttribute="width" constant="240" id="zXU-x4-SQg"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddL-Uh-wu1">
-                                <rect key="frame" x="179" y="304" width="130" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddL-Uh-wu1">
+                                <rect key="frame" x="186" y="298" width="130" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="1NW-fz-S6J"/>
                                     <constraint firstAttribute="height" constant="30" id="xTv-Ld-l4H"/>
@@ -144,9 +142,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="checkLogin" destination="Y91-bZ-MF4" id="NDV-GA-Tno"/>
                         <outlet property="password" destination="aon-iD-7ZT" id="xs6-cs-BPg"/>
                         <outlet property="username" destination="ddL-Uh-wu1" id="nah-rn-syk"/>
+                        <segue destination="Ftn-Bd-Na3" kind="show" identifier="loginSuccess" id="oNo-W3-I21"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -929,7 +927,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jti-Tq-DqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2895" y="254"/>
+            <point key="canvasLocation" x="2873" y="270"/>
         </scene>
         <!--Filter Table View Controller-->
         <scene sceneID="nNk-Di-aPB">

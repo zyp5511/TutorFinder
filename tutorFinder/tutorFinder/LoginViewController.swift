@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LoopBack
 
 class LoginViewController: UIViewController {
 
@@ -18,16 +19,34 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var username: UITextField!
    
+
     @IBOutlet weak var password: UITextField!
     
-
-    
-
-    @IBAction func checkLogin(sender: AnyObject) {
+    @IBAction func check(sender: AnyObject) {
         
-        let wrongMessage =
-    
+        BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail(username.text, password: password.text, success: { (LBUser ) -> Void in
+            NSLog("Successfully logged in.");
+            
+            // Display login confirmation
+            //let alertController = UIAlertController(title: "Login", message:
+            //    "Successfully logged in", preferredStyle: UIAlertControllerStyle.Alert)
+            //alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            //self.presentViewController(alertController, animated: true, completion: nil)
+            self.performSegueWithIdentifier("loginSuccess", sender: nil)
+            
+        }) { (error: NSError!) -> Void in
+            NSLog("Error logging in.")
+            
+            // Display error alert
+            let alertController = UIAlertController(title: "Login", message: "Login failed", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+
     }
+
+
+    
     
 
     

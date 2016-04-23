@@ -17,7 +17,7 @@ class TutorTableViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        AppDelegate.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> () in
+        BackendUtilities.sharedInstance.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> () in
             self.students = fetchedStudents as! [Student]
             self.tableView.reloadData()
             }, failure: { (error: NSError!) -> Void in

@@ -7,19 +7,19 @@
 //
 
 import Foundation
-
+import LoopBack
 
 class BackendUtilities  {
     let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate!)
     let DEFAULTS_CURRENT_USER_ID_KEY: String = "LBUserRepositoryCurrentUserId"
     var adapter: LBRESTAdapter
-    var Repo: StudentsRepo
+    var studentsRepo: StudentsRepo
     
     static let sharedInstance = BackendUtilities()
     
     init() {
         adapter = appDelegate.adapter as LBRESTAdapter!
-        clientRepo = adapter.repositoryWithClass(StudentsRepo) as! ClientRepository
+        studentsRepo = adapter.repositoryWithClass(StudentsRepo) as! StudentsRepo
     }
     
 }
