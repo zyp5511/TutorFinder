@@ -43,6 +43,7 @@ class ProfileTableViewController: UITableViewController {
         email3.text = student.email
         education5 = student.degree
         description9 = student.description1
+        availability8 = student.avaliability
         let rating = student.rating
         
         
