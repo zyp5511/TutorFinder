@@ -310,7 +310,7 @@
                         <outlet property="reenter" destination="4xw-Yu-Drz" id="M1n-vW-vG2"/>
                         <outlet property="sex" destination="hjo-Oy-uKX" id="NYd-aW-3Mz"/>
                         <outlet property="username" destination="Th5-7b-56e" id="Lao-mG-qJq"/>
-                        <segue destination="AUA-r3-iP2" kind="show" id="Aii-Ql-keF"/>
+                        <segue destination="AUA-r3-iP2" kind="show" identifier="signupSuccess" id="Aii-Ql-keF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhK-nn-5F9" userLabel="First Responder" sceneMemberID="firstResponder"/>
