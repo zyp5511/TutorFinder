@@ -12,13 +12,14 @@ import LoopBack
 
 class Student : LBUser {
 
-    //var degree: String!
-    //var description1: String!
-   // var location: NSObject!  //not sure
+    var degree: String!
+    var description1: String!
+    //var location: NSObject!  //not sure dictionary?
+    
     //   "lat": 0,
     //   "lng": 0
     var gender: String!
-   // var tutor: NSNumber!  //bool
+   //var tutor: NSNumber!  //bool
  //   var rating: NSNumber! //int
     var name: String!
    // var realm: String!
@@ -31,6 +32,15 @@ class Student : LBUser {
   //  var created: String!
    // var lastUpdated: String!
     //var id : NSNumber!  //int
-    
+    "realm": "string",
+    "username": "string",
+    "credentials": {},
+    "challenges": {},
+    "email": "string",
+    "emailVerified": true,
+    "status": "string",
+    "created": "2016-04-23",
+    "lastUpdated": "2016-04-23",
+    "id": 0
 }
  

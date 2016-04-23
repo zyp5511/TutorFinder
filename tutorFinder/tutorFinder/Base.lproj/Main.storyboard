@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -149,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2286" y="243"/>
+            <point key="canvasLocation" x="2176" y="-152"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="0JI-GX-QU7">
@@ -209,7 +208,6 @@
                                 <state key="normal" title="SignUp"/>
                                 <connections>
                                     <action selector="signupButton:" destination="vKZ-le-1IP" eventType="touchUpInside" id="8bG-oC-vhd"/>
-                                    <segue destination="AUA-r3-iP2" kind="show" id="ZSt-NW-eqx"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DD-8O-UED">
@@ -312,17 +310,18 @@
                         <outlet property="reenter" destination="4xw-Yu-Drz" id="M1n-vW-vG2"/>
                         <outlet property="sex" destination="hjo-Oy-uKX" id="NYd-aW-3Mz"/>
                         <outlet property="username" destination="Th5-7b-56e" id="Lao-mG-qJq"/>
+                        <segue destination="AUA-r3-iP2" kind="show" id="Aii-Ql-keF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhK-nn-5F9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2644" y="-689"/>
+            <point key="canvasLocation" x="2653" y="-718"/>
         </scene>
         <!--Tutor-->
         <scene sceneID="WZF-O0-w3D">
             <objects>
                 <tableViewController id="ufF-gs-RZn" customClass="TutorTableViewController" customModule="tutorFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="EvW-r6-IoD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="127" sectionHeaderHeight="28" sectionFooterHeight="28" id="EvW-r6-IoD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,22 +331,27 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tutor" rowHeight="173" id="GJI-GH-RbH" customClass="TutorTableViewCell" customModule="tutorFinder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="136" width="414" height="173"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tutor" rowHeight="127" id="GJI-GH-RbH" customClass="TutorTableViewCell" customModule="tutorFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="414" height="127"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GJI-GH-RbH" id="mEH-30-rOM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yKt-2F-4Tr">
-                                            <rect key="frame" x="25" y="24" width="124" height="124"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="124" id="7Ti-JH-pal"/>
-                                                <constraint firstAttribute="height" constant="124" id="rkW-4n-pxd"/>
-                                            </constraints>
-                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GWy-1B-9p6">
+                                            <rect key="frame" x="25" y="24" width="90" height="90"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKt-2F-4Tr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="7Ti-JH-pal"/>
+                                                        <constraint firstAttribute="height" constant="90" id="rkW-4n-pxd"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRZ-oC-fid">
-                                            <rect key="frame" x="174" y="32" width="126" height="38"/>
+                                            <rect key="frame" x="144" y="24" width="126" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -380,19 +384,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-56-Qy2">
-                                            <rect key="frame" x="174" y="107" width="117" height="33"/>
+                                            <rect key="frame" x="144" y="75" width="117" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYM-sq-bUs">
-                                            <rect key="frame" x="341" y="37" width="46" height="33"/>
+                                            <rect key="frame" x="321" y="26" width="46" height="33"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="yKt-2F-4Tr" firstAttribute="centerY" secondItem="mEH-30-rOM" secondAttribute="centerY" id="Vln-AQ-n4M"/>
-                                        <constraint firstItem="yKt-2F-4Tr" firstAttribute="leading" secondItem="mEH-30-rOM" secondAttribute="leadingMargin" constant="17" id="czt-nH-9mi"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="availability" destination="0Cs-56-Qy2" id="GOY-NV-qIW"/>
@@ -1133,7 +1133,7 @@
         <image name="twitter_letter-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xhS-52-aq6"/>
-        <segue reference="SEm-nG-SXC"/>
+        <segue reference="Aii-Ql-keF"/>
+        <segue reference="2D1-8u-lAk"/>
     </inferredMetricsTieBreakers>
 </document>

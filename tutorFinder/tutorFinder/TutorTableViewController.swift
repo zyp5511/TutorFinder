@@ -50,7 +50,7 @@ class TutorTableViewController: UITableViewController {
         let object = students[indexPath.row] as Student
         cell.name.text = object.name as String
     
-        cell.availability.text = object.gender  as String
+        cell.availability.text = object.email  as String
         return cell
         
     }
