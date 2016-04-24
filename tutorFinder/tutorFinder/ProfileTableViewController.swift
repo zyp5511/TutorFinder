@@ -31,6 +31,7 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
         name2.text = student.name
         if (student.gender == "male")
         {
@@ -123,7 +124,7 @@ class ProfileTableViewController: UITableViewController {
                 cell.rating5.image = UIImage(named:"fullstar.png")
             }
         }
-        
+        */
         
         
         // Uncomment the following line to preserve selection between presentations
