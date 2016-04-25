@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        password.secureTextEntry = true
         // Do any additional setup after loading the view.
     }
     
@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
    
 
     @IBOutlet weak var password: UITextField!
+    
     
     @IBAction func check(sender: AnyObject) {
         
@@ -47,6 +48,10 @@ class LoginViewController: UIViewController {
 
 
     
+    @IBAction func signuppressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("toSignUp", sender: self)
+    }
+
     
 
     
