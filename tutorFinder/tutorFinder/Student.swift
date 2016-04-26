@@ -21,7 +21,7 @@ class Student : LBUser {
     var tutor: NSNumber!  //bool
     var rating: NSNumber! // Num
     var name: String!
-    var avail : String!
+    var availability : String!
     var username : String!
     //  var realm: String!
     //  var status : String!

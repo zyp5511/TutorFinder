@@ -84,13 +84,15 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
             
             let user:Student = BackendUtilities.sharedInstance.studentsRepo.createUserWithEmail(email as String, password: password as String) as! Student
             user.setValuesForKeysWithDictionary(["gender" : sex as String ])
-            user.setValuesForKeysWithDictionary(["id" : "1" ])
+          //  user.setValuesForKeysWithDictionary(["id" : "1" ])
             user.setValuesForKeysWithDictionary(["rating" : 3 ])
             user.setValuesForKeysWithDictionary(["tutor" : true])
             user.setValuesForKeysWithDictionary(["username" : username as String])
-            user.setValuesForKeysWithDictionary(["description" : "unknown"])
-            user.setValuesForKeysWithDictionary(["realm" : "unknown"])
+            user.setValuesForKeysWithDictionary(["descriptions" : "Unknown"])
+            user.setValuesForKeysWithDictionary(["realm" : "Unknown"])
             user.setValuesForKeysWithDictionary(["status" : "Offline"])
+            user.setValuesForKeysWithDictionary(["availability" : "Unknown"])
+
             
            // user.setValuesForKeysWithDictionary(["location": here])
         

@@ -90,15 +90,15 @@ class TutorTableViewController: UITableViewController {
         }
         
         
-        print(object.degree)
+      //  print(object.degree)
       //  print(object.avaliability)
-        print(object.rating)
+        //print(object.rating)
        // print(object.status)
         cell.name.text = object.username as String
     
        // let time = object.avaliability
        // if time.isEmpty{
-           cell.availability.text = "Empty"
+        cell.availability.text = object.availability as String
        // }
        // else{
         //    cell.availability.text = time
