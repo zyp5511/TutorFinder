@@ -31,23 +31,23 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
     
     var gender = "Male";
     
-    /*    //var startLocation: CLLocation!
-    let here = CLLocation(latitude: 43.0731 ,longitude: -89.4012)
-
-    
-    var lastLocation = CLLocation()
-    var locationAuthorizationStatus:CLAuthorizationStatus!
-    var window: UIWindow?
+    var here:CLLocation!
+//    var startLocation: CLLocation!
+//
+//    
+//    var lastLocation = CLLocation()
+//    var locationAuthorizationStatus:CLAuthorizationStatus!
     var locationManager: CLLocationManager!
-    var seenError : Bool = false
-    var locationFixAchieved : Bool = false
-    var locationStatus : NSString = "Not Started"
-*/
+//    var locationStatus : NSString = "Not Started"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sexPicker.dataSource = self;
         sexPicker.delegate = self;
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        here = CLLocation(latitude: 43.0731 ,longitude: -89.4012)
         //self.initLocationManager()
     }
     
@@ -95,15 +95,16 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
             user.setValuesForKeysWithDictionary(["rating" : 3 ])
             user.setValuesForKeysWithDictionary(["tutor" : true])
             user.setValuesForKeysWithDictionary(["username" : username as String])
-            user.setValuesForKeysWithDictionary(["descriptions" : "Unknown"])
-            user.setValuesForKeysWithDictionary(["realm" : "Unknown"])
+//            user.setValuesForKeysWithDictionary(["descriptions" : "Unknown"])
+//            user.setValuesForKeysWithDictionary(["realm" : "Unknown"])
             user.setValuesForKeysWithDictionary(["status" : "Offline"])
             user.setValuesForKeysWithDictionary(["availability" : "Unknown"])
-            user.setValuesForKeysWithDictionary(["securityQuestion" : securityQuestion as String])
-            user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswers as String])
-            user.setValuesForKeysWithDictionary(["university" : "University of Tutor"])
+//            user.setValuesForKeysWithDictionary(["securityQuestion" : securityQuestion as String])
+//            user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswer as String])
+//            user.setValuesForKeysWithDictionary(["university" : "University of Tutor"])
             user.setValuesForKeysWithDictionary(["major" : "Unknown"])
-            
+            user.setValuesForKeysWithDictionary(["location" : here])
+
            // user.setValuesForKeysWithDictionary(["location": here])
         
             
