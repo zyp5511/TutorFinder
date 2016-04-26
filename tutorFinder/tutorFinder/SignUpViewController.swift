@@ -23,6 +23,10 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
     
     @IBOutlet weak var txtreenter: UITextField!
     
+    @IBOutlet weak var txtQuestion: UITextField!
+    
+    @IBOutlet weak var txtAnswer: UITextField!
+    
     @IBOutlet weak var sexPicker: UIPickerView!
     
     var gender = "Male";
@@ -63,6 +67,8 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
         let reenter:NSString = txtreenter.text!
         let sex :NSString = gender
         let email: NSString = txtemail.text!
+        let securityQuestion: NSString = txtQuestion.text!
+        let securityAnswer : NSString = txtAnswer.text!
         
         
         if ( username.isEqualToString("") || password.isEqualToString("") || email.isEqualToString("")) {
@@ -92,7 +98,10 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
             user.setValuesForKeysWithDictionary(["realm" : "Unknown"])
             user.setValuesForKeysWithDictionary(["status" : "Offline"])
             user.setValuesForKeysWithDictionary(["availability" : "Unknown"])
-
+            user.setValuesForKeysWithDictionary(["securityQuestion" : securityQuestion as String])
+            user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswer as String])
+            user.setValuesForKeysWithDictionary(["university" : "University of Tutor"])
+            user.setValuesForKeysWithDictionary(["major" : "Unknown"])
             
            // user.setValuesForKeysWithDictionary(["location": here])
         
