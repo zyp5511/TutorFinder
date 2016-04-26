@@ -48,6 +48,7 @@ class TutorTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("tutor", forIndexPath: indexPath) as! TutorTableViewCell
         
         let object = students[indexPath.row] as Student!
+        NSLog(String(object))
         
         let rate = object.rating
         let rating = Int(rate)
@@ -92,8 +93,8 @@ class TutorTableViewController: UITableViewController {
         print(object.degree)
       //  print(object.avaliability)
         print(object.rating)
-        print(object.status)
-        cell.name.text = object.name as String
+       // print(object.status)
+        cell.name.text = object.username as String
     
        // let time = object.avaliability
        // if time.isEmpty{
