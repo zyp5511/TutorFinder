@@ -263,14 +263,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arj-wO-aXj">
-                                <rect key="frame" x="106" y="563" width="202" height="38"/>
+                                <rect key="frame" x="106" y="648" width="202" height="38"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelBtn:" destination="vKZ-le-1IP" eventType="touchUpInside" id="jHx-n2-khV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgq-Ny-AI5">
-                                <rect key="frame" x="106" y="500" width="202" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgq-Ny-AI5">
+                                <rect key="frame" x="106" y="582" width="202" height="38"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="1Rq-fy-Pcb"/>
