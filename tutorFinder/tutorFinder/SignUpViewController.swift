@@ -67,11 +67,12 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
         let reenter:NSString = txtreenter.text!
         let sex :NSString = gender
         let email: NSString = txtemail.text!
-        let securityQuestion: NSString = txtQuestion.text!
-        let securityAnswer : NSString = txtAnswer.text!
+        let securityQuestion : NSString = txtQuestion.text!
+        let securityAnswers : NSString = txtAnswer.text!
         
         
-        if ( username.isEqualToString("") || password.isEqualToString("") || email.isEqualToString("")) {
+        if ( username.isEqualToString("") || password.isEqualToString("") ||
+            email.isEqualToString("")) {
             
             // Display error alert
             let alertController = UIAlertController(title: "Sign in Failed", message: "Please enter Username Password and email", preferredStyle: UIAlertControllerStyle.Alert)
@@ -99,7 +100,7 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
             user.setValuesForKeysWithDictionary(["status" : "Offline"])
             user.setValuesForKeysWithDictionary(["availability" : "Unknown"])
             user.setValuesForKeysWithDictionary(["securityQuestion" : securityQuestion as String])
-            user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswer as String])
+            user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswers as String])
             user.setValuesForKeysWithDictionary(["university" : "University of Tutor"])
             user.setValuesForKeysWithDictionary(["major" : "Unknown"])
             

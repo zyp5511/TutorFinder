@@ -14,15 +14,17 @@ class Student : LBUser {
 
     var degree: String!
     var descriptions: String!
-    //var location: NSObject!  //not sure dictionary?
-        //   "lat": 0,
-    //   "lng": 0
+    var location: CLLocation!  //not sure dictionary?
     var gender: String!
     var tutor: NSNumber!  //bool
     var rating: NSNumber! // Num
     var name: String!
     var availability : String!
     var username : String!
+    var university : String!
+    var securityQuestion : String!
+    var securityAnswer : String!
+    var major: String!
     //  var realm: String!
     //  var status : String!
     //credential, chanllege, emailVerified,email, created, lastUpdated, id
