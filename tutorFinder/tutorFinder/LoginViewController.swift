@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
             //    "Successfully logged in", preferredStyle: UIAlertControllerStyle.Alert)
             //alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             //self.presentViewController(alertController, animated: true, completion: nil)
-            self.performSegueWithIdentifier("loginSuccess", sender: nil)
+            self.performSegueWithIdentifier("loginSuccess", sender: self)
             
         }) { (error: NSError!) -> Void in
             NSLog("Error logging in.")

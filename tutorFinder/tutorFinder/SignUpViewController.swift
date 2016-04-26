@@ -8,9 +8,10 @@
 
 import UIKit
 import LoopBack
+import CoreLocation
 
 
-class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerViewDelegate {
+class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate {
 
     let pickerData = ["Male","Female","Rather Not Tell"]
     
@@ -25,17 +26,35 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
     @IBOutlet weak var sexPicker: UIPickerView!
     
     var gender = "Male";
+    
+    /*    //var startLocation: CLLocation!
+    let here = CLLocation(latitude: 43.0731 ,longitude: -89.4012)
 
+    
+    var lastLocation = CLLocation()
+    var locationAuthorizationStatus:CLAuthorizationStatus!
+    var window: UIWindow?
+    var locationManager: CLLocationManager!
+    var seenError : Bool = false
+    var locationFixAchieved : Bool = false
+    var locationStatus : NSString = "Not Started"
+*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sexPicker.dataSource = self;
         sexPicker.delegate = self;
-        
+        //self.initLocationManager()
     }
     
     
-
+    
+    @IBAction func cancelBtn(sender: AnyObject) {
+    
+        self.performSegueWithIdentifier("signupSuccess", sender: self)
+    
+    }
+    
     
     @IBAction func signupButton(sender: AnyObject) {
        
@@ -65,10 +84,10 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource,UIPickerVie
             
             let user:Student = BackendUtilities.sharedInstance.studentsRepo.createUserWithEmail(email as String, password: password as String) as! Student
             user.setValuesForKeysWithDictionary(["gender" : sex as String ])
-            user.setValuesForKeysWithDictionary(["id" : "1" ])
-            user.setValuesForKeysWithDictionary(["rating" : "3" ])
+           // user.setValuesForKeysWithDictionary(["id" : "1" ])
+           user.setValuesForKeysWithDictionary(["rating" : 3 ])
             user.setValuesForKeysWithDictionary(["tutor" : true])
-          //  user.setValuesForKeysWithDictionary([:])
+           // user.setValuesForKeysWithDictionary(["location": here])
         
             
             NSLog(String(user._id))

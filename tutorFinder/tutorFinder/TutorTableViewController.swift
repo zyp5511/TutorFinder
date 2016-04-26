@@ -47,7 +47,7 @@ class TutorTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("tutor", forIndexPath: indexPath) as! TutorTableViewCell
         
-        let object = students[indexPath.row] as Student
+        let object = students[indexPath.row] as Student!
         
         let rate = object.rating
         let rating = Int(rate)
