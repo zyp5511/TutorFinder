@@ -27,17 +27,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         passwordTextField.secureTextEntry = true
+        passwordTextField.secureTextEntry = true
         let hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
-        
+        loginButton.setTitle("Login", forState: UIControlState.Normal)
         // 2.
         if hasLogin {
-            loginButton.setTitle("Login", forState: UIControlState.Normal)
             loginButton.tag = loginButtonTag
            // createInfoLabel.hidden = true
         } else {
-            loginButton.setTitle("Create", forState: UIControlState.Normal)
+            //loginButton.setTitle("Create", forState: UIControlState.Normal)
             loginButton.tag = createLoginButtonTag
            // createInfoLabel.hidden = false
         }
@@ -47,7 +45,7 @@ class LoginViewController: UIViewController {
             usernameTextField.text = storedUsername as String
         }
         
-        passwordTextField.secureTextEntry = true
+      
         // Do any additional setup after loading the view.
     }
     
@@ -73,6 +71,7 @@ class LoginViewController: UIViewController {
         if sender.tag == createLoginButtonTag {
             
             // 4.
+            /*
             let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
             if hasLoginKey == false {
                 NSUserDefaults.standardUserDefaults().setValue(self.usernameTextField.text, forKey: "username")
@@ -86,26 +85,27 @@ class LoginViewController: UIViewController {
             loginButton.tag = loginButtonTag
             
             performSegueWithIdentifier("dismissLogin", sender: self)
+            */
         } else if sender.tag == loginButtonTag {
             // 6.
-            if checkLogin(usernameTextField.text!, password: passwordTextField.text!) {
-                performSegueWithIdentifier("loginSuccess", sender: self)
+            if checkLogin() {
+                //performSegueWithIdentifier("dismissLogin", sender: self)
             } else {
                 // 7.
-                let alertView = UIAlertController(title: "Login Problem",
-                                                  message: "Wrong username or password." as String, preferredStyle:.Alert)
-                let okAction = UIAlertAction(title: "Foiled Again!", style: .Default, handler: nil)
-                alertView.addAction(okAction)
-                self.presentViewController(alertView, animated: true, completion: nil)
+                //let alertView = UIAlertController(title: "Login Problem",
+                 //                                 message: "Wrong username or password." as String, preferredStyle:.Alert)
+               // let okAction = UIAlertAction(title: "Foiled Again!", style: .Default, handler: nil)
+                //alertView.addAction(okAction)
+                //self.presentViewController(alertView, animated: true, completion: nil)
             }
         }
     }
 
     
     
-  func checkLogin(username: String, password: String ) -> Bool {
+  func checkLogin( ) -> Bool {
     var success = false ;
-        BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail(username, password: password, success: { (LBUser ) -> Void in
+        BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail(usernameTextField.text, password: passwordTextField.text, success: { (LBUser ) -> Void in
             NSLog("Successfully logged in.");
             
             // Display login confirmation
@@ -113,9 +113,27 @@ class LoginViewController: UIViewController {
             //    "Successfully logged in", preferredStyle: UIAlertControllerStyle.Alert)
             //alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             //self.presentViewController(alertController, animated: true, completion: nil)
-            //self.performSegueWithIdentifier("loginSuccess", sender: self)
-            success = true;
+           // self.performSegueWithIdentifier("dismissLogin", sender: self)
             
+            
+// 4.
+
+ let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+ if hasLoginKey == false {
+ NSUserDefaults.standardUserDefaults().setValue(self.usernameTextField.text, forKey: "username")
+ }
+ 
+ // 5.
+ self.MyKeychainWrapper.mySetObject(self.passwordTextField.text, forKey:kSecValueData)
+ self.MyKeychainWrapper.writeToKeychain()
+ NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLoginKey")
+ NSUserDefaults.standardUserDefaults().synchronize()
+ self.loginButton.tag = self.loginButtonTag
+ 
+ 
+            self.performSegueWithIdentifier("dismissLogin", sender: self)
+            success = true;
+ 
         }) { (error: NSError!) -> Void in
             NSLog("Error logging in.")
             

@@ -26,18 +26,13 @@ class TutorTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        BackendUtilities.sharedInstance.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> () in
-            self.students = fetchedStudents as! [Student]
-            self.tableView.reloadData()
-            }, failure: { (error: NSError!) -> Void in
-                NSLog(error.description)
-        })
+        view.alpha = 0
+        if (isAuthenticated == true){
+        }
     }
     
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        
         isAuthenticated = true
         view.alpha = 1.0
     }
@@ -56,9 +51,7 @@ class TutorTableViewController: UITableViewController {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
-        super.viewDidAppear(false)
+    override func viewWillAppear(animated: Bool) {
         self.showLoginView()
     }
     
@@ -67,6 +60,14 @@ class TutorTableViewController: UITableViewController {
         
         if !isAuthenticated {
             self.performSegueWithIdentifier("loginView", sender: self)
+        }
+        else {
+            BackendUtilities.sharedInstance.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> () in
+                self.students = fetchedStudents as! [Student]
+                self.tableView.reloadData()
+                }, failure: { (error: NSError!) -> Void in
+                    NSLog(error.description)
+            })
         }
     }
 
