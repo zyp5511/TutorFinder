@@ -55,21 +55,21 @@ class FilterDetailTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FilterDetail")!
-        cell.textLabel?.text = details[rowNum][indexPath.row]
+        cell.textLabel?.text = details[category][indexPath.row]
 
         return cell
     }
     
-   /*
+   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "filterback"){
             let selectedrow = self.tableView.indexPathForSelectedRow?.row
             
             if let dest = segue.destinationViewController as? FilterTableViewController {
-              //   dest.value[category] = selectedrow!
+                 dest.value[category] = selectedrow!
             }
         }
-    }*/
+    }
     
 
     /*

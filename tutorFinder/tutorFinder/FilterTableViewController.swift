@@ -17,7 +17,7 @@ class FilterTableViewController: UITableViewController{
                 ["Ph.D", "Master", "Bachelor"],
                 ["CS","Electrical Engineer"]]
 
-    let value = [0,0,0,0]    //distance, gender, degree, major
+    var value = [0,0,0,0]    //distance, gender, degree, major
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
