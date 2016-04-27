@@ -8,10 +8,20 @@
 
 import UIKit
 import LoopBack
+import LocalAuthentication
 
 class TutorTableViewController: UITableViewController {
     
     var students = [Student]()
+    
+    var isAuthenticated = false
+    var context = LAContext()
+    //var managedObjectContext: NSManagedObjectContext? = nil
+    //var _fetchedResultsController: NSFetchedResultsController? = nil
+    
+    var didReturnFromBackground = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +34,44 @@ class TutorTableViewController: UITableViewController {
                 NSLog(error.description)
         })
     }
+    
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        
+        isAuthenticated = true
+        view.alpha = 1.0
+    }
+    
+    func appWillResignActive(notification : NSNotification) {
+        
+        view.alpha = 0
+        isAuthenticated = false
+        didReturnFromBackground = true
+    }
+    
+    func appDidBecomeActive(notification : NSNotification) {
+        
+        if didReturnFromBackground {
+            self.showLoginView()
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        super.viewDidAppear(false)
+        self.showLoginView()
+    }
+    
+    
+    func showLoginView() {
+        
+        if !isAuthenticated {
+            self.performSegueWithIdentifier("loginView", sender: self)
+        }
+    }
+
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,6 +89,9 @@ class TutorTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return students.count
     }
+    
+    
+    
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
