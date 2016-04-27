@@ -35,6 +35,9 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
 
     var locationManager: CLLocationManager!
 
+    var currentLocation : CLLocation!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +54,10 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
        // locationManager.delegate = self
        // locationManager.requestWhenInUseAuthorization()
         //locationManager.startUpdatingLocation()
+        
+       self.locationManager.startUpdatingLocation()
+        currentLocation =  self.locationManager.location
+        print(currentLocation.coordinate)
     }
     
     
@@ -105,7 +112,7 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
             user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswers as String])
             user.setValuesForKeysWithDictionary(["university" : "University of Tutor"])
             user.setValuesForKeysWithDictionary(["major" : "Unknown"])
-            user.setValuesForKeysWithDictionary(["location" : here])
+            user.setValuesForKeysWithDictionary(["location" : currentLocation])
 
            // user.setValuesForKeysWithDictionary(["location": here])
         
