@@ -378,6 +378,9 @@
                             <rect key="frame" x="0.0" y="600" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Save"/>
+                            <connections>
+                                <action selector="Update:" destination="Hmg-WP-yEl" eventType="touchUpInside" id="WbE-Kq-H89"/>
+                            </connections>
                         </button>
                         <sections>
                             <tableViewSection id="TO3-pp-ZZV">
@@ -477,17 +480,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3d-go-5XL">
-                                                    <rect key="frame" x="292" y="12" width="97" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCU-6F-vco">
                                                     <rect key="frame" x="16" y="15" width="77" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3d-go-5XL">
+                                                    <rect key="frame" x="292" y="12" width="97" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -557,7 +560,7 @@
                         <outlet property="name2" destination="Ps6-ey-1Ag" id="t1r-TD-nDz"/>
                         <outlet property="rate1" destination="GOZ-5B-Lxb" id="4hY-Gm-K44"/>
                         <outlet property="school4" destination="She-Yt-nlb" id="ifq-Ar-SCR"/>
-                        <outlet property="subject6" destination="uJH-fv-aRQ" id="Y8N-dd-Bkd"/>
+                        <outlet property="subject6" destination="5wd-5X-FTX" id="I4D-8Z-rs3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLf-RK-5Pu" userLabel="First Responder" sceneMemberID="firstResponder"/>

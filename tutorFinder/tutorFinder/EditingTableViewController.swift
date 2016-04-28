@@ -9,23 +9,28 @@
 import UIKit
 
 class EditingTableViewController: UITableViewController {
+    
+    var currentUser: Student = Student()
 
     @IBOutlet weak var gender1: UIImageView!
     @IBOutlet weak var name1: UILabel!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var rate1: UIImageView!
     
+    
     @IBOutlet weak var name2: UITextField!
     @IBOutlet weak var email3: UITextField!
     @IBOutlet weak var school4: UITextField!
     @IBOutlet weak var education: UITextField!
-    @IBOutlet weak var subject6: UIView!
+    @IBOutlet weak var subject6: UITextField!
     @IBOutlet weak var description7: UITextView!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        name1.text = "Jiwei"
+        
+        getCurrentUser();
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -50,7 +55,59 @@ class EditingTableViewController: UITableViewController {
         return 7
         
     }
+    
+    func getCurrentUser() {
+        BackendUtilities.sharedInstance.studentsRepo.findCurrentUserWithSuccess({ (curr) -> Void in
+            NSLog("Found user")
+            if let _ = curr    {
+                self.currentUser = curr as! Student
+                self.loadUserInformation()
+            }
+            else    {
+            }
+        }) { (error: NSError!) -> Void in
+            NSLog("Error fetching current user")
+        }
+    }
 
+    
+    func loadUserInformation(){
+        
+        if (currentUser.gender == "Male")
+        {
+            gender1.image = UIImage(named:"male.jpeg")
+        }
+        else
+        {
+            gender1.image = UIImage(named:"female.png")
+        }
+        
+        name1.text = currentUser.name    // cannot be changed
+        rate1.image = UIImage(named:"emptystart.png")   //cannot be changed
+        name2.text = currentUser.name
+        email3.text = currentUser.email
+        school4.text = currentUser.university
+        education.text = currentUser.degree
+        subject6.text = currentUser.major
+        description7.text = currentUser.descriptions
+    }
+    
+    
+    @IBAction func Update(sender: UIButton) {
+        self.currentUser.name = name2.text
+        self.currentUser.email = email3.text
+        self.currentUser.degree = education.text
+        self.currentUser.university = school4.text
+        self.currentUser.descriptions = description7.text
+        self.currentUser.major = subject6.text
+        self.currentUser.saveWithSuccess({ () -> Void in
+            NSLog("sucessfully saved")
+            self.loadUserInformation()
+            }, failure: { (error: NSError!) -> Void in
+                NSLog("error saving")
+        })
+    }
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
