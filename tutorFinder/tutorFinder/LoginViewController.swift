@@ -53,21 +53,6 @@ class LoginViewController: UIViewController {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // MARK: - Action for checking username/password
     @IBAction func loginAction(sender: AnyObject) {
         
@@ -84,36 +69,14 @@ class LoginViewController: UIViewController {
         // 2.
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
-        
-        // 3.
-        if sender.tag == createLoginButtonTag {
-            
-            // 4.
-            /*
-            let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
-            if hasLoginKey == false {
-                NSUserDefaults.standardUserDefaults().setValue(self.usernameTextField.text, forKey: "username")
-            }
-            
-            // 5.
-            MyKeychainWrapper.mySetObject(passwordTextField.text, forKey:kSecValueData)
-            MyKeychainWrapper.writeToKeychain()
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLoginKey")
-            NSUserDefaults.standardUserDefaults().synchronize()
-            loginButton.tag = loginButtonTag
-            
-            performSegueWithIdentifier("dismissLogin", sender: self)
-            */
-        } else if sender.tag == loginButtonTag {
-            // 6.
+    
             if checkLogin() {
                 //performSegueWithIdentifier("dismissLogin", sender: self)
             } else {
-            }
-        }
+            
     }
 
-    
+    }
     
   func checkLogin( ) -> Bool {
     var success = false ;

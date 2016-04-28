@@ -57,7 +57,7 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
         
        self.locationManager.startUpdatingLocation()
         currentLocation =  self.locationManager.location
-        print(currentLocation.coordinate)
+       // print(currentLocation.coordinate)
     }
     
     
@@ -112,9 +112,9 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
             user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswers as String])
             user.setValuesForKeysWithDictionary(["university" : "University of Tutor"])
             user.setValuesForKeysWithDictionary(["major" : "Unknown"])
-            user.setValuesForKeysWithDictionary(["location" : currentLocation])
+           // user.setValuesForKeysWithDictionary(["location" : currentLocation])
 
-           // user.setValuesForKeysWithDictionary(["location": here])
+            user.setValuesForKeysWithDictionary(["location": here])
         
             
             NSLog(String(user._id))

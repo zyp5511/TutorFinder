@@ -29,7 +29,11 @@ class FilterTableViewController: UITableViewController{
         // #warning Incomplete implementation, return the number of rows
         return 4
     }
-
+    
+    /*
+    override func viewDidLoad() {
+        self.tableView.reloadData()
+    }*/
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FilterCell", forIndexPath: indexPath) as! filterCell
@@ -46,6 +50,7 @@ class FilterTableViewController: UITableViewController{
         */
         
         //value 
+       // print("Postion back",value[2])
         cell.label1?.text = col1[indexPath.row];
         cell.label2?.text = col2[indexPath.row][value[indexPath.row]];
         return cell
@@ -58,53 +63,25 @@ class FilterTableViewController: UITableViewController{
             
             if let dest = segue.destinationViewController as? FilterDetailTableViewController{
                 dest.category = selectedrow!
+                dest.selectedValue = col2[selectedrow!][value[selectedrow!]]
+                print( "category:" , col2[selectedrow!][value[selectedrow!]], "\n")
             }
         }
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    @IBAction func unwindWithSelectedValue (segue:UIStoryboardSegue){
+        if let valuePicker = segue.sourceViewController as? FilterDetailTableViewController,
+            selectedValue = valuePicker.selectedValue {
+           // print("Change to", selectedValue)
+            //print("Cate changed to",valuePicker.category )
+           // print("Lcoation is ", col2[valuePicker.category].indexOf(selectedValue)!)
+            value[valuePicker.category] = col2[valuePicker.category].indexOf(selectedValue)! ;
+            self.tableView.reloadData()
+        }
+        
+    
+    
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
