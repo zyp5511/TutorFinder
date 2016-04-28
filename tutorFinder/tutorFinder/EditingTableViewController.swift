@@ -22,7 +22,7 @@ class EditingTableViewController: UITableViewController {
     @IBOutlet weak var email3: UITextField!
     @IBOutlet weak var school4: UITextField!
     @IBOutlet weak var education: UITextField!
-    @IBOutlet weak var subject6: UIView!
+    @IBOutlet weak var subject6: UITextField!
     @IBOutlet weak var description7: UITextView!
 
     
@@ -88,7 +88,7 @@ class EditingTableViewController: UITableViewController {
         email3.text = currentUser.email
         school4.text = currentUser.university
         education.text = currentUser.degree
-       // subject6.text =
+        subject6.text = currentUser.major
         description7.text = currentUser.descriptions
     }
     
@@ -99,7 +99,7 @@ class EditingTableViewController: UITableViewController {
         self.currentUser.degree = education.text
         self.currentUser.university = school4.text
         self.currentUser.descriptions = description7.text
-        
+        self.currentUser.major = subject6.text
         self.currentUser.saveWithSuccess({ () -> Void in
             NSLog("sucessfully saved")
             self.loadUserInformation()
