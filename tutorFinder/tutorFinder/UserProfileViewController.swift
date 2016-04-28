@@ -9,5 +9,6 @@
 import UIKit
 
 class UserProfileViewController: UIViewController {
+    var id = Int()
 
 }

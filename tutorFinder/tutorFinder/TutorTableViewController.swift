@@ -175,6 +175,15 @@ class TutorTableViewController: UITableViewController {
         
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        //let storyboard = UIStoryboard(name: "storyboard", bundle: nil);
+        //let days = storyboard.instantiateViewControllerWithIdentifier("DaysTableViewController") as! UITableViewController
+        //let destinationVC:DaysTableViewController = DaysTableViewController()
+        let userProfile = indexPath.row
+        self.performSegueWithIdentifier("tutorToUserProfile", sender: nil)
+    }
+
+    
           /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -210,14 +219,13 @@ class TutorTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if (segue.identifier == "tutorToUserProfile") {
+            let vc:UserProfileViewController = segue.destinationViewController as! UserProfileViewController
+            vc.id = 1        }
+        
+    }
     
 }
