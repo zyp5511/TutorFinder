@@ -6,7 +6,7 @@
 //  Copyright © 2016 ZhangYipeng. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class UserProfileViewController: UIViewController {
 

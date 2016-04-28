@@ -67,10 +67,14 @@ class ProfileTableViewController: UITableViewController {
         
         
         
-        , failure: <#T##SLFailureBlock!##SLFailureBlock!##(NSError!) -> Void#>)
+            , failure:{ (error: NSError!) -> Void in
+                NSLog("Error fetching current user")
+            }
+        )
     
     
     }
+ 
     
     func loadUserInformation(){
     
