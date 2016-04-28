@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,CLLocationManagerDelegate
     var locationStatus : NSString = "Not Started"
     
     
-    var adapter = LBRESTAdapter(URL: NSURL(string: "pure-spire-51842.herokuapp.com/api"))
+    var adapter = LBRESTAdapter(URL: NSURL(string: "http://pure-spire-51842.herokuapp.com/api"))
     //var studentsRepo = adapter.repositoryWithClass(StudentsRepo) as! StudentsRepo
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

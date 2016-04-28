@@ -17,6 +17,7 @@ class TutorTableViewController: UITableViewController {
     var isAuthenticated = false
     var context = LAContext()
     let DefaultUsername = NSUserDefaults.standardUserDefaults().stringForKey("username") as String!
+    var emailAdd = String()
     
     //var managedObjectContext: NSManagedObjectContext? = nil
     //var _fetchedResultsController: NSFetchedResultsController? = nil
@@ -179,7 +180,8 @@ class TutorTableViewController: UITableViewController {
         //let storyboard = UIStoryboard(name: "storyboard", bundle: nil);
         //let days = storyboard.instantiateViewControllerWithIdentifier("DaysTableViewController") as! UITableViewController
         //let destinationVC:DaysTableViewController = DaysTableViewController()
-        let userProfile = indexPath.row
+        let object = students[indexPath.row] as Student!
+        emailAdd = object.email as String
         self.performSegueWithIdentifier("tutorToUserProfile", sender: nil)
     }
 
@@ -223,8 +225,9 @@ class TutorTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if (segue.identifier == "tutorToUserProfile") {
-            let vc:UserProfileViewController = segue.destinationViewController as! UserProfileViewController
-            vc.id = 1        }
+            let vc:UserProfileTableViewController = segue.destinationViewController as! UserProfileTableViewController
+            vc.email = emailAdd
+                 }
         
     }
     
