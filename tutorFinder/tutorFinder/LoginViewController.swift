@@ -85,17 +85,15 @@ class LoginViewController: UIViewController {
   func checkLogin( ) -> Bool {
     var success = false ;
     
-    let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+    //let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
     
     BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail(usernameTextField.text, password: passwordTextField.text, success: { (LBUser ) -> Void in
             NSLog("Successfully logged in.");
         
-            if hasLoginKey == false {
                 NSUserDefaults.standardUserDefaults().setValue(self.usernameTextField.text, forKey: "username")
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLoginKey")
                 NSUserDefaults.standardUserDefaults().setValue(self.passwordTextField.text, forKey: "password")
                 NSUserDefaults.standardUserDefaults().synchronize()
-          }
             self.performSegueWithIdentifier("dismissLogin", sender: self)
             success = true;
  

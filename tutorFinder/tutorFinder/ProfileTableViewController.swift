@@ -34,6 +34,8 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var availability8: UITextView!
     @IBOutlet weak var description9: UITextView!
     
+    @IBOutlet weak var logoutButton: UIButton!
+    
     var currentUser: Student = Student()
     
     
@@ -53,6 +55,26 @@ class ProfileTableViewController: UITableViewController {
         }
         
     }
+    
+    
+    @IBAction func logoutButton(sender: AnyObject) {
+        BackendUtilities.sharedInstance.studentsRepo.logoutWithSuccess({
+            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "username")
+            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "password")
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "hasLoginKey")
+            self.performSegueWithIdentifier("toSignUp", sender: self)
+            }
+        
+        
+        
+            , failure:{ (error: NSError!) -> Void in
+                NSLog("Error fetching current user")
+            }
+        )
+    
+    
+    }
+ 
     
     func loadUserInformation(){
     
