@@ -15,25 +15,43 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var name1: UILabel!
     @IBOutlet weak var gender1: UIImageView!
-    @IBOutlet weak var rate1: UIImageView!
+    @IBOutlet weak var rating1: UIImageView!
+    @IBOutlet weak var rating2: UIImageView!
+    @IBOutlet weak var rating3: UIImageView!
+    @IBOutlet weak var rating4: UIImageView!
+    @IBOutlet weak var rating5: UIImageView!
+    
+    
     @IBOutlet weak var name2: UILabel!
     @IBOutlet weak var email3: UILabel!
     @IBOutlet weak var school4: UILabel!
     @IBOutlet weak var education5: UILabel!
     @IBOutlet weak var subject6: UILabel!
     
-    @IBOutlet weak var social7a: UIImageView!
-    @IBOutlet weak var social7b: UIImageView!
-    @IBOutlet weak var social7c: UIImageView!
+    @IBOutlet weak var social7a: UIImageView!   //fixed
+    @IBOutlet weak var social7b: UIImageView!   //fixed
+    @IBOutlet weak var social7c: UIImageView!   //fixed
     @IBOutlet weak var availability8: UITextView!
     @IBOutlet weak var description9: UITextView!
+    
+    var currentUser: Student = Student()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        name2.text = student.name
-        if (student.gender == "male")
+        BackendUtilities.sharedInstance.studentsRepo.findCurrentUserWithSuccess({ (client) -> Void in
+            NSLog("Found user")
+            if let _ = client    {
+                self.currentUser = client as! Student
+            }
+            else    {
+            }
+        }) { (error: NSError!) -> Void in
+            NSLog("Error fetching current user")
+        }
+        
+        if (currentUser.gender == "male")
         {
             gender1.image = UIImage(named:"male.jpeg")
         }
@@ -41,97 +59,88 @@ class ProfileTableViewController: UITableViewController {
         {
             gender1.image = UIImage(named:"female.png")
         }
-        email3.text = student.email
-        education5 = student.degree
-        description9 = student.description1
-        availability8 = student.avaliability
-        let rating = student.rating
         
         
-        if (rating == nil)
-        {
-            cell.rating1.image = UIImage(named: "emptystart.png")
-            cell.rating2.image = UIImage(named: "emptystart.png")
-            cell.rating3.image = UIImage(named: "emptystart.png")
-            cell.rating4.image = UIImage(named: "emptystart.png")
-            cell.rating5.image = UIImage(named: "emptystart.png")
-            
-        }
-        else
-        {
+        
+        name2.text = currentUser.name
+        email3.text = currentUser.email
+        school4.text = currentUser.university
+        education5.text = currentUser.degree
+        subject6.text = currentUser.major
+
+        availability8.text = currentUser.availability
+        description9.text = currentUser.descriptions
+        
+        
+        
+        let rating = Int(student.rating)
+        
+        
             if (rating == 0 )
             {
-                cell.rating1.image = UIImage(named: "emptystart.png")
+                rating1.image = UIImage(named: "emptystart.png")
             }
             else if (rating == 5)
             {
-                cell.rating1.image = UIImage(named:"halfstart.png")
+                rating1.image = UIImage(named:"halfstart.png")
             }
             else
             {
-                cell.rating1.image = UIImage(named:"fullstar.png")
+                rating1.image = UIImage(named:"fullstar.png")
             }
             
             if (rating <= 1 )
             {
-                cell.rating2.image = UIImage(named: "emptystart.png")
+                rating2.image = UIImage(named: "emptystart.png")
             }
             else if (rating == 5)
             {
-                cell.rating2.image = UIImage(named:"halfstart.png")
+                rating2.image = UIImage(named:"halfstart.png")
             }
             else
             {
-                cell.rating2.image = UIImage(named:"fullstar.png")
+                rating2.image = UIImage(named:"fullstar.png")
             }
             
             if (rating <= 2 )
             {
-                cell.rating3.image = UIImage(named: "emptystart.png")
+                rating3.image = UIImage(named: "emptystart.png")
             }
             else if (rating == 5)
             {
-                cell.rating3.image = UIImage(named:"halfstart.png")
+                rating3.image = UIImage(named:"halfstart.png")
             }
             else
             {
-                cell.rating3.image = UIImage(named:"fullstar.png")
+                rating3.image = UIImage(named:"fullstar.png")
             }
             
             if (rating <= 3 )
             {
-                cell.rating4.image = UIImage(named: "emptystart.png")
+                rating4.image = UIImage(named: "emptystart.png")
             }
             else if (rating == 5)
             {
-                cell.rating4.image = UIImage(named:"halfstart.png")
+                rating4.image = UIImage(named:"halfstart.png")
             }
             else
             {
-                cell.rating4.image = UIImage(named:"fullstar.png")
+                rating4.image = UIImage(named:"fullstar.png")
             }
             
             if (rating <= 4 )
             {
-                cell.rating5.image = UIImage(named: "emptystart.png")
+                rating5.image = UIImage(named: "emptystart.png")
             }
             else if (rating == 5)
             {
-                cell.rating5.image = UIImage(named:"halfstart.png")
+                rating5.image = UIImage(named:"halfstart.png")
             }
             else
             {
-                cell.rating5.image = UIImage(named:"fullstar.png")
+               rating5.image = UIImage(named:"fullstar.png")
             }
-        }
-        */
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {

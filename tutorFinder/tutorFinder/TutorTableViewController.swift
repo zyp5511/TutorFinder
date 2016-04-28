@@ -16,6 +16,8 @@ class TutorTableViewController: UITableViewController {
     
     var isAuthenticated = false
     var context = LAContext()
+    let DefaultUsername = NSUserDefaults.standardUserDefaults().stringForKey("username") as String!
+    
     //var managedObjectContext: NSManagedObjectContext? = nil
     //var _fetchedResultsController: NSFetchedResultsController? = nil
     
@@ -100,12 +102,35 @@ class TutorTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("tutor", forIndexPath: indexPath) as! TutorTableViewCell
         
         let object = students[indexPath.row] as Student!
-        NSLog(String(object))
+    
+      //  NSLog(String(object))
         
         let rate = object.rating
         let rating = Int(rate)
         
-      
+        //let userEmail = object.email as String
+        
+        /*
+        // store defaultUser as type Student
+        if ((userEmail == DefaultUsername) == 1 ){
+            
+            print("Success")
+           // NSUserDefaults.standardUserDefaults().setObject(object, forKey: "currentUser")
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let encodedData = NSKeyedArchiver.archivedDataWithRootObject(object)
+            userDefaults.setObject(encodedData, forKey: "currentUser")
+            userDefaults.synchronize()
+            
+            let decoded  = userDefaults.objectForKey("currentUser") as! NSData
+            let decodedTeams = NSKeyedUnarchiver.unarchiveObjectWithData(decoded) as! [Student]
+            print("Value get is ", decodedTeams.username)
+            
+                //.setValue(object, forKey: "currentUser")
+         }
+         print("Email is ", userEmail)
+         print("Username:", DefaultUsername)
+         */
+        
         if rating == 0 {
             cell.rating1.image = UIImage(named: "emptystart.png")
         }
@@ -142,25 +167,15 @@ class TutorTableViewController: UITableViewController {
         }
         
         
-      //  print(object.degree)
-      //  print(object.avaliability)
-        //print(object.rating)
-       // print(object.status)
+
         cell.name.text = object.username as String
-    
-       // let time = object.avaliability
-       // if time.isEmpty{
         cell.availability.text = object.availability as String
-       // }
-       // else{
-        //    cell.availability.text = time
-       // }
         
-        return cell
+            return cell
         
     }
     
-       /*
+          /*
      // Override to support conditional editing of the table view.
      override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.
