@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3657224B1CD1C3EC001C5B64 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3657224A1CD1C3EC001C5B64 /* UserProfileViewController.swift */; };
 		3669CB9C1CB341E200308F98 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CB9B1CB341E200308F98 /* SignUpViewController.swift */; };
 		3669CBA21CB3584E00308F98 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */; };
 		3669CBA41CB3597400308F98 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA31CB3597400308F98 /* InboxTableViewController.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3657224A1CD1C3EC001C5B64 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		3669CB9B1CB341E200308F98 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		3669CBA31CB3597400308F98 /* InboxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				C2737AD01CC46F8E00A579F5 /* Swift-Bridging-Header.h */,
 				C2E854311CCC0A2F0043893A /* BackendUtilities.swift */,
 				FBC45C791CD0A62D0013145C /* tutorFinder-Bridging-Header.h */,
+				3657224A1CD1C3EC001C5B64 /* UserProfileViewController.swift */,
 			);
 			path = tutorFinder;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				3669CBA21CB3584E00308F98 /* FilterTableViewController.swift in Sources */,
 				3669CBA61CB365C600308F98 /* EditingTableViewController.swift in Sources */,
 				3669CB9C1CB341E200308F98 /* SignUpViewController.swift in Sources */,
+				3657224B1CD1C3EC001C5B64 /* UserProfileViewController.swift in Sources */,
 				FBC45C7C1CD0A62E0013145C /* KeychainWrapper.m in Sources */,
 				C2E854321CCC0A2F0043893A /* BackendUtilities.swift in Sources */,
 				C2737ACF1CC4669D00A579F5 /* FilterDetailTableViewController.swift in Sources */,
