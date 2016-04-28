@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import tutorFinder
+//@testable import tutorFinder
 
 class tutorFinderTests: XCTestCase {
     

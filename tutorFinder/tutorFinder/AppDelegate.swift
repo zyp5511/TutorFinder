@@ -62,17 +62,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,CLLocationManagerDelegate
         
         locationManager.requestAlwaysAuthorization()
     }
-/*
+
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         locationManager.stopUpdatingLocation()
-        if ((error) != nil) {
+        if ((error) == true) {
             if (seenError == false) {
                 seenError = true
                 print(error)
             }
         }
     }
-  */
+  
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         self.locationManager.stopUpdatingLocation()
