@@ -112,7 +112,9 @@ class SignUpViewController: UIViewController ,UIPickerViewDataSource, UIPickerVi
             user.setValuesForKeysWithDictionary(["securityAnswer" : securityAnswers as String])
             user.setValuesForKeysWithDictionary(["university" : "University of Tutor"])
             user.setValuesForKeysWithDictionary(["major" : "Unknown"])
+            user.setValuesForKeysWithDictionary(["name" : "Anonym"])
            
+            //user.setValue("name", forKey: "Anonym")
 
 
             user.setValuesForKeysWithDictionary(["location": here])

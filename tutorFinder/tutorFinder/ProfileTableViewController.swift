@@ -40,10 +40,11 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        BackendUtilities.sharedInstance.studentsRepo.findCurrentUserWithSuccess({ (client) -> Void in
+        BackendUtilities.sharedInstance.studentsRepo.findCurrentUserWithSuccess({ (user) -> Void in
             NSLog("Found user")
-            if let _ = client    {
-                self.currentUser = client as! Student
+            if let _ = user    {
+                self.currentUser = user as! Student
+                 self.loadUserInformation()
             }
             else    {
             }
@@ -51,7 +52,11 @@ class ProfileTableViewController: UITableViewController {
             NSLog("Error fetching current user")
         }
         
-        if (currentUser.gender == "male")
+    }
+    
+    func loadUserInformation(){
+    
+        if (currentUser.gender == "Male")
         {
             gender1.image = UIImage(named:"male.jpeg")
         }
@@ -61,86 +66,87 @@ class ProfileTableViewController: UITableViewController {
         }
         
         
-        
+        name1.text = currentUser.name
         name2.text = currentUser.name
         email3.text = currentUser.email
         school4.text = currentUser.university
         education5.text = currentUser.degree
         subject6.text = currentUser.major
-
+        
         availability8.text = currentUser.availability
         description9.text = currentUser.descriptions
         
         
         
-        let rating = Int(student.rating)
+        let rating = Int(currentUser.rating)
         
         
-            if (rating == 0 )
-            {
-                rating1.image = UIImage(named: "emptystart.png")
-            }
-            else if (rating == 5)
-            {
-                rating1.image = UIImage(named:"halfstart.png")
-            }
-            else
-            {
-                rating1.image = UIImage(named:"fullstar.png")
-            }
-            
-            if (rating <= 1 )
-            {
-                rating2.image = UIImage(named: "emptystart.png")
-            }
-            else if (rating == 5)
-            {
-                rating2.image = UIImage(named:"halfstart.png")
-            }
-            else
-            {
-                rating2.image = UIImage(named:"fullstar.png")
-            }
-            
-            if (rating <= 2 )
-            {
-                rating3.image = UIImage(named: "emptystart.png")
-            }
-            else if (rating == 5)
-            {
-                rating3.image = UIImage(named:"halfstart.png")
-            }
-            else
-            {
-                rating3.image = UIImage(named:"fullstar.png")
-            }
-            
-            if (rating <= 3 )
-            {
-                rating4.image = UIImage(named: "emptystart.png")
-            }
-            else if (rating == 5)
-            {
-                rating4.image = UIImage(named:"halfstart.png")
-            }
-            else
-            {
-                rating4.image = UIImage(named:"fullstar.png")
-            }
-            
-            if (rating <= 4 )
-            {
-                rating5.image = UIImage(named: "emptystart.png")
-            }
-            else if (rating == 5)
-            {
-                rating5.image = UIImage(named:"halfstart.png")
-            }
-            else
-            {
-               rating5.image = UIImage(named:"fullstar.png")
-            }
+        if (rating == 0 )
+        {
+            rating1.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5)
+        {
+            rating1.image = UIImage(named:"halfstart.png")
+        }
+        else
+        {
+            rating1.image = UIImage(named:"fullstar.png")
+        }
         
+        if (rating <= 1 )
+        {
+            rating2.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5)
+        {
+            rating2.image = UIImage(named:"halfstart.png")
+        }
+        else
+        {
+            rating2.image = UIImage(named:"fullstar.png")
+        }
+        
+        if (rating <= 2 )
+        {
+            rating3.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5)
+        {
+            rating3.image = UIImage(named:"halfstart.png")
+        }
+        else
+        {
+            rating3.image = UIImage(named:"fullstar.png")
+        }
+        
+        if (rating <= 3 )
+        {
+            rating4.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5)
+        {
+            rating4.image = UIImage(named:"halfstart.png")
+        }
+        else
+        {
+            rating4.image = UIImage(named:"fullstar.png")
+        }
+        
+        if (rating <= 4 )
+        {
+            rating5.image = UIImage(named: "emptystart.png")
+        }
+        else if (rating == 5)
+        {
+            rating5.image = UIImage(named:"halfstart.png")
+        }
+        else
+        {
+            rating5.image = UIImage(named:"fullstar.png")
+        }
+
+    
     }
 
     override func didReceiveMemoryWarning() {

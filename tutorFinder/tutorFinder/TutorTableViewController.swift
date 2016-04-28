@@ -103,7 +103,7 @@ class TutorTableViewController: UITableViewController {
         
         let object = students[indexPath.row] as Student!
     
-      //  NSLog(String(object))
+         NSLog(String(object))
         
         let rate = object.rating
         let rating = Int(rate)
