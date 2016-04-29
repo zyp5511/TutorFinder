@@ -11,13 +11,16 @@ import UIKit
 class FilterTableViewController: UITableViewController{
 
     
-    let col1 = ["Distance", "Gender","Education","Feild"]
+    let col1 = ["Distance", "Gender","Education","Field"]
     let col2 = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
                 ["Female", "Male", "Unknown" ],
                 ["Ph.D", "Master", "Bachelor"],
                 ["CS","Electrical Engineer"]]
 
     var value = [0,0,0,0]    //distance, gender, degree, major
+    // initialize
+    var filter: [String : String] = [ "Distance" : "< 10 Miles", "Gender" : "Female", "Education" : "Ph.D" ,"Field" : "CS" ]
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -72,15 +75,13 @@ class FilterTableViewController: UITableViewController{
     @IBAction func unwindWithSelectedValue (segue:UIStoryboardSegue){
         if let valuePicker = segue.sourceViewController as? FilterDetailTableViewController,
             selectedValue = valuePicker.selectedValue {
-           // print("Change to", selectedValue)
-            //print("Cate changed to",valuePicker.category )
-           // print("Lcoation is ", col2[valuePicker.category].indexOf(selectedValue)!)
             value[valuePicker.category] = col2[valuePicker.category].indexOf(selectedValue)! ;
+            filter[col1[0]] = col2[0][value[0]]
+            filter[col1[1]] = col2[1][value[1]]
+            filter[col1[2]] = col2[2][value[2]]
+            filter[col1[3]] = col2[3][value[3]]
             self.tableView.reloadData()
         }
-        
-    
-    
     }
 
     

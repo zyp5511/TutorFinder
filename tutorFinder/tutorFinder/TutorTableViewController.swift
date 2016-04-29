@@ -19,6 +19,8 @@ class TutorTableViewController: UITableViewController {
     let DefaultUsername = NSUserDefaults.standardUserDefaults().stringForKey("username") as String!
     var emailAdd = String()
     
+     var filter: [String : String] = [ "Distance" : "< 10 Miles", "Gender" : "Female", "Education" : "Ph.D" ,"Field" : "CS" ]
+     var value = [0,0,0,0]
     //var managedObjectContext: NSManagedObjectContext? = nil
     //var _fetchedResultsController: NSFetchedResultsController? = nil
     
@@ -104,7 +106,7 @@ class TutorTableViewController: UITableViewController {
         
         let object = students[indexPath.row] as Student!
     
-         NSLog(String(object))
+      //   NSLog(String(object))
         
         let rate = object.rating
         let rating = Int(rate)
@@ -227,8 +229,25 @@ class TutorTableViewController: UITableViewController {
         if (segue.identifier == "tutorToUserProfile") {
             let vc:UserProfileTableViewController = segue.destinationViewController as! UserProfileTableViewController
             vc.email = emailAdd
-                 }
+        }
+        else if (segue.identifier == "EnterFilter"){
+             let vc : FilterTableViewController = segue.destinationViewController as!
+                FilterTableViewController
+            vc.filter = filter
+            vc.value = value
+        }
         
     }
+    
+    
+    @IBAction func unwindFromFilter (segue:UIStoryboardSegue){
+        if let valuePicker = segue.sourceViewController as? FilterTableViewController{
+                    filter = valuePicker.filter
+                    value = valuePicker.value
+                print(filter["Distance"])
+        }
+        
+    }
+
     
 }
