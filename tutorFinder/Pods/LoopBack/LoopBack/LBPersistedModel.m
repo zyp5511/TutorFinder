@@ -122,7 +122,6 @@
 - (void)findOneWithFilter:(NSDictionary *)filter
         success:(LBPersistedModelFindOneSuccessBlock)success
         failure:(SLFailureBlock)failure {
-
     if(!filter) {
         filter = @{};
     }

@@ -19,7 +19,7 @@ class FilterTableViewController: UITableViewController{
 
     var value = [0,0,0,0]    //distance, gender, degree, major
     // initialize
-    var filter: [String : String] = [ "Distance" : "< 10 Miles", "Gender" : "Female", "Education" : "Ph.D" ,"Field" : "CS" ]
+    var filter: [String : String] = [ "Distance" : "< 10 Miles", "gender" : "Female", "degree" : "Ph.D" ,"major" : "CS" ]
     
     // MARK: - Table view data source
 

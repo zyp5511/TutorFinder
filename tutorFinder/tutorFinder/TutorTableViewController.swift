@@ -19,8 +19,10 @@ class TutorTableViewController: UITableViewController {
     let DefaultUsername = NSUserDefaults.standardUserDefaults().stringForKey("username") as String!
     var emailAdd = String()
     
-     var filter: [String : String] = [ "Distance" : "< 10 Miles", "Gender" : "Female", "Education" : "Ph.D" ,"Field" : "CS" ]
-     var value = [0,0,0,0]
+    var filter: [String : String] = [:]
+    var value = [0,0,0,0]
+    
+    
     //var managedObjectContext: NSManagedObjectContext? = nil
     //var _fetchedResultsController: NSFetchedResultsController? = nil
     
@@ -62,13 +64,28 @@ class TutorTableViewController: UITableViewController {
     
     
     func showLoginView() {
+//        NSLog(String(BackendUtilities.sharedInstance.studentsRepo.cachedCurrentUser._id))
         
         if !isAuthenticated {
             self.performSegueWithIdentifier("loginView", sender: self)
         }
         else {
-            BackendUtilities.sharedInstance.studentsRepo.allWithSuccess({ (fetchedStudents: [AnyObject]!) -> () in
+            NSLog(self.filter.description)
+            let currentID = BackendUtilities.sharedInstance.studentsRepo.cachedCurrentUser._id
+            let excludeSelf:NSDictionary = ["id":["neq":currentID]]
+            var newFilter:NSDictionary = ["where":excludeSelf]
+            
+            if !self.filter.values.isEmpty{
+                let genderFilter:NSDictionary = ["gender":self.filter["Gender"]!]
+                let degreeFilter:NSDictionary = ["degree":self.filter["Education"]!]
+                let majorFilter:NSDictionary = ["major":self.filter["Field"]!]
+                newFilter = ["where":["and":[genderFilter,degreeFilter,excludeSelf]],"order":"ID ASC"]
+            }
+            NSLog(newFilter.description)
+            BackendUtilities.sharedInstance.studentsRepo.findWithFilter(newFilter as [NSObject : AnyObject],
+                success: { (fetchedStudents: [AnyObject]!) -> () in
                 self.students = fetchedStudents as! [Student]
+//                NSLog(self.students.description)
                 self.tableView.reloadData()
                 }, failure: { (error: NSError!) -> Void in
                     NSLog(error.description)
