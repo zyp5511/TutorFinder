@@ -42,6 +42,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="wF9-K5-LkZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2518" y="-161"/>
         </scene>
@@ -163,13 +164,12 @@
                         <outlet property="passwordTextField" destination="aon-iD-7ZT" id="QEE-wV-tCb"/>
                         <outlet property="usernameTextField" destination="ddL-Uh-wu1" id="afZ-Md-DQs"/>
                         <segue destination="vKZ-le-1IP" kind="show" identifier="toSignUp" id="TUj-iu-DjG"/>
-                        <segue destination="bvc-1Z-o1N" kind="unwind" identifier="dismissLogin" animates="NO" unwindAction="unwindSegue:" id="790-yV-UyL"/>
+                        <segue destination="wF9-K5-LkZ" kind="unwind" identifier="dismissLogin" unwindAction="unwindSegue:" id="xn0-7d-W5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="bvc-1Z-o1N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3221" y="-1097"/>
+            <point key="canvasLocation" x="3353" y="-1153"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="0JI-GX-QU7">
@@ -1015,7 +1015,6 @@
                         <outlet property="social7b" destination="KPs-Sb-c2T" id="iuX-Qe-aZz"/>
                         <outlet property="social7c" destination="T3z-CG-z7z" id="Wci-GU-ucT"/>
                         <outlet property="subject6" destination="Shd-aO-pSJ" id="8EO-X2-oAL"/>
-                        <segue destination="bvc-1Z-o1N" kind="unwind" identifier="logout" unwindAction="unwindSegue:" id="4o6-kW-cju"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rq6-cg-O1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1250,11 +1249,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tB4-qe-Tym" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3846" y="689"/>
+            <point key="canvasLocation" x="3718" y="817"/>
         </scene>
         <!--Profile-->
         <scene sceneID="UxW-Yz-Yjf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0j-MH-Ewx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LgI-1h-ErX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="9xf-IM-Gqk"/>
                     <toolbarItems/>
@@ -1267,7 +1267,6 @@
                         <segue destination="Q1B-JZ-sSt" kind="relationship" relationship="rootViewController" id="YVV-VK-4W7"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M0j-MH-Ewx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3733" y="-130"/>
         </scene>
@@ -1297,6 +1296,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZ3-8d-jxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2725" y="1032"/>
         </scene>
     </scenes>
     <resources>

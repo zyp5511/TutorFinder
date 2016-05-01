@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLoginKey")
                 NSUserDefaults.standardUserDefaults().setValue(self.passwordTextField.text, forKey: "password")
                 NSUserDefaults.standardUserDefaults().synchronize()
-            self.performSegueWithIdentifier("dismissLogin", sender: self)
+            self.performSegueWithIdentifier("dismisslogin", sender: self)
             success = true;
  
         }) { (error: NSError!) -> Void in
