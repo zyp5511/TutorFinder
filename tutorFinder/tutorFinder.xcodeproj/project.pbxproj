@@ -41,6 +41,11 @@
 		C2F7C5421CB4CADE0031523C /* emptystart.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C53F1CB4CADE0031523C /* emptystart.png */; };
 		C2F7C5431CB4CADE0031523C /* fullstar.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5401CB4CADE0031523C /* fullstar.png */; };
 		C2F7C5441CB4CADE0031523C /* halfstart.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5411CB4CADE0031523C /* halfstart.png */; };
+		FB5B53081CD6937800C4E6B3 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5B53051CD6937800C4E6B3 /* FBSDKCoreKit.framework */; };
+		FB5B53091CD6937800C4E6B3 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5B53061CD6937800C4E6B3 /* FBSDKLoginKit.framework */; };
+		FB5B530A1CD6937800C4E6B3 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5B53071CD6937800C4E6B3 /* FBSDKShareKit.framework */; };
+		FB5B530D1CD6988900C4E6B3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5B530C1CD6988900C4E6B3 /* Bolts.framework */; };
+		FB5B530F1CD69AB900C4E6B3 /* CheckAutoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B530E1CD69AB900C4E6B3 /* CheckAutoLogin.swift */; };
 		FBC45C781CD0A5500013145C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC45C771CD0A5500013145C /* Security.framework */; };
 		FBC45C7C1CD0A62E0013145C /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC45C7B1CD0A62E0013145C /* KeychainWrapper.m */; };
 		FBF9EE441C84E91A001E3F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */; };
@@ -106,6 +111,11 @@
 		C2F7C5401CB4CADE0031523C /* fullstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullstar.png; sourceTree = SOURCE_ROOT; };
 		C2F7C5411CB4CADE0031523C /* halfstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halfstart.png; sourceTree = SOURCE_ROOT; };
 		D9DFA62E6A68146D6D28D3A9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5B53051CD6937800C4E6B3 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		FB5B53061CD6937800C4E6B3 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FB5B53071CD6937800C4E6B3 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		FB5B530C1CD6988900C4E6B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FB5B530E1CD69AB900C4E6B3 /* CheckAutoLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAutoLogin.swift; sourceTree = "<group>"; };
 		FBC45C771CD0A5500013145C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FBC45C791CD0A62D0013145C /* tutorFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tutorFinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		FBC45C7A1CD0A62E0013145C /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
@@ -130,6 +140,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC45C781CD0A5500013145C /* Security.framework in Frameworks */,
+				FB5B53081CD6937800C4E6B3 /* FBSDKCoreKit.framework in Frameworks */,
+				FB5B530A1CD6937800C4E6B3 /* FBSDKShareKit.framework in Frameworks */,
+				FB5B530D1CD6988900C4E6B3 /* Bolts.framework in Frameworks */,
+				FB5B53091CD6937800C4E6B3 /* FBSDKLoginKit.framework in Frameworks */,
 				7753BB6C060CB85E945CEFF5 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +168,10 @@
 		8DD19F93B79794E24707ED5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB5B530C1CD6988900C4E6B3 /* Bolts.framework */,
+				FB5B53051CD6937800C4E6B3 /* FBSDKCoreKit.framework */,
+				FB5B53061CD6937800C4E6B3 /* FBSDKLoginKit.framework */,
+				FB5B53071CD6937800C4E6B3 /* FBSDKShareKit.framework */,
 				FBC45C771CD0A5500013145C /* Security.framework */,
 				D9DFA62E6A68146D6D28D3A9 /* Pods.framework */,
 			);
@@ -227,6 +245,7 @@
 				3669CB9B1CB341E200308F98 /* SignUpViewController.swift */,
 				3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */,
 				3669CBA51CB365C600308F98 /* EditingTableViewController.swift */,
+				FB5B530E1CD69AB900C4E6B3 /* CheckAutoLogin.swift */,
 				FBC45C7A1CD0A62E0013145C /* KeychainWrapper.h */,
 				FBC45C7B1CD0A62E0013145C /* KeychainWrapper.m */,
 				3669CBA31CB3597400308F98 /* InboxTableViewController.swift */,
@@ -479,6 +498,7 @@
 				3669CB9C1CB341E200308F98 /* SignUpViewController.swift in Sources */,
 				FBC45C7C1CD0A62E0013145C /* KeychainWrapper.m in Sources */,
 				C2E854321CCC0A2F0043893A /* BackendUtilities.swift in Sources */,
+				FB5B530F1CD69AB900C4E6B3 /* CheckAutoLogin.swift in Sources */,
 				C2737ACF1CC4669D00A579F5 /* FilterDetailTableViewController.swift in Sources */,
 				C2737AC91CC430DB00A579F5 /* StudentsRepo.swift in Sources */,
 				FBF9EE441C84E91A001E3F2D /* AppDelegate.swift in Sources */,
@@ -624,6 +644,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = tutorFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -640,6 +664,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = tutorFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
