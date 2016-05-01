@@ -33,6 +33,18 @@ class checkAutoLogin : UIViewController {
         checkLogin()
     }
     
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
+     
+    }
+    @IBAction func tologin(segue: UIStoryboardSegue) {
+        
+    }
+   override func canPerformUnwindSegueAction(action: Selector, fromViewController: UIViewController, withSender sender: AnyObject) -> Bool {
+        let result = (self.description == "LoginViewController")
+        return result;
+    }
+    
+    
     func checkLogin (){
         if (hasLogin){
             BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail( NSUserDefaults.standardUserDefaults().stringForKey("username"), password: NSUserDefaults.standardUserDefaults().stringForKey("password"), success: { (LBUser ) -> Void in

@@ -21,10 +21,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup" translatesAutoresizingMaskIntoConstraints="NO" id="DN2-Id-5sV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltD-zJ-m3j">
-                                <rect key="frame" x="93" y="219" width="175" height="30"/>
-                                <state key="normal" title="ENTER THE WORLD"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -34,6 +30,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DN2-Id-5sV" secondAttribute="bottom" id="smh-5K-Rdx"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="8T9-X7-DXy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -42,7 +39,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="wF9-K5-LkZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2518" y="-161"/>
         </scene>
@@ -164,10 +160,11 @@
                         <outlet property="passwordTextField" destination="aon-iD-7ZT" id="QEE-wV-tCb"/>
                         <outlet property="usernameTextField" destination="ddL-Uh-wu1" id="afZ-Md-DQs"/>
                         <segue destination="vKZ-le-1IP" kind="show" identifier="toSignUp" id="TUj-iu-DjG"/>
-                        <segue destination="wF9-K5-LkZ" kind="unwind" identifier="dismissLogin" unwindAction="unwindSegue:" id="xn0-7d-W5e"/>
+                        <segue destination="bvc-1Z-o1N" kind="unwind" unwindAction="unwindToMenu:" id="UiH-NC-Vbr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bvc-1Z-o1N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3353" y="-1153"/>
         </scene>
@@ -1015,9 +1012,11 @@
                         <outlet property="social7b" destination="KPs-Sb-c2T" id="iuX-Qe-aZz"/>
                         <outlet property="social7c" destination="T3z-CG-z7z" id="Wci-GU-ucT"/>
                         <outlet property="subject6" destination="Shd-aO-pSJ" id="8EO-X2-oAL"/>
+                        <segue destination="TUY-jb-Mam" kind="unwind" identifier="tologin" unwindAction="unwindSegue:" id="4gG-Nl-bHF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rq6-cg-O1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TUY-jb-Mam" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4755" y="-1346"/>
         </scene>
@@ -1312,6 +1311,6 @@
         <image name="twitter_letter-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4rV-ZL-cM2"/>
+        <segue reference="Aii-Ql-keF"/>
     </inferredMetricsTieBreakers>
 </document>
