@@ -1002,7 +1002,7 @@
                         <outlet property="email3" destination="hPa-7Z-adh" id="m6m-hc-RzO"/>
                         <outlet property="gender1" destination="BTw-cN-cJe" id="q78-2z-O16"/>
                         <outlet property="image1" destination="TwD-7j-X0h" id="THh-3k-VvU"/>
-                        <outlet property="logoutButton" destination="ecx-QQ-HFg" id="CsL-2h-pvi"/>
+                        <outlet property="logoutButton" destination="ecx-QQ-HFg" id="d8p-HM-LBj"/>
                         <outlet property="name1" destination="sam-iW-YuG" id="ThU-oM-sOB"/>
                         <outlet property="name2" destination="bz1-go-1el" id="rmP-yo-EGt"/>
                         <outlet property="rating1" destination="725-nH-FPf" id="BRm-0n-XgL"/>
@@ -1312,6 +1312,6 @@
         <image name="twitter_letter-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aii-Ql-keF"/>
+        <segue reference="4rV-ZL-cM2"/>
     </inferredMetricsTieBreakers>
 </document>

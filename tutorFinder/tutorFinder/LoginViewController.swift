@@ -28,10 +28,9 @@ class LoginViewController: UIViewController {
 
     
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("asd")
         passwordTextField.secureTextEntry = true
         
         loginButton.setTitle("Login", forState: UIControlState.Normal)
@@ -44,10 +43,6 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    override func viewWillAppear(animated: Bool) {
-        }
     
     
     

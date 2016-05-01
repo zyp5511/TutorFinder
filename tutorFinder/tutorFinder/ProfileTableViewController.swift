@@ -64,9 +64,6 @@ class ProfileTableViewController: UITableViewController {
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: "hasLoginKey")
             self.performSegueWithIdentifier("toSignUp", sender: self)
             }
-        
-        
-        
             , failure:{ (error: NSError!) -> Void in
                 NSLog("Error fetching current user")
             }
