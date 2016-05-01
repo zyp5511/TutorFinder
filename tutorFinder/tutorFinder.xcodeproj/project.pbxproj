@@ -15,17 +15,11 @@
 		3669CBA81CB3660600308F98 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */; };
 		36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */; };
 		7753BB6C060CB85E945CEFF5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DFA62E6A68146D6D28D3A9 /* Pods.framework */; };
-		C20391161CB589AB0050C04B /* tutorfinder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C20391151CB589AB0050C04B /* tutorfinder.jpeg */; };
 		C2737AC71CC42E9400A579F5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737AC61CC42E9400A579F5 /* Student.swift */; };
 		C2737AC91CC430DB00A579F5 /* StudentsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737AC81CC430DB00A579F5 /* StudentsRepo.swift */; };
 		C2737ACB1CC43A4600A579F5 /* TutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACA1CC43A4600A579F5 /* TutorTableViewController.swift */; };
 		C2737ACD1CC43AB100A579F5 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACC1CC43AB100A579F5 /* TutorTableViewCell.swift */; };
 		C2737ACF1CC4669D00A579F5 /* FilterDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACE1CC4669D00A579F5 /* FilterDetailTableViewController.swift */; };
-		C2840B881CD314C300F95567 /* 小博士1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2840B871CD314C300F95567 /* 小博士1.png */; };
-		C2840B8A1CD3166000F95567 /* 龙猫1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2840B891CD3166000F95567 /* 龙猫1.jpg */; };
-		C2840B8E1CD3174B00F95567 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2840B8B1CD3174B00F95567 /* 2.jpg */; };
-		C2840B8F1CD3174B00F95567 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2840B8C1CD3174B00F95567 /* 3.jpg */; };
-		C2840B901CD3174B00F95567 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2840B8D1CD3174B00F95567 /* 4.jpg */; };
 		C2840B941CD3254200F95567 /* StartingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2840B931CD3254200F95567 /* StartingPage.swift */; };
 		C2E854321CCC0A2F0043893A /* BackendUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E854311CCC0A2F0043893A /* BackendUtilities.swift */; };
 		C2F7C5281CB498270031523C /* SGnJH4T.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5271CB498270031523C /* SGnJH4T.jpg */; };
@@ -35,12 +29,6 @@
 		C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5311CB4C72A0031523C /* square-facebook-512.png */; };
 		C2F7C5351CB4C72A0031523C /* twitter_letter-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */; };
 		C2F7C5361CB4C72A0031523C /* WeChat-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */; };
-		C2F7C53A1CB4C7D80031523C /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5371CB4C7D80031523C /* female.png */; };
-		C2F7C53B1CB4C7D80031523C /* male.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5381CB4C7D80031523C /* male.jpeg */; };
-		C2F7C53C1CB4C7D80031523C /* unknow.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5391CB4C7D80031523C /* unknow.png */; };
-		C2F7C5421CB4CADE0031523C /* emptystart.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C53F1CB4CADE0031523C /* emptystart.png */; };
-		C2F7C5431CB4CADE0031523C /* fullstar.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5401CB4CADE0031523C /* fullstar.png */; };
-		C2F7C5441CB4CADE0031523C /* halfstart.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5411CB4CADE0031523C /* halfstart.png */; };
 		FBC45C781CD0A5500013145C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC45C771CD0A5500013145C /* Security.framework */; };
 		FBC45C7C1CD0A62E0013145C /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC45C7B1CD0A62E0013145C /* KeychainWrapper.m */; };
 		FBF9EE441C84E91A001E3F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */; };
@@ -78,18 +66,12 @@
 		36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42FABE82B9192F7F3E993BF9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		56DA91E30BBCE9DC79A4B547 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		C20391151CB589AB0050C04B /* tutorfinder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutorfinder.jpeg; sourceTree = SOURCE_ROOT; };
 		C2737AC61CC42E9400A579F5 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		C2737AC81CC430DB00A579F5 /* StudentsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsRepo.swift; sourceTree = "<group>"; };
 		C2737ACA1CC43A4600A579F5 /* TutorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewController.swift; sourceTree = "<group>"; };
 		C2737ACC1CC43AB100A579F5 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
 		C2737ACE1CC4669D00A579F5 /* FilterDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDetailTableViewController.swift; sourceTree = "<group>"; };
 		C2737AD01CC46F8E00A579F5 /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		C2840B871CD314C300F95567 /* 小博士1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小博士1.png"; sourceTree = "<group>"; };
-		C2840B891CD3166000F95567 /* 龙猫1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "龙猫1.jpg"; sourceTree = "<group>"; };
-		C2840B8B1CD3174B00F95567 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		C2840B8C1CD3174B00F95567 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		C2840B8D1CD3174B00F95567 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		C2840B931CD3254200F95567 /* StartingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingPage.swift; sourceTree = "<group>"; };
 		C2E854311CCC0A2F0043893A /* BackendUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendUtilities.swift; sourceTree = "<group>"; };
 		C2F7C5271CB498270031523C /* SGnJH4T.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SGnJH4T.jpg; sourceTree = SOURCE_ROOT; };
@@ -99,12 +81,6 @@
 		C2F7C5311CB4C72A0031523C /* square-facebook-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-facebook-512.png"; sourceTree = SOURCE_ROOT; };
 		C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter_letter-512.png"; sourceTree = SOURCE_ROOT; };
 		C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeChat-Icon.png"; sourceTree = SOURCE_ROOT; };
-		C2F7C5371CB4C7D80031523C /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = SOURCE_ROOT; };
-		C2F7C5381CB4C7D80031523C /* male.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = male.jpeg; sourceTree = SOURCE_ROOT; };
-		C2F7C5391CB4C7D80031523C /* unknow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknow.png; sourceTree = SOURCE_ROOT; };
-		C2F7C53F1CB4CADE0031523C /* emptystart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptystart.png; sourceTree = SOURCE_ROOT; };
-		C2F7C5401CB4CADE0031523C /* fullstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullstar.png; sourceTree = SOURCE_ROOT; };
-		C2F7C5411CB4CADE0031523C /* halfstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halfstart.png; sourceTree = SOURCE_ROOT; };
 		D9DFA62E6A68146D6D28D3A9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC45C771CD0A5500013145C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FBC45C791CD0A62D0013145C /* tutorFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tutorFinder-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -203,19 +179,7 @@
 		FBF9EE421C84E91A001E3F2D /* tutorFinder */ = {
 			isa = PBXGroup;
 			children = (
-				C2840B8B1CD3174B00F95567 /* 2.jpg */,
-				C2840B8C1CD3174B00F95567 /* 3.jpg */,
-				C2840B8D1CD3174B00F95567 /* 4.jpg */,
 				C242981F1CC1B47600C4D556 /* json */,
-				C20391151CB589AB0050C04B /* tutorfinder.jpeg */,
-				C2840B891CD3166000F95567 /* 龙猫1.jpg */,
-				C2840B871CD314C300F95567 /* 小博士1.png */,
-				C2F7C53F1CB4CADE0031523C /* emptystart.png */,
-				C2F7C5411CB4CADE0031523C /* halfstart.png */,
-				C2F7C5401CB4CADE0031523C /* fullstar.png */,
-				C2F7C5371CB4C7D80031523C /* female.png */,
-				C2F7C5381CB4C7D80031523C /* male.jpeg */,
-				C2F7C5391CB4C7D80031523C /* unknow.png */,
 				C2F7C5311CB4C72A0031523C /* square-facebook-512.png */,
 				C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */,
 				C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */,
@@ -376,22 +340,10 @@
 				C2F7C5351CB4C72A0031523C /* twitter_letter-512.png in Resources */,
 				C2F7C5281CB498270031523C /* SGnJH4T.jpg in Resources */,
 				FBF9EE4E1C84E91A001E3F2D /* LaunchScreen.storyboard in Resources */,
-				C2840B8A1CD3166000F95567 /* 龙猫1.jpg in Resources */,
 				C2F7C52E1CB4B9DF0031523C /* facebook-avatar.jpg in Resources */,
-				C2F7C53A1CB4C7D80031523C /* female.png in Resources */,
-				C2F7C53B1CB4C7D80031523C /* male.jpeg in Resources */,
-				C2F7C5431CB4CADE0031523C /* fullstar.png in Resources */,
 				C2F7C52A1CB498630031523C /* cute1.jpg in Resources */,
-				C2840B8E1CD3174B00F95567 /* 2.jpg in Resources */,
-				C2F7C53C1CB4C7D80031523C /* unknow.png in Resources */,
 				FBF9EE4B1C84E91A001E3F2D /* Assets.xcassets in Resources */,
-				C20391161CB589AB0050C04B /* tutorfinder.jpeg in Resources */,
 				C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */,
-				C2F7C5441CB4CADE0031523C /* halfstart.png in Resources */,
-				C2840B901CD3174B00F95567 /* 4.jpg in Resources */,
-				C2840B8F1CD3174B00F95567 /* 3.jpg in Resources */,
-				C2840B881CD314C300F95567 /* 小博士1.png in Resources */,
-				C2F7C5421CB4CADE0031523C /* emptystart.png in Resources */,
 				FBF9EE491C84E91A001E3F2D /* Main.storyboard in Resources */,
 				C2F7C5361CB4C72A0031523C /* WeChat-Icon.png in Resources */,
 			);
