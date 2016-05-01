@@ -8,6 +8,8 @@
 
 import UIKit
 import LoopBack
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
 
@@ -45,21 +47,7 @@ class LoginViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-        if (hasLogin){
-            BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail( NSUserDefaults.standardUserDefaults().stringForKey("username"), password: NSUserDefaults.standardUserDefaults().stringForKey("password"), success: { (LBUser ) -> Void in
-                NSLog("Successfully logged in.");
-                self.performSegueWithIdentifier("dismissLogin", sender: self)
-                
-            }) { (error: NSError!) -> Void in
-                NSLog("Error logging in.")
-                
-                // Display error alert
-                let alertController = UIAlertController(title: "Login", message: "Login failed", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
-            }
         }
-    }
     
     
     
@@ -84,7 +72,6 @@ class LoginViewController: UIViewController {
     
   func checkLogin( ) -> Bool {
     var success = false ;
-    
     //let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
     
     BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail(usernameTextField.text, password: passwordTextField.text, success: { (LBUser ) -> Void in

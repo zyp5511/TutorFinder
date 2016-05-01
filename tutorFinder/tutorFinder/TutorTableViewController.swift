@@ -32,10 +32,7 @@ class TutorTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.alpha = 0
-        if (isAuthenticated == true){
-        }
+        self.showLoginView()
     }
     
     
@@ -58,18 +55,10 @@ class TutorTableViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.showLoginView()
-    }
-    
     
     func showLoginView() {
 //        NSLog(String(BackendUtilities.sharedInstance.studentsRepo.cachedCurrentUser._id))
         
-        if !isAuthenticated {
-            self.performSegueWithIdentifier("loginView", sender: self)
-        }
-        else {
             NSLog(self.filter.description)
             let currentID = BackendUtilities.sharedInstance.studentsRepo.cachedCurrentUser._id
             let excludeSelf:NSDictionary = ["id":["neq":currentID]]
@@ -90,7 +79,6 @@ class TutorTableViewController: UITableViewController {
                 }, failure: { (error: NSError!) -> Void in
                     NSLog(error.description)
             })
-        }
     }
 
     

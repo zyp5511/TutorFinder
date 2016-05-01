@@ -7,3 +7,4 @@
 //
 
 #import <LoopBack/LoopBack.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
