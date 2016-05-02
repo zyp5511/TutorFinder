@@ -31,15 +31,17 @@ class TutorTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
+        print("tutor")
         super.viewDidLoad()
         self.showLoginView()
     }
     
-    
+    /*
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         isAuthenticated = true
+        print("aaaa")
         view.alpha = 1.0
-    }
+    }*/
     
     func appWillResignActive(notification : NSNotification) {
         

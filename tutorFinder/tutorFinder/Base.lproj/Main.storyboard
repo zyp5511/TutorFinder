@@ -160,7 +160,7 @@
                         <outlet property="passwordTextField" destination="aon-iD-7ZT" id="QEE-wV-tCb"/>
                         <outlet property="usernameTextField" destination="ddL-Uh-wu1" id="afZ-Md-DQs"/>
                         <segue destination="vKZ-le-1IP" kind="show" identifier="toSignUp" id="TUj-iu-DjG"/>
-                        <segue destination="bvc-1Z-o1N" kind="unwind" unwindAction="unwindToMenu:" id="UiH-NC-Vbr"/>
+                        <segue destination="bvc-1Z-o1N" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="UiH-NC-Vbr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72X-Q9-JhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -734,6 +734,7 @@
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="logoutButton:" destination="Q1B-JZ-sSt" eventType="touchUpInside" id="IDv-eb-pbe"/>
+                                <segue destination="TUY-jb-Mam" kind="unwind" identifier="tologin" unwindAction="tologin:" id="4tP-qN-jXi"/>
                             </connections>
                         </button>
                         <sections>
@@ -1012,7 +1013,6 @@
                         <outlet property="social7b" destination="KPs-Sb-c2T" id="iuX-Qe-aZz"/>
                         <outlet property="social7c" destination="T3z-CG-z7z" id="Wci-GU-ucT"/>
                         <outlet property="subject6" destination="Shd-aO-pSJ" id="8EO-X2-oAL"/>
-                        <segue destination="TUY-jb-Mam" kind="unwind" identifier="tologin" unwindAction="unwindSegue:" id="4gG-Nl-bHF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rq6-cg-O1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1311,6 +1311,6 @@
         <image name="twitter_letter-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aii-Ql-keF"/>
+        <segue reference="4rV-ZL-cM2"/>
     </inferredMetricsTieBreakers>
 </document>

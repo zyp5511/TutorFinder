@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("asd")
         passwordTextField.secureTextEntry = true
         
         loginButton.setTitle("Login", forState: UIControlState.Normal)
@@ -39,8 +38,6 @@ class LoginViewController: UIViewController {
             usernameTextField.text = storedUsername as String
         }
         
-      
-        // Do any additional setup after loading the view.
     }
     
     
@@ -75,12 +72,11 @@ class LoginViewController: UIViewController {
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLoginKey")
                 NSUserDefaults.standardUserDefaults().setValue(self.passwordTextField.text, forKey: "password")
                 NSUserDefaults.standardUserDefaults().synchronize()
-            self.performSegueWithIdentifier(" unwindToMenu", sender: self)
+                self.performSegueWithIdentifier("unwindToMenu", sender: self)
             success = true;
  
         }) { (error: NSError!) -> Void in
             NSLog("Error logging in.")
-            
             // Display error alert
             let alertController = UIAlertController(title: "Login", message: "Login failed", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
@@ -99,6 +95,11 @@ class LoginViewController: UIViewController {
 
     
 
+    
+    override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        print("\(self) \(#function) \(subsequentVC)")
+        super.unwindForSegue(unwindSegue, towardsViewController: subsequentVC)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

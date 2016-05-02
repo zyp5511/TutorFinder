@@ -14,15 +14,18 @@ import FBSDKLoginKit
 class checkAutoLogin : UIViewController {
 
     
-    let hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+    var hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
     
     override func viewDidLoad() {
          super.viewDidLoad()
-          print(hasLogin)
-        
+          //print(hasLogin)
         }
     
-    
+    @IBAction func tologin(segue: UIStoryboardSegue) {
+        print("回来了")
+        hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+        checkLogin()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,24 +36,33 @@ class checkAutoLogin : UIViewController {
         checkLogin()
     }
     
+    
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
-     
-    }
-    @IBAction func tologin(segue: UIStoryboardSegue) {
+      //  print("hahahaha")
+        hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+       // print(hasLogin)
+        checkLogin()
         
     }
+
+    /*
    override func canPerformUnwindSegueAction(action: Selector, fromViewController: UIViewController, withSender sender: AnyObject) -> Bool {
         let result = (self.description == "LoginViewController")
+        print("11")
+    
+         hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+        self.reloadInputViews()
+    
         return result;
     }
     
-    
+    */
     func checkLogin (){
+        //hasLogin=false;
         if (hasLogin){
             BackendUtilities.sharedInstance.studentsRepo.userByLoginWithEmail( NSUserDefaults.standardUserDefaults().stringForKey("username"), password: NSUserDefaults.standardUserDefaults().stringForKey("password"), success: { (LBUser ) -> Void in
-                NSLog("Successfully logged in.");
+                NSLog("Successfully logged in incheckogin.");
                 self.performSegueWithIdentifier("tableView", sender: self)
-                
             }) { (error: NSError!) -> Void in
                 NSLog("Error logging in.")
                 // Display error alert
@@ -60,7 +72,7 @@ class checkAutoLogin : UIViewController {
             }
         }
         else{
-            print(hasLogin)
+            //print(hasLogin)
             self.performSegueWithIdentifier("needlogin", sender: self)
         }
     }
