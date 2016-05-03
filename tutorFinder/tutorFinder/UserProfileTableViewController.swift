@@ -26,8 +26,21 @@ class UserProfileTableViewController: UITableViewController {
     
     @IBOutlet weak var userDescription: UITextView!
     
+    @IBOutlet weak var userGender: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (student.gender == "Male")
+        {
+            userGender.image = UIImage(named:"male")
+        }
+        else
+        {
+            userGender.image = UIImage(named:"female")
+        }
+
+        
         userName.text = student.name
         userEmail.text = student.email
         userSchool.text = student.university
