@@ -25,19 +25,28 @@ class UserProfileTableViewController: UITableViewController {
     @IBOutlet weak var userAvailability: UITextView!
     
     @IBOutlet weak var userDescription: UITextView!
-    
+        
     @IBOutlet weak var userGender: UIImageView!
     
+    @IBOutlet weak var rating1: UIImageView!
+    
+    @IBOutlet weak var rating2: UIImageView!
+    
+    @IBOutlet weak var rating3: UIImageView!
+    
+    @IBOutlet weak var rating4: UIImageView!
+    
+    @IBOutlet weak var rating5: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if (student.gender == "Male")
         {
-            //userGender.image = UIImage(named:"male")
+            userGender.image = UIImage(named:"male")
         }
         else
         {
-            //userGender.image = UIImage(named:"female")
+            userGender.image = UIImage(named:"female")
         }
 
         
@@ -48,6 +57,45 @@ class UserProfileTableViewController: UITableViewController {
         userSubject.text = student.major
         userAvailability.text = student.availability
         userDescription.text = student.description
+        
+        
+        let rating = Int(student.rating)
+        
+        if rating == 0 {
+            rating1.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating1.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 1 {
+            rating2.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating2.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 2 {
+            rating3.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating3.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 3 {
+            rating4.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating4.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 4 {
+            rating5.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating5.image = UIImage(named:"fullstar")
+        }
+
         print(email)
         
     }
