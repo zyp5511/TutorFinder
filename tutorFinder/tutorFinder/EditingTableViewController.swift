@@ -41,6 +41,9 @@ class EditingTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        description7.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
+        description7.layer.borderWidth = CGFloat(Float(1.0))
+        description7.layer.cornerRadius = CGFloat(Float(5.0))
     }
 
     // MARK: - Table view data source
@@ -83,7 +86,7 @@ class EditingTableViewController: UITableViewController {
         }
         
         name1.text = currentUser.name    // cannot be changed
-        rate1.image = UIImage(named:"emptystart")   //cannot be changed
+        rate1.image = UIImage(named:"emptystar")   //cannot be changed
         name2.text = currentUser.name
         email3.text = currentUser.email
         school4.text = currentUser.university
@@ -94,20 +97,41 @@ class EditingTableViewController: UITableViewController {
     
     
     @IBAction func Update(sender: UIButton) {
+        
+        let temp2 = self.currentUser.username
+        let temp = self.currentUser.email
         self.currentUser.name = name2.text
-        self.currentUser.email = email3.text
+        self.currentUser.username = "test"
+        self.currentUser.email = "test@gmail.com"
         self.currentUser.degree = education.text
         self.currentUser.university = school4.text
         self.currentUser.descriptions = description7.text
-        self.currentUser.major = subject6.text
+      //self.currentUser.major = subject6.text
+     
         self.currentUser.saveWithSuccess({ () -> Void in
             NSLog("sucessfully saved")
             self.loadUserInformation()
             }, failure: { (error: NSError!) -> Void in
-                NSLog("error saving")
+                NSLog(error.description)
         })
+        
+        self.currentUser.email = temp
+        self.currentUser.username = temp2
+        self.currentUser.saveWithSuccess({ () -> Void in
+            NSLog("sucessfully saved")
+            self.loadUserInformation()
+            }, failure: { (error: NSError!) -> Void in
+                NSLog(error.description)
+        })
+        
+        
+       // print("SUccess Changed")
     }
     
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)

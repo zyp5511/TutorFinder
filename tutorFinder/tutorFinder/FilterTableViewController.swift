@@ -10,7 +10,7 @@ import UIKit
 
 class FilterTableViewController: UITableViewController{
 
-    
+    @IBOutlet weak var done: UIButton!
     let col1 = ["Distance", "Gender","Education","Field"]
     let col2 = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
                 ["Female", "Male", "Unknown" ],
@@ -24,6 +24,14 @@ class FilterTableViewController: UITableViewController{
     var pictures = ["dis", "gen", "edu","fie"]
     // MARK: - Table view data source
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let button = UIButton(type: .Custom)
+        button.frame = CGRectMake(160, 100, 50, 50)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

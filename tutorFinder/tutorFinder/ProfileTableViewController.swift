@@ -36,6 +36,8 @@ class ProfileTableViewController: UITableViewController {
     
     @IBOutlet weak var logoutButton: UIButton!
     
+    @IBOutlet weak var update: UIButton!
+    
     var currentUser: Student = Student()
     
     
@@ -54,6 +56,13 @@ class ProfileTableViewController: UITableViewController {
         }) { (error: NSError!) -> Void in
             NSLog("Error fetching current user")
         }
+        
+        availability8.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
+        availability8.layer.borderWidth = CGFloat(Float(1.0))
+        availability8.layer.cornerRadius = CGFloat(Float(5.0))
+        description9.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
+        description9.layer.borderWidth = CGFloat(Float(1.0))
+        description9.layer.cornerRadius = CGFloat(Float(5.0))
         
     }
     
@@ -101,68 +110,38 @@ class ProfileTableViewController: UITableViewController {
         let rating = Int(currentUser.rating)
         
         
-        if (rating == 0 )
-        {
-            rating1.image = UIImage(named: "emptystart")
+        if rating == 0 {
+            rating1.image = UIImage(named: "emptystar")
         }
-        else if (rating == 5)
-        {
-            rating1.image = UIImage(named:"halfstart")
-        }
-        else
-        {
+        else {
             rating1.image = UIImage(named:"fullstar")
         }
         
-        if (rating <= 1 )
-        {
-            rating2.image = UIImage(named: "emptystart")
+        if rating <= 1 {
+            rating2.image = UIImage(named: "emptystar")
         }
-        else if (rating == 5)
-        {
-            rating2.image = UIImage(named:"halfstart")
-        }
-        else
-        {
+        else {
             rating2.image = UIImage(named:"fullstar")
         }
         
-        if (rating <= 2 )
-        {
-            rating3.image = UIImage(named: "emptystart")
+        if rating <= 2 {
+            rating3.image = UIImage(named: "emptystar")
         }
-        else if (rating == 5)
-        {
-            rating3.image = UIImage(named:"halfstart")
-        }
-        else
-        {
+        else {
             rating3.image = UIImage(named:"fullstar")
         }
         
-        if (rating <= 3 )
-        {
-            rating4.image = UIImage(named: "emptystart")
+        if rating <= 3 {
+            rating4.image = UIImage(named: "emptystar")
         }
-        else if (rating == 5)
-        {
-            rating4.image = UIImage(named:"halfstart")
-        }
-        else
-        {
+        else {
             rating4.image = UIImage(named:"fullstar")
         }
         
-        if (rating <= 4 )
-        {
-            rating5.image = UIImage(named: "emptystart")
+        if rating <= 4 {
+            rating5.image = UIImage(named: "emptystar")
         }
-        else if (rating == 5)
-        {
-            rating5.image = UIImage(named:"halfstart")
-        }
-        else
-        {
+        else {
             rating5.image = UIImage(named:"fullstar")
         }
 
@@ -185,7 +164,21 @@ class ProfileTableViewController: UITableViewController {
         return 9
     }
     
+    @IBAction func updateAvailability(sender: AnyObject) {
+        
+        currentUser.availability = availability8.text
+        self.currentUser.saveWithSuccess({ () -> Void in
+            NSLog("sucessfully saved")
+            self.loadUserInformation()
+            }, failure: { (error: NSError!) -> Void in
+                NSLog("error saving")
+        })
+    }
 
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
