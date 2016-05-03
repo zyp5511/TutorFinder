@@ -142,38 +142,38 @@ class TutorTableViewController: UITableViewController {
          */
         
         if rating == 0 {
-            cell.rating1.image = UIImage(named: "emptystart.png")
+            cell.rating1.image = UIImage(named: "emptystar")
         }
         else {
-            cell.rating1.image = UIImage(named:"fullstar.png")
+            cell.rating1.image = UIImage(named:"fullstar")
         }
         
         if rating <= 1 {
-            cell.rating2.image = UIImage(named: "emptystart.png")
+            cell.rating2.image = UIImage(named: "emptystar")
         }
         else {
-            cell.rating2.image = UIImage(named:"fullstar.png")
+            cell.rating2.image = UIImage(named:"fullstar")
         }
         
         if rating <= 2 {
-            cell.rating3.image = UIImage(named: "emptystart.png")
+            cell.rating3.image = UIImage(named: "emptystar")
         }
         else {
-            cell.rating3.image = UIImage(named:"fullstar.png")
+            cell.rating3.image = UIImage(named:"fullstar")
         }
         
         if rating <= 3 {
-            cell.rating4.image = UIImage(named: "emptystart.png")
+            cell.rating4.image = UIImage(named: "emptystar")
         }
         else {
-            cell.rating4.image = UIImage(named:"fullstar.png")
+            cell.rating4.image = UIImage(named:"fullstar")
         }
         
         if rating <= 4 {
-            cell.rating5.image = UIImage(named: "emptystart.png")
+            cell.rating5.image = UIImage(named: "emptystar")
         }
         else {
-            cell.rating5.image = UIImage(named:"fullstar.png")
+            cell.rating5.image = UIImage(named:"fullstar")
         }
         
         
