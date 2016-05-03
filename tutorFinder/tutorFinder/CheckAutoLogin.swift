@@ -24,7 +24,8 @@ class checkAutoLogin : UIViewController {
     @IBAction func tologin(segue: UIStoryboardSegue) {
         print("回来了")
         hasLogin = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
-        checkLogin()
+        //checkLogin()
+        self.performSegueWithIdentifier("needlogin", sender: self)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

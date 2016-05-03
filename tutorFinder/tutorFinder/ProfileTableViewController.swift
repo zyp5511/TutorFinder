@@ -42,7 +42,7 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logoutButton.setTitle("LogOut", forState: UIControlState.Normal)
-        
+       
         BackendUtilities.sharedInstance.studentsRepo.findCurrentUserWithSuccess({ (user) -> Void in
             NSLog("Found user")
             if let _ = user    {
