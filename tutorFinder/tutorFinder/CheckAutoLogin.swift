@@ -67,9 +67,11 @@ class checkAutoLogin : UIViewController {
             }) { (error: NSError!) -> Void in
                 NSLog("Error logging in.")
                 // Display error alert
+                self.performSegueWithIdentifier("needlogin", sender: self)
                 let alertController = UIAlertController(title: "Login", message: "Login failed", preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
                 self.presentViewController(alertController, animated: true, completion: nil)
+               
             }
         }
         else{

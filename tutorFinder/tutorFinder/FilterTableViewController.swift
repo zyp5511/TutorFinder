@@ -21,6 +21,7 @@ class FilterTableViewController: UITableViewController{
     // initialize
     var filter: [String : String] = [ "Distance" : "< 10 Miles", "gender" : "Female", "degree" : "Ph.D" ,"major" : "CS" ]
     
+    var pictures = ["dis", "gen", "edu","fie"]
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -56,6 +57,8 @@ class FilterTableViewController: UITableViewController{
        // print("Postion back",value[2])
         cell.label1?.text = col1[indexPath.row];
         cell.label2?.text = col2[indexPath.row][value[indexPath.row]];
+        
+        cell.pic?.image = UIImage(named:pictures[indexPath.row])
         return cell
     }
     

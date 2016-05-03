@@ -13,4 +13,5 @@ class filterCell: UITableViewCell {
     
     @IBOutlet weak var label2: UILabel!
     
+    @IBOutlet weak var pic: UIImageView!
 }

@@ -21,10 +21,7 @@
 		C2737ACD1CC43AB100A579F5 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACC1CC43AB100A579F5 /* TutorTableViewCell.swift */; };
 		C2737ACF1CC4669D00A579F5 /* FilterDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACE1CC4669D00A579F5 /* FilterDetailTableViewController.swift */; };
 		C2E854321CCC0A2F0043893A /* BackendUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E854311CCC0A2F0043893A /* BackendUtilities.swift */; };
-		C2F7C5281CB498270031523C /* SGnJH4T.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5271CB498270031523C /* SGnJH4T.jpg */; };
-		C2F7C52A1CB498630031523C /* cute1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5291CB498630031523C /* cute1.jpg */; };
 		C2F7C52C1CB4AE080031523C /* filterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7C52B1CB4AE080031523C /* filterCell.swift */; };
-		C2F7C52E1CB4B9DF0031523C /* facebook-avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C52D1CB4B9DF0031523C /* facebook-avatar.jpg */; };
 		C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5311CB4C72A0031523C /* square-facebook-512.png */; };
 		C2F7C5351CB4C72A0031523C /* twitter_letter-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */; };
 		C2F7C5361CB4C72A0031523C /* WeChat-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */; };
@@ -77,10 +74,7 @@
 		C2737ACE1CC4669D00A579F5 /* FilterDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDetailTableViewController.swift; sourceTree = "<group>"; };
 		C2737AD01CC46F8E00A579F5 /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2E854311CCC0A2F0043893A /* BackendUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendUtilities.swift; sourceTree = "<group>"; };
-		C2F7C5271CB498270031523C /* SGnJH4T.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SGnJH4T.jpg; sourceTree = SOURCE_ROOT; };
-		C2F7C5291CB498630031523C /* cute1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute1.jpg; sourceTree = SOURCE_ROOT; };
 		C2F7C52B1CB4AE080031523C /* filterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterCell.swift; sourceTree = "<group>"; };
-		C2F7C52D1CB4B9DF0031523C /* facebook-avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "facebook-avatar.jpg"; sourceTree = SOURCE_ROOT; };
 		C2F7C5311CB4C72A0031523C /* square-facebook-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-facebook-512.png"; sourceTree = SOURCE_ROOT; };
 		C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter_letter-512.png"; sourceTree = SOURCE_ROOT; };
 		C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeChat-Icon.png"; sourceTree = SOURCE_ROOT; };
@@ -199,9 +193,6 @@
 				C2F7C5311CB4C72A0031523C /* square-facebook-512.png */,
 				C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */,
 				C2F7C5331CB4C72A0031523C /* WeChat-Icon.png */,
-				C2F7C52D1CB4B9DF0031523C /* facebook-avatar.jpg */,
-				C2F7C5291CB498630031523C /* cute1.jpg */,
-				C2F7C5271CB498270031523C /* SGnJH4T.jpg */,
 				FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */,
 				FBF9EE471C84E91A001E3F2D /* Main.storyboard */,
 				3669CB9B1CB341E200308F98 /* SignUpViewController.swift */,
@@ -354,10 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F7C5351CB4C72A0031523C /* twitter_letter-512.png in Resources */,
-				C2F7C5281CB498270031523C /* SGnJH4T.jpg in Resources */,
 				FBF9EE4E1C84E91A001E3F2D /* LaunchScreen.storyboard in Resources */,
-				C2F7C52E1CB4B9DF0031523C /* facebook-avatar.jpg in Resources */,
-				C2F7C52A1CB498630031523C /* cute1.jpg in Resources */,
 				FBF9EE4B1C84E91A001E3F2D /* Assets.xcassets in Resources */,
 				C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */,
 				FBF9EE491C84E91A001E3F2D /* Main.storyboard in Resources */,

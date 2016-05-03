@@ -75,15 +75,15 @@ class EditingTableViewController: UITableViewController {
         
         if (currentUser.gender == "Male")
         {
-            gender1.image = UIImage(named:"male.jpeg")
+            gender1.image = UIImage(named:"male")
         }
         else
         {
-            gender1.image = UIImage(named:"female.png")
+            gender1.image = UIImage(named:"female")
         }
         
         name1.text = currentUser.name    // cannot be changed
-        rate1.image = UIImage(named:"emptystart.png")   //cannot be changed
+        rate1.image = UIImage(named:"emptystart")   //cannot be changed
         name2.text = currentUser.name
         email3.text = currentUser.email
         school4.text = currentUser.university

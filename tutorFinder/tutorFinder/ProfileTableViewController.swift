@@ -78,11 +78,11 @@ class ProfileTableViewController: UITableViewController {
     
         if (currentUser.gender == "Male")
         {
-            gender1.image = UIImage(named:"male.jpeg")
+            gender1.image = UIImage(named:"male")
         }
         else
         {
-            gender1.image = UIImage(named:"female.png")
+            gender1.image = UIImage(named:"female")
         }
         
         
@@ -103,67 +103,67 @@ class ProfileTableViewController: UITableViewController {
         
         if (rating == 0 )
         {
-            rating1.image = UIImage(named: "emptystart.png")
+            rating1.image = UIImage(named: "emptystart")
         }
         else if (rating == 5)
         {
-            rating1.image = UIImage(named:"halfstart.png")
+            rating1.image = UIImage(named:"halfstart")
         }
         else
         {
-            rating1.image = UIImage(named:"fullstar.png")
+            rating1.image = UIImage(named:"fullstar")
         }
         
         if (rating <= 1 )
         {
-            rating2.image = UIImage(named: "emptystart.png")
+            rating2.image = UIImage(named: "emptystart")
         }
         else if (rating == 5)
         {
-            rating2.image = UIImage(named:"halfstart.png")
+            rating2.image = UIImage(named:"halfstart")
         }
         else
         {
-            rating2.image = UIImage(named:"fullstar.png")
+            rating2.image = UIImage(named:"fullstar")
         }
         
         if (rating <= 2 )
         {
-            rating3.image = UIImage(named: "emptystart.png")
+            rating3.image = UIImage(named: "emptystart")
         }
         else if (rating == 5)
         {
-            rating3.image = UIImage(named:"halfstart.png")
+            rating3.image = UIImage(named:"halfstart")
         }
         else
         {
-            rating3.image = UIImage(named:"fullstar.png")
+            rating3.image = UIImage(named:"fullstar")
         }
         
         if (rating <= 3 )
         {
-            rating4.image = UIImage(named: "emptystart.png")
+            rating4.image = UIImage(named: "emptystart")
         }
         else if (rating == 5)
         {
-            rating4.image = UIImage(named:"halfstart.png")
+            rating4.image = UIImage(named:"halfstart")
         }
         else
         {
-            rating4.image = UIImage(named:"fullstar.png")
+            rating4.image = UIImage(named:"fullstar")
         }
         
         if (rating <= 4 )
         {
-            rating5.image = UIImage(named: "emptystart.png")
+            rating5.image = UIImage(named: "emptystart")
         }
         else if (rating == 5)
         {
-            rating5.image = UIImage(named:"halfstart.png")
+            rating5.image = UIImage(named:"halfstart")
         }
         else
         {
-            rating5.image = UIImage(named:"fullstar.png")
+            rating5.image = UIImage(named:"fullstar")
         }
 
     
