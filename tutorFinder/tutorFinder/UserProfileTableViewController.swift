@@ -33,11 +33,11 @@ class UserProfileTableViewController: UITableViewController {
         super.viewDidLoad()
         if (student.gender == "Male")
         {
-            userGender.image = UIImage(named:"male")
+            //userGender.image = UIImage(named:"male")
         }
         else
         {
-            userGender.image = UIImage(named:"female")
+            //userGender.image = UIImage(named:"female")
         }
 
         

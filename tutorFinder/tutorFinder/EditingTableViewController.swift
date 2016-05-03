@@ -115,6 +115,8 @@ class EditingTableViewController: UITableViewController {
                 NSLog(error.description)
         })
         
+        
+        
         self.currentUser.email = temp
         self.currentUser.username = temp2
         self.currentUser.saveWithSuccess({ () -> Void in
