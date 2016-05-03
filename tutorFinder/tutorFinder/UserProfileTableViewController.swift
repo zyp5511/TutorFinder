@@ -22,13 +22,19 @@ class UserProfileTableViewController: UITableViewController {
     
     @IBOutlet weak var userSubject: UILabel!
     
+    @IBOutlet weak var userAvailability: UITextView!
+    
+    @IBOutlet weak var userDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userName.text = student.name
         userEmail.text = student.email
         userSchool.text = student.university
-        userSchool.text = student.degree
-        userSchool.text = student.major
+        userEducation.text = student.degree
+        userSubject.text = student.major
+        userAvailability.text = student.availability
+        userDescription.text = student.description
         print(email)
         
     }
