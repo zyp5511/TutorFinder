@@ -97,7 +97,7 @@ class LoginViewController: UIViewController {
 
     
     override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        print("\(self) \(#function) \(subsequentVC)")
+        //print("\(self) \(#function) \(subsequentVC)")
         super.unwindForSegue(unwindSegue, towardsViewController: subsequentVC)
     }
     

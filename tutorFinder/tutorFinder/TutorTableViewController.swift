@@ -18,6 +18,7 @@ class TutorTableViewController: UITableViewController {
     var context = LAContext()
     let DefaultUsername = NSUserDefaults.standardUserDefaults().stringForKey("username") as String!
     var emailAdd = String()
+    var clickedStudent = Student()
     
     var filter: [String : String] = [:]
     var value = [0,0,0,0]
@@ -190,7 +191,7 @@ class TutorTableViewController: UITableViewController {
         //let days = storyboard.instantiateViewControllerWithIdentifier("DaysTableViewController") as! UITableViewController
         //let destinationVC:DaysTableViewController = DaysTableViewController()
         let object = students[indexPath.row] as Student!
-        emailAdd = object.email as String
+        clickedStudent = object as Student
         self.performSegueWithIdentifier("tutorToUserProfile", sender: nil)
     }
 
@@ -235,7 +236,7 @@ class TutorTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "tutorToUserProfile") {
             let vc:UserProfileTableViewController = segue.destinationViewController as! UserProfileTableViewController
-            vc.email = emailAdd
+            vc.student = clickedStudent
         }
         else if (segue.identifier == "EnterFilter"){
              let vc : FilterTableViewController = segue.destinationViewController as!
