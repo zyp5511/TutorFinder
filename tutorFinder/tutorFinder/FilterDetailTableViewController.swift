@@ -13,21 +13,28 @@ class FilterDetailTableViewController: UITableViewController {
     var category = 0;
     var rowNum = 0;
     var details = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
-                ["Female", "Male", "Unknown" ],
-                ["Ph.D", "Master", "Bachelor"],
-                ["CS","Electrical Engineer"]]
+                   ["Female", "Male", "Unknown" ],
+                   ["Ph.D", "Master", "Bachelor"],
+                   ["CS","Electrical Engineer"]]
+    
     var selectedValueIndex: Int?
     
     var selectedValue : String? {
         didSet{
             if let value = selectedValue{
+                if (category == 3){
+                     setupMajorlist()
+                }
                 selectedValueIndex = details[category].indexOf(value)!
+
             }
         }
     }
     
     
+
     override func viewDidLoad() {
+        setupMajorlist()
         super.viewDidLoad()
     }
 
@@ -49,7 +56,7 @@ class FilterDetailTableViewController: UITableViewController {
             case 0: rowNum = 4;
             case 1: rowNum = 3;
             case 2: rowNum = 3;
-            case 3: rowNum = 2;
+            case 3: rowNum = details[3].count;
             default: rowNum = 0;
         }
         return rowNum
@@ -101,5 +108,18 @@ class FilterDetailTableViewController: UITableViewController {
         }
     }
     
-
+    func setupMajorlist() {
+        
+        do {
+            guard let path = NSBundle.mainBundle().pathForResource("majorlist", ofType: "txt") else {
+                print("path is wrong\n")
+                return
+            }
+            let text = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+                details[3] = text.componentsSeparatedByString("\n")
+            // print("size of List is ", majorList.count)
+         }catch _ as NSError {
+                print("picker is wrong")
+         }
+    }
 }

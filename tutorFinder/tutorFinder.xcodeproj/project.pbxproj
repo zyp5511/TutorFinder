@@ -10,7 +10,6 @@
 		3657224F1CD1DF0E001C5B64 /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3657224E1CD1DF0E001C5B64 /* UserProfileTableViewController.swift */; };
 		3669CB9C1CB341E200308F98 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CB9B1CB341E200308F98 /* SignUpViewController.swift */; };
 		3669CBA21CB3584E00308F98 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */; };
-		3669CBA41CB3597400308F98 /* InboxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA31CB3597400308F98 /* InboxTableViewController.swift */; };
 		3669CBA61CB365C600308F98 /* EditingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA51CB365C600308F98 /* EditingTableViewController.swift */; };
 		3669CBA81CB3660600308F98 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */; };
 		36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */; };
@@ -20,6 +19,7 @@
 		C2737ACB1CC43A4600A579F5 /* TutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACA1CC43A4600A579F5 /* TutorTableViewController.swift */; };
 		C2737ACD1CC43AB100A579F5 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACC1CC43AB100A579F5 /* TutorTableViewCell.swift */; };
 		C2737ACF1CC4669D00A579F5 /* FilterDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2737ACE1CC4669D00A579F5 /* FilterDetailTableViewController.swift */; };
+		C278CBE31CDB0AC600EB70A4 /* majorlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = C278CBE21CDB0AC600EB70A4 /* majorlist.txt */; };
 		C2E854321CCC0A2F0043893A /* BackendUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E854311CCC0A2F0043893A /* BackendUtilities.swift */; };
 		C2F7C52C1CB4AE080031523C /* filterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7C52B1CB4AE080031523C /* filterCell.swift */; };
 		C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F7C5311CB4C72A0031523C /* square-facebook-512.png */; };
@@ -61,7 +61,6 @@
 		3657224E1CD1DF0E001C5B64 /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
 		3669CB9B1CB341E200308F98 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
-		3669CBA31CB3597400308F98 /* InboxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewController.swift; sourceTree = "<group>"; };
 		3669CBA51CB365C600308F98 /* EditingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingTableViewController.swift; sourceTree = "<group>"; };
 		3669CBA71CB3660600308F98 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		36F8D38E1CB05BFF00DD4C09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		C2737ACC1CC43AB100A579F5 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
 		C2737ACE1CC4669D00A579F5 /* FilterDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDetailTableViewController.swift; sourceTree = "<group>"; };
 		C2737AD01CC46F8E00A579F5 /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		C278CBE21CDB0AC600EB70A4 /* majorlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = majorlist.txt; sourceTree = "<group>"; };
 		C2E854311CCC0A2F0043893A /* BackendUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendUtilities.swift; sourceTree = "<group>"; };
 		C2F7C52B1CB4AE080031523C /* filterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterCell.swift; sourceTree = "<group>"; };
 		C2F7C5311CB4C72A0031523C /* square-facebook-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-facebook-512.png"; sourceTree = SOURCE_ROOT; };
@@ -189,6 +189,7 @@
 		FBF9EE421C84E91A001E3F2D /* tutorFinder */ = {
 			isa = PBXGroup;
 			children = (
+				C278CBE21CDB0AC600EB70A4 /* majorlist.txt */,
 				C242981F1CC1B47600C4D556 /* json */,
 				C2F7C5311CB4C72A0031523C /* square-facebook-512.png */,
 				C2F7C5321CB4C72A0031523C /* twitter_letter-512.png */,
@@ -201,7 +202,6 @@
 				FB5B530E1CD69AB900C4E6B3 /* CheckAutoLogin.swift */,
 				FBC45C7A1CD0A62E0013145C /* KeychainWrapper.h */,
 				FBC45C7B1CD0A62E0013145C /* KeychainWrapper.m */,
-				3669CBA31CB3597400308F98 /* InboxTableViewController.swift */,
 				C2F7C52B1CB4AE080031523C /* filterCell.swift */,
 				3669CBA11CB3584E00308F98 /* FilterTableViewController.swift */,
 				C2737ACE1CC4669D00A579F5 /* FilterDetailTableViewController.swift */,
@@ -345,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F7C5351CB4C72A0031523C /* twitter_letter-512.png in Resources */,
+				C278CBE31CDB0AC600EB70A4 /* majorlist.txt in Resources */,
 				FBF9EE4E1C84E91A001E3F2D /* LaunchScreen.storyboard in Resources */,
 				FBF9EE4B1C84E91A001E3F2D /* Assets.xcassets in Resources */,
 				C2F7C5341CB4C72A0031523C /* square-facebook-512.png in Resources */,
@@ -425,7 +426,6 @@
 				C2737ACB1CC43A4600A579F5 /* TutorTableViewController.swift in Sources */,
 				3669CBA81CB3660600308F98 /* ProfileTableViewController.swift in Sources */,
 				C2737ACD1CC43AB100A579F5 /* TutorTableViewCell.swift in Sources */,
-				3669CBA41CB3597400308F98 /* InboxTableViewController.swift in Sources */,
 				C2737AC71CC42E9400A579F5 /* Student.swift in Sources */,
 				36F8D38F1CB05BFF00DD4C09 /* LoginViewController.swift in Sources */,
 				3657224F1CD1DF0E001C5B64 /* UserProfileTableViewController.swift in Sources */,

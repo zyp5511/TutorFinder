@@ -12,19 +12,20 @@ class FilterTableViewController: UITableViewController{
 
     @IBOutlet weak var done: UIButton!
     let col1 = ["Distance", "Gender","Education","Field"]
-    let col2 = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
+    var col2 = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
                 ["Female", "Male", "Unknown" ],
                 ["Ph.D", "Master", "Bachelor"],
                 ["CS","Electrical Engineer"]]
 
     var value = [0,0,0,0]    //distance, gender, degree, major
     // initialize
-    var filter: [String : String] = [ "Distance" : "< 10 Miles", "gender" : "Female", "degree" : "Ph.D" ,"major" : "CS" ]
+    var filter: [String : String] = [ "Distance" : "< 10 Miles", "gender" : "Female", "degree" : "Ph.D" ,"major" : "empty" ]
     
     var pictures = ["dis", "gen", "edu","fie"]
     // MARK: - Table view data source
 
     override func viewDidLoad() {
+        setupMajorlist()
         super.viewDidLoad()
         
         let button = UIButton(type: .Custom)
@@ -96,4 +97,18 @@ class FilterTableViewController: UITableViewController{
     }
 
     
+    func setupMajorlist() {
+        
+        do {
+            guard let path = NSBundle.mainBundle().pathForResource("majorlist", ofType: "txt") else {
+                print("path is wrong\n")
+                return
+            }
+            let text = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            col2[3] = text.componentsSeparatedByString("\n")
+            // print("size of List is ", majorList.count)
+        }catch _ as NSError {
+            print("picker is wrong")
+        }
+    }
 }

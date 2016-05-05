@@ -12,6 +12,11 @@ class UserProfileTableViewController: UITableViewController {
     var email = String()
     var student = Student()
     
+    @IBOutlet weak var userNameTop: UILabel!
+    @IBOutlet weak var useravatar: UIImageView!
+    @IBOutlet weak var userGender: UIImageView!
+    
+    
     @IBOutlet weak var userName: UILabel!
     
     @IBOutlet weak var userEmail: UILabel!
@@ -25,8 +30,6 @@ class UserProfileTableViewController: UITableViewController {
     @IBOutlet weak var userAvailability: UITextView!
     
     @IBOutlet weak var userDescription: UITextView!
-        
-    @IBOutlet weak var userGender: UIImageView!
     
     @IBOutlet weak var rating1: UIImageView!
     
@@ -44,19 +47,21 @@ class UserProfileTableViewController: UITableViewController {
         {
             userGender.image = UIImage(named:"male")
         }
-        else
+        else if (student.gender == "female")
         {
             userGender.image = UIImage(named:"female")
+        }else {
+            userGender.image = UIImage (named:"unknownGen")
         }
 
-        
+        userNameTop.text = student.name
         userName.text = student.name
         userEmail.text = student.email
         userSchool.text = student.university
         userEducation.text = student.degree
         userSubject.text = student.major
         userAvailability.text = student.availability
-        userDescription.text = student.description
+        userDescription.text = student.descriptions
         
         
         let rating = Int(student.rating)

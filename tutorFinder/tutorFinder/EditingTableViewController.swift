@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditingTableViewController: UITableViewController {
+class EditingTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var currentUser: Student = Student()
 
@@ -17,18 +17,23 @@ class EditingTableViewController: UITableViewController {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var rate1: UIImageView!
     
-    
     @IBOutlet weak var name2: UITextField!
     @IBOutlet weak var email3: UITextField!
     @IBOutlet weak var school4: UITextField!
     @IBOutlet weak var education: UITextField!
-    @IBOutlet weak var subject6: UITextField!
+   // @IBOutlet weak var subject6: UITextField!
     @IBOutlet weak var description7: UITextView!
-
+    @IBOutlet weak var subject: UIPickerView!
+    
+    var majorList : [String] = ["A","B"]
+    var chosenMajor = "(empty)"
     
     override func viewDidLoad() {
+        setupMajorlist()
         super.viewDidLoad()
-        self.loadUserInformation()
+        subject.dataSource = self
+        subject.delegate = self
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,17 +41,19 @@ class EditingTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func viewDidAppear(){
-            super.viewDidAppear()
-            getCurrentUser()
+    override func viewDidAppear(animated: Bool){
+        super.viewDidAppear(animated)
+        //setupMajorlist()
+        getCurrentUser()
+        description7.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
+        description7.layer.borderWidth = CGFloat(Float(1.0))
+        description7.layer.cornerRadius = CGFloat(Float(5.0))
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        description7.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
-        description7.layer.borderWidth = CGFloat(Float(1.0))
-        description7.layer.cornerRadius = CGFloat(Float(5.0))
     }
 
     // MARK: - Table view data source
@@ -67,6 +74,7 @@ class EditingTableViewController: UITableViewController {
             NSLog("Found user")
             if let _ = curr    {
                 self.currentUser = curr as! Student
+                self.loadUserInformation()
             }
             else    {
             }
@@ -93,9 +101,9 @@ class EditingTableViewController: UITableViewController {
         email3.text = currentUser.email
         school4.text = currentUser.university
         education.text = currentUser.degree
-        subject6.text = currentUser.major
         description7.text = currentUser.descriptions
     }
+    
     
     
     @IBAction func Update(sender: UIButton) {
@@ -108,7 +116,7 @@ class EditingTableViewController: UITableViewController {
         self.currentUser.degree = education.text
         self.currentUser.university = school4.text
         self.currentUser.descriptions = description7.text
-      //self.currentUser.major = subject6.text
+       // self.currentUser.major = chosenMajor
      
         self.currentUser.saveWithSuccess({ () -> Void in
             NSLog("sucessfully saved")
@@ -166,29 +174,48 @@ class EditingTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return majorList.count
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Delegates
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return majorList[row]
     }
-    */
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        chosenMajor = majorList[row]
+    }
+    
+    //size
+    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return 250
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        let pickerLabel = UILabel()
+        let titleData = majorList[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        pickerLabel.attributedText = myTitle
+        return pickerLabel
+    }
+    
+    func setupMajorlist() {
+
+        do {
+            guard let path = NSBundle.mainBundle().pathForResource("majorlist", ofType: "txt") else {
+                print("path is wrong\n")
+                return
+            }
+            let text = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            majorList = text.componentsSeparatedByString("\n")
+           // print("size of List is ", majorList.count)
+        } catch _ as NSError {
+            print("picker is wrong")
+        }
+    
+    }
 
 }
