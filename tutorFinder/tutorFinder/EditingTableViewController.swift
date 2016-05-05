@@ -37,7 +37,8 @@ class EditingTableViewController: UITableViewController {
     }
 
     override func viewDidAppear(){
-            getCurrentUser();
+            super.viewDidAppear()
+            getCurrentUser()
     }
     
     override func didReceiveMemoryWarning() {
