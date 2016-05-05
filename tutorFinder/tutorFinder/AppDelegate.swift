@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,CLLocationManagerDelegate
         // Override point for customization after application launch.
         initLocationManager();
         print("adbcd")
-         UINavigationBar.appearance().barTintColor = UIColor(red: 46.0/255.0, green: 14.0/255.0, blue: 74.0/255.0, alpha: 1.0)
+         UINavigationBar.appearance().barTintColor = UIColor(red: 153/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
         // return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }

@@ -811,7 +811,7 @@
                                                     <rect key="frame" x="8" y="9" width="170" height="140"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="140" id="EgQ-0c-ML9"/>
-                                                        <constraint firstAttribute="width" constant="170" id="nA7-TY-P4k"/>
+                                                        <constraint firstAttribute="width" constant="140" id="nA7-TY-P4k"/>
                                                     </constraints>
                                                 </imageView>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIE-kN-dRV">
