@@ -543,7 +543,7 @@
                                         <rect key="frame" x="0.0" y="64" width="414" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mb8-da-aLS" id="GYs-LV-80B">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOx-5V-3kS">
@@ -626,7 +626,7 @@
                                         <rect key="frame" x="0.0" y="201" width="414" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0AZ-XZ-rKV" id="y5a-6y-ZsZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvb-8i-g6J">
@@ -1704,11 +1704,11 @@
             </objects>
             <point key="canvasLocation" x="5207" y="564"/>
         </scene>
-        <!--search-->
+        <!--Tutor-->
         <scene sceneID="Giu-Tv-J9r">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oFw-Dq-GDp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="search" id="1UH-Ck-Oig"/>
+                    <tabBarItem key="tabBarItem" title="Tutor" image="tutortab" id="1UH-Ck-Oig"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qJg-vh-5HQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1727,7 +1727,7 @@
         <scene sceneID="UxW-Yz-Yjf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LgI-1h-ErX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profiletab.png" id="9xf-IM-Gqk"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profiletab" selectedImage="profiletab" id="9xf-IM-Gqk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xFT-rD-kd0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1750,9 +1750,10 @@
         <image name="fullstar.png" width="32" height="32"/>
         <image name="login" width="2550" height="4200"/>
         <image name="male.jpeg" width="1280" height="1024"/>
-        <image name="profiletab.png" width="30" height="30"/>
+        <image name="profiletab" width="25" height="25"/>
         <image name="signup" width="2550" height="4200"/>
         <image name="square-facebook-512.png" width="512" height="512"/>
+        <image name="tutortab" width="25" height="25"/>
         <image name="twitter_letter-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
