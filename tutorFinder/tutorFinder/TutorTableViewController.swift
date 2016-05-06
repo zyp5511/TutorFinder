@@ -34,6 +34,9 @@ class TutorTableViewController: UITableViewController {
     override func viewDidLoad() {
         print("tutor")
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.showLoginView()
     }
     

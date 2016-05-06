@@ -279,8 +279,8 @@
                                     <outlet property="delegate" destination="vKZ-le-1IP" id="195-rO-ljJ"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EQ-tR-VYr">
-                                <rect key="frame" x="37" y="602" width="28" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EQ-tR-VYr">
+                                <rect key="frame" x="37" y="602" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -805,6 +805,9 @@
                                                 </imageView>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIE-kN-dRV">
                                                     <rect key="frame" x="341" y="63" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="changeTutorStatus:" destination="Q1B-JZ-sSt" eventType="valueChanged" id="yJF-Lc-8ip"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hya-83-9LW">
                                                     <rect key="frame" x="290" y="67" width="45" height="23"/>
@@ -1016,21 +1019,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Social Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8m-qW-bs5">
-                                                    <rect key="frame" x="17" y="16" width="115" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WeChat-Icon.png" highlightedImage="WeChat-Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="KPs-Sb-c2T">
-                                                    <rect key="frame" x="288" y="8" width="44" height="38"/>
+                                                    <rect key="frame" x="289" y="8" width="44" height="38"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter_letter-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="T3z-CG-z7z">
-                                                    <rect key="frame" x="352" y="8" width="48" height="38"/>
+                                                    <rect key="frame" x="352" y="8" width="46" height="38"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square-facebook-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="TvA-qz-BrN">
                                                     <rect key="frame" x="225" y="8" width="44" height="38"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Social Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8m-qW-bs5">
+                                                    <rect key="frame" x="14" y="16" width="115" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1148,13 +1151,14 @@
                         <outlet property="social7b" destination="KPs-Sb-c2T" id="iuX-Qe-aZz"/>
                         <outlet property="social7c" destination="T3z-CG-z7z" id="Wci-GU-ucT"/>
                         <outlet property="subject6" destination="Shd-aO-pSJ" id="zWT-hY-diK"/>
+                        <outlet property="tutorSwitch" destination="iIE-kN-dRV" id="T9h-H6-OnE"/>
                         <outlet property="update" destination="9tJ-RF-o00" id="Lzm-tv-bic"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rq6-cg-O1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TUY-jb-Mam" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4551" y="-1444"/>
+            <point key="canvasLocation" x="4602" y="-1442"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5U3-Co-LGz">

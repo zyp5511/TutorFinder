@@ -102,6 +102,12 @@ class UserProfileTableViewController: UITableViewController {
         }
 
         print(email)
+        userAvailability.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
+        userAvailability.layer.borderWidth = CGFloat(Float(1.0))
+        userAvailability.layer.cornerRadius = CGFloat(Float(5.0))
+        userDescription.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
+        userDescription.layer.borderWidth = CGFloat(Float(1.0))
+        userDescription.layer.cornerRadius = CGFloat(Float(5.0))
         
     }
 

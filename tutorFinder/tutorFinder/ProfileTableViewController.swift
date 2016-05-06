@@ -35,11 +35,12 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var description9: UITextView!
     
     @IBOutlet weak var logoutButton: UIButton!
-    
+
+    @IBOutlet weak var tutorSwitch: UISwitch!
     @IBOutlet weak var update: UIButton!
     
     var currentUser: Student = Student()
-    
+    var isTutor : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +64,7 @@ class ProfileTableViewController: UITableViewController {
         description9.layer.borderColor = UIColor(red:128/255, green: 128/255, blue: 128/255,alpha:1).CGColor
         description9.layer.borderWidth = CGFloat(Float(1.0))
         description9.layer.cornerRadius = CGFloat(Float(5.0))
-        
+       
     }
     
     
@@ -104,7 +105,7 @@ class ProfileTableViewController: UITableViewController {
         
         availability8.text = currentUser.availability
         description9.text = currentUser.descriptions
-        
+        tutorSwitch.on = currentUser.tutor.boolValue
         
         
         let rating = Int(currentUser.rating)
@@ -179,6 +180,36 @@ class ProfileTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    
+    @IBAction func changeTutorStatus(sender: UIButton) {
+        if tutorSwitch.on{
+            print("switch is off")
+            isTutor = false;
+            tutorSwitch.setOn(false, animated: true)
+            currentUser.tutor = isTutor
+            self.currentUser.saveWithSuccess({ () -> Void in
+                NSLog("sucessfully saved")
+                self.loadUserInformation()
+                }, failure: { (error: NSError!) -> Void in
+                    NSLog("error saving")
+            })
+        }else {
+            print("switch is on")
+            isTutor = true;
+            tutorSwitch.setOn(true, animated: true)
+            currentUser.tutor = isTutor
+            self.currentUser.saveWithSuccess({ () -> Void in
+                NSLog("sucessfully saved")
+                self.loadUserInformation()
+                }, failure: { (error: NSError!) -> Void in
+                    NSLog("error saving")
+            })
+
+        }
+        
+    }
+ 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)

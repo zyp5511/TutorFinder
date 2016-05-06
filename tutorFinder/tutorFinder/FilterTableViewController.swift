@@ -92,6 +92,10 @@ class FilterTableViewController: UITableViewController{
             filter[col1[1]] = col2[1][value[1]]
             filter[col1[2]] = col2[2][value[2]]
             filter[col1[3]] = col2[3][value[3]]
+            if (filter[col1[3]] == "(empty)"){
+                filter[col1[3]] = ""
+            }
+            print("slected major is ", filter[col1[3]])
             self.tableView.reloadData()
         }
     }
