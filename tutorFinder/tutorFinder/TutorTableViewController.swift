@@ -20,6 +20,7 @@ class TutorTableViewController: UITableViewController {
     var emailAdd = String()
     var clickedStudent = Student()
     
+    var distanceDict:NSDictionary=["< 10 Miles":"10","< 50 Miles":"50","< 100 Miles":"100","> 100 Miles":"9999"]
     var filter: [String : String] = [:]
     var value = [0,0,0,0]
     
@@ -48,7 +49,6 @@ class TutorTableViewController: UITableViewController {
     }*/
     
     func appWillResignActive(notification : NSNotification) {
-        
         view.alpha = 0
         isAuthenticated = false
         didReturnFromBackground = true
@@ -69,10 +69,10 @@ class TutorTableViewController: UITableViewController {
             let currentID = BackendUtilities.sharedInstance.studentsRepo.cachedCurrentUser._id
             let excludeSelf:NSDictionary = ["id":["neq":currentID]]
             var newFilter:NSDictionary = ["where":excludeSelf]
-            
             if !self.filter.values.isEmpty{
+                let degree:NSString = self.filter["Education"]!
                 let genderFilter:NSDictionary = ["gender":self.filter["Gender"]!]
-                let degreeFilter:NSDictionary = ["degree":self.filter["Education"]!]
+                let degreeFilter:NSDictionary = ["degree":degree.lowercaseString]
                 let majorFilter:NSDictionary = ["major":self.filter["Field"]!]
                 newFilter = ["where":["and":[genderFilter,degreeFilter,excludeSelf]],"order":"ID ASC"]
             }
@@ -80,8 +80,8 @@ class TutorTableViewController: UITableViewController {
             BackendUtilities.sharedInstance.studentsRepo.findWithFilter(newFilter as [NSObject : AnyObject],
                 success: { (fetchedStudents: [AnyObject]!) -> () in
                 self.students = fetchedStudents as! [Student]
-//                NSLog(self.students.description)
                 self.tableView.reloadData()
+                NSLog(self.students.description)
                 }, failure: { (error: NSError!) -> Void in
                     NSLog(error.description)
             })
@@ -124,27 +124,7 @@ class TutorTableViewController: UITableViewController {
         
         //let userEmail = object.email as String
         
-        /*
-        // store defaultUser as type Student
-        if ((userEmail == DefaultUsername) == 1 ){
-            
-            print("Success")
-           // NSUserDefaults.standardUserDefaults().setObject(object, forKey: "currentUser")
-            let userDefaults = NSUserDefaults.standardUserDefaults()
-            let encodedData = NSKeyedArchiver.archivedDataWithRootObject(object)
-            userDefaults.setObject(encodedData, forKey: "currentUser")
-            userDefaults.synchronize()
-            
-            let decoded  = userDefaults.objectForKey("currentUser") as! NSData
-            let decodedTeams = NSKeyedUnarchiver.unarchiveObjectWithData(decoded) as! [Student]
-            print("Value get is ", decodedTeams.username)
-            
-                //.setValue(object, forKey: "currentUser")
-         }
-         print("Email is ", userEmail)
-         print("Username:", DefaultUsername)
-         */
-        
+               
         if rating == 0 {
             cell.rating1.image = UIImage(named: "emptystar")
         }
@@ -185,7 +165,7 @@ class TutorTableViewController: UITableViewController {
         cell.name.text = object.username as String
         cell.availability.text = object.availability as String
         
-            return cell
+        return cell
         
     }
     
