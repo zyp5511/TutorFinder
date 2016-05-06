@@ -23,7 +23,7 @@ class TutorTableViewController: UITableViewController {
     var distanceDict:NSDictionary=["< 10 Miles":"10","< 50 Miles":"50","< 100 Miles":"100","> 100 Miles":"9999"]
     var filter: [String : String] = [:]
     var value = [0,0,0,0]
-    
+    var distance1 : Int!
     
     //var managedObjectContext: NSManagedObjectContext? = nil
     //var _fetchedResultsController: NSFetchedResultsController? = nil

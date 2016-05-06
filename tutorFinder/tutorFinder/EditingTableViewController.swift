@@ -15,8 +15,13 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
     @IBOutlet weak var gender1: UIImageView!
     @IBOutlet weak var name1: UILabel!
     @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var rate1: UIImageView!
     
+    @IBOutlet weak var rating5: UIImageView!
+    @IBOutlet weak var rating1: UIImageView!
+    @IBOutlet weak var rating2: UIImageView!
+    @IBOutlet weak var rating4: UIImageView!
+    
+    @IBOutlet weak var rating3: UIImageView!
     @IBOutlet weak var name2: UITextField!
     @IBOutlet weak var email3: UITextField!
     @IBOutlet weak var school4: UITextField!
@@ -33,7 +38,9 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
         super.viewDidLoad()
         subject.dataSource = self
         subject.delegate = self
-        
+
+
+        //subject.selectedRowInComponent(majorList.indexOf(chosenMajor)!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -95,13 +102,52 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
             gender1.image = UIImage(named:"female")
         }
         
-        name1.text = currentUser.name    // cannot be changed
-        rate1.image = UIImage(named:"emptystar")   //cannot be changed
+        name1.text = currentUser.username    // cannot be changed
         name2.text = currentUser.name
         email3.text = currentUser.email
         school4.text = currentUser.university
         education.text = currentUser.degree
         description7.text = currentUser.descriptions
+        chosenMajor = currentUser.major
+        
+        let rating = Int(currentUser.rating)
+        
+        
+        if rating == 0 {
+            rating1.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating1.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 1 {
+            rating2.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating2.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 2 {
+            rating3.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating3.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 3 {
+            rating4.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating4.image = UIImage(named:"fullstar")
+        }
+        
+        if rating <= 4 {
+            rating5.image = UIImage(named: "emptystar")
+        }
+        else {
+            rating5.image = UIImage(named:"fullstar")
+        }
+
     }
     
     
@@ -116,7 +162,7 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
         self.currentUser.degree = education.text
         self.currentUser.university = school4.text
         self.currentUser.descriptions = description7.text
-       // self.currentUser.major = chosenMajor
+        self.currentUser.major = chosenMajor
      
         self.currentUser.saveWithSuccess({ () -> Void in
             NSLog("sucessfully saved")
