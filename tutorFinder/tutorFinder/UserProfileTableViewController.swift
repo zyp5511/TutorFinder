@@ -62,7 +62,8 @@ class UserProfileTableViewController: UITableViewController {
         userSubject.text = student.major
         userAvailability.text = student.availability
         userDescription.text = student.descriptions
-        
+        userAvailability.userInteractionEnabled = false
+        userDescription.userInteractionEnabled = false
         
         let rating = Int(student.rating)
         

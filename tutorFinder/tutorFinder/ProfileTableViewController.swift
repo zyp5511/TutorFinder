@@ -109,6 +109,7 @@ class ProfileTableViewController: UITableViewController {
         description9.text = currentUser.descriptions
         tutorSwitch.on = currentUser.tutor.boolValue
         
+        description9.userInteractionEnabled = false
         
         let rating = Int(currentUser.rating)
         
@@ -204,12 +205,12 @@ class ProfileTableViewController: UITableViewController {
             currentUser.tutor = isTutor
             self.currentUser.saveWithSuccess({ () -> Void in
                 NSLog("sucessfully saved")
-                self.loadUserInformation()
                 }, failure: { (error: NSError!) -> Void in
                     NSLog("error saving")
             })
 
         }
+        self.loadUserInformation()
         
     }
  
