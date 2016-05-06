@@ -23,7 +23,7 @@ class TutorTableViewController: UITableViewController {
     var filter: [String : String] = [:]
     var value = [0,0,0,0]
     var distance1 : Int!
-    
+    var studentID : String!
     //var managedObjectContext: NSManagedObjectContext? = nil
     //var _fetchedResultsController: NSFetchedResultsController? = nil
     
@@ -136,6 +136,7 @@ class TutorTableViewController: UITableViewController {
         
         let rate = object.rating
         let rating = Int(rate)
+        let studentID = String(object._id)
         
         //let userEmail = object.email as String
         
@@ -181,6 +182,12 @@ class TutorTableViewController: UITableViewController {
         cell.availability.text = object.availability as String
         let currDist:Double = Student.caclDistance(object, location: here)/1000.0/1.6
         cell.distance1.text = NSString(format: "%.2f miles",currDist) as String
+        if ((studentID == "1") || (studentID ==  "2") || (studentID == "3") || (studentID == "4") || (studentID == "5") || (studentID == "6") || (studentID == "7") || (studentID == "8")){
+            cell.avatar.image = UIImage(named: studentID)
+        }
+        else {
+            cell.avatar.image = UIImage(named: "default")
+        }
         
         return cell
         

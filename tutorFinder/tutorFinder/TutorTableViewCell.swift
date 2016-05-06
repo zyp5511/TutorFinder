@@ -15,9 +15,8 @@ class TutorTableViewCell: UITableViewCell {
         // Initialization code
     }
     */
-
     @IBOutlet weak var avatar: UIImageView!
-    
+
     @IBOutlet weak var name: UILabel!
     
     @IBOutlet weak var availability: UILabel!
