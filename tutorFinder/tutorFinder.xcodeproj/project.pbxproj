@@ -32,6 +32,7 @@
 		FB5B530F1CD69AB900C4E6B3 /* CheckAutoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B530E1CD69AB900C4E6B3 /* CheckAutoLogin.swift */; };
 		FBC45C781CD0A5500013145C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC45C771CD0A5500013145C /* Security.framework */; };
 		FBC45C7C1CD0A62E0013145C /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC45C7B1CD0A62E0013145C /* KeychainWrapper.m */; };
+		FBF894541CDC560E00A6B3EE /* profiletab.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF894531CDC560E00A6B3EE /* profiletab.png */; };
 		FBF9EE441C84E91A001E3F2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */; };
 		FBF9EE491C84E91A001E3F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF9EE471C84E91A001E3F2D /* Main.storyboard */; };
 		FBF9EE4B1C84E91A001E3F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF9EE4A1C84E91A001E3F2D /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		FBC45C791CD0A62D0013145C /* tutorFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tutorFinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		FBC45C7A1CD0A62E0013145C /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		FBC45C7B1CD0A62E0013145C /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		FBF894531CDC560E00A6B3EE /* profiletab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profiletab.png; sourceTree = "<group>"; };
 		FBF9EE401C84E91A001E3F2D /* tutorFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF9EE431C84E91A001E3F2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF9EE481C84E91A001E3F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		FBF9EE421C84E91A001E3F2D /* tutorFinder */ = {
 			isa = PBXGroup;
 			children = (
+				FBF894531CDC560E00A6B3EE /* profiletab.png */,
 				C278CBE21CDB0AC600EB70A4 /* majorlist.txt */,
 				C242981F1CC1B47600C4D556 /* json */,
 				C2F7C5311CB4C72A0031523C /* square-facebook-512.png */,
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F7C5351CB4C72A0031523C /* twitter_letter-512.png in Resources */,
+				FBF894541CDC560E00A6B3EE /* profiletab.png in Resources */,
 				C278CBE31CDB0AC600EB70A4 /* majorlist.txt in Resources */,
 				FBF9EE4E1C84E91A001E3F2D /* LaunchScreen.storyboard in Resources */,
 				FBF9EE4B1C84E91A001E3F2D /* Assets.xcassets in Resources */,

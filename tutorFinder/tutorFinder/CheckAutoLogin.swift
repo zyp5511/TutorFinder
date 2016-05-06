@@ -71,6 +71,7 @@ class checkAutoLogin : UIViewController {
                 let alertController = UIAlertController(title: "Login", message: "Login failed", preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
                 self.presentViewController(alertController, animated: true, completion: nil)
+                 self.performSegueWithIdentifier("needlogin", sender: self)
                
             }
         }
