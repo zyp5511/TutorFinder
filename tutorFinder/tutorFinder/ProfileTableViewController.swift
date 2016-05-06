@@ -45,12 +45,14 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logoutButton.setTitle("LogOut", forState: UIControlState.Normal)
-       
+        logoutButton.frame.size.width = 100
+        
         BackendUtilities.sharedInstance.studentsRepo.findCurrentUserWithSuccess({ (user) -> Void in
             NSLog("Found user")
             if let _ = user    {
                 self.currentUser = user as! Student
                  self.loadUserInformation()
+                print(self.currentUser._id)
             }
             else    {
             }
@@ -165,15 +167,16 @@ class ProfileTableViewController: UITableViewController {
         return 9
     }
     
-    @IBAction func updateAvailability(sender: AnyObject) {
-        
-        currentUser.availability = availability8.text
-        self.currentUser.saveWithSuccess({ () -> Void in
-            NSLog("sucessfully saved")
-            self.loadUserInformation()
-            }, failure: { (error: NSError!) -> Void in
-                NSLog("error saving")
-        })
+    @IBAction func updateAvailability(sender: UIButton) {
+
+            self.currentUser.availability = self.availability8.text
+            self.currentUser.saveWithSuccess({ () -> Void in
+                    NSLog("sucessfully saved")
+                    }, failure: { (error: NSError!) -> Void in
+                        NSLog(error.description)
+            })
+
+        loadUserInformation()
     }
 
     

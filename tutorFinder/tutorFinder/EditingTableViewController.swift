@@ -122,7 +122,7 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
             NSLog("sucessfully saved")
             self.loadUserInformation()
             }, failure: { (error: NSError!) -> Void in
-                NSLog(error.description)
+                NSLog("error")
         })
         
         
