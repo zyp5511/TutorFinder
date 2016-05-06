@@ -98,7 +98,7 @@ class ProfileTableViewController: UITableViewController {
         }
         
         
-        name1.text = currentUser.name
+        name1.text = currentUser.username
         name2.text = currentUser.name
         email3.text = currentUser.email
         school4.text = currentUser.university
