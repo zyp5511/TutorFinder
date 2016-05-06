@@ -56,6 +56,14 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
         description7.layer.borderWidth = CGFloat(Float(1.0))
         description7.layer.cornerRadius = CGFloat(Float(5.0))
         
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        
+        
+    
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

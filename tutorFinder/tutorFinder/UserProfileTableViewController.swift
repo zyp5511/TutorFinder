@@ -55,6 +55,13 @@ class UserProfileTableViewController: UITableViewController {
         }else {
             userGender.image = UIImage (named:"unknownGen")
         }
+        
+        
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+
 
         userNameTop.text = student.username
         userName.text = student.name

@@ -39,6 +39,11 @@ class TutorTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         self.students.removeAll()
         self.showLoginView()
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+
     }
     
     /*

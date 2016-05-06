@@ -41,11 +41,19 @@ class ProfileTableViewController: UITableViewController {
     
     var currentUser: Student = Student()
     var isTutor : Bool = true
+    var studentID : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logoutButton.setTitle("LogOut", forState: UIControlState.Normal)
         logoutButton.frame.size.width = 100
+        
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        
+        
         
         BackendUtilities.sharedInstance.studentsRepo.findCurrentUserWithSuccess({ (user) -> Void in
             NSLog("Found user")
@@ -112,6 +120,16 @@ class ProfileTableViewController: UITableViewController {
         tutorSwitch.on = currentUser.tutor.boolValue
         
         description9.userInteractionEnabled = false
+        studentID = String(currentUser._id)
+        
+        if ((studentID == "1") || (studentID ==  "2") || (studentID == "3") || (studentID == "4") || (studentID == "5") || (studentID == "6") || (studentID == "7") || (studentID == "8")){
+            image1.image = UIImage(named: studentID)
+        }
+        else {
+            image1.image = UIImage(named: "default")
+        }
+        
+
         
         let rating = Int(currentUser.rating)
         

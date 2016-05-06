@@ -31,6 +31,12 @@ class FilterTableViewController: UITableViewController{
         let button = UIButton(type: .Custom)
         button.frame = CGRectMake(160, 100, 50, 50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
