@@ -92,9 +92,11 @@ class ProfileTableViewController: UITableViewController {
         {
             gender1.image = UIImage(named:"male")
         }
-        else
+        else if (currentUser.gender == "Female")
         {
             gender1.image = UIImage(named:"female")
+        }else {
+            gender1.image = UIImage(named:"unknownGen")
         }
         
         

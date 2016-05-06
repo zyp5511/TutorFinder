@@ -94,7 +94,7 @@ class TutorTableViewController: UITableViewController {
                 }
                 
                 self.tableView.reloadData()
-//                NSLog(self.students.description)
+                NSLog(self.students.description)
                 }, failure: { (error: NSError!) -> Void in
                     NSLog(error.description)
             })
