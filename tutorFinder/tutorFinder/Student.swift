@@ -32,8 +32,12 @@ class Student : LBUser {
     //credential, chanllege, emailVerified,email, created, lastUpdated, id
     // are all include in LBUser
 
-    
-}
+
+    static func caclDistance(other:Student,location:CLLocation) -> CLLocationDistance{
+        return location.distanceFromLocation(other.location)
+    }
+   }
+
 
 
 

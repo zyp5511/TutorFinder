@@ -11,9 +11,8 @@ import LoopBack
 import LocalAuthentication
 
 class TutorTableViewController: UITableViewController {
-    
     var students = [Student]()
-    
+    let here = CLLocation(latitude:44.0731,longitude: -89.4012)
     var isAuthenticated = false
     var context = LAContext()
     let DefaultUsername = NSUserDefaults.standardUserDefaults().stringForKey("username") as String!
@@ -38,6 +37,7 @@ class TutorTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.students.removeAll()
         self.showLoginView()
     }
     
@@ -79,12 +79,27 @@ class TutorTableViewController: UITableViewController {
             NSLog(newFilter.description)
             BackendUtilities.sharedInstance.studentsRepo.findWithFilter(newFilter as [NSObject : AnyObject],
                 success: { (fetchedStudents: [AnyObject]!) -> () in
-                self.students = fetchedStudents as! [Student]
+                if !self.filter.values.isEmpty{
+                for stu:Student in fetchedStudents as! [Student]{
+                    let dist0 = Student.caclDistance(stu, location: self.here)/1000.0/1.6
+                    let currDist:String = self.filter["Distance"]!
+                    let distToComp:Double = Double(self.distanceDict[currDist] as! String)!
+                    NSLog(distToComp.description)
+                    if dist0 <= distToComp {
+                        self.students.append(stu)
+                    }
+                }
+               }else{
+                    self.students = fetchedStudents as! [Student]
+                }
+                
                 self.tableView.reloadData()
-                NSLog(self.students.description)
+//                NSLog(self.students.description)
                 }, failure: { (error: NSError!) -> Void in
                     NSLog(error.description)
             })
+        
+        
     }
 
     
@@ -164,6 +179,8 @@ class TutorTableViewController: UITableViewController {
 
         cell.name.text = object.username as String
         cell.availability.text = object.availability as String
+        let currDist:Double = Student.caclDistance(object, location: here)/1000.0/1.6
+        cell.distance1.text = NSString(format: "%.2f miles",currDist) as String
         
         return cell
         
