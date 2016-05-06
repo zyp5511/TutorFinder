@@ -54,7 +54,7 @@ class UserProfileTableViewController: UITableViewController {
             userGender.image = UIImage (named:"unknownGen")
         }
 
-        userNameTop.text = student.name
+        userNameTop.text = student.username
         userName.text = student.name
         userEmail.text = student.email
         userSchool.text = student.university

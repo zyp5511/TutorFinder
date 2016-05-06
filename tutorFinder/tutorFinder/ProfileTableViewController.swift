@@ -98,7 +98,7 @@ class ProfileTableViewController: UITableViewController {
         }
         
         
-        name1.text = currentUser.name
+        name1.text = currentUser.username
         name2.text = currentUser.name
         email3.text = currentUser.email
         school4.text = currentUser.university
@@ -188,20 +188,19 @@ class ProfileTableViewController: UITableViewController {
     
     @IBAction func changeTutorStatus(sender: UIButton) {
         if tutorSwitch.on{
-            print("switch is off")
-            isTutor = false;
-            tutorSwitch.setOn(false, animated: true)
+            print("switch is on")
+            isTutor = true;
+           // tutorSwitch.setOn(false, animated: true)
             currentUser.tutor = isTutor
             self.currentUser.saveWithSuccess({ () -> Void in
                 NSLog("sucessfully saved")
-                self.loadUserInformation()
                 }, failure: { (error: NSError!) -> Void in
                     NSLog("error saving")
             })
         }else {
-            print("switch is on")
-            isTutor = true;
-            tutorSwitch.setOn(true, animated: true)
+            print("switch is off")
+            isTutor = false;
+           // tutorSwitch.setOn(true, animated: true)
             currentUser.tutor = isTutor
             self.currentUser.saveWithSuccess({ () -> Void in
                 NSLog("sucessfully saved")
@@ -214,23 +213,6 @@ class ProfileTableViewController: UITableViewController {
         
     }
  
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-        //border ajustment
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.darkGrayColor().CGColor
-        border.frame = CGRect(x: 0, y: cell.frame.size.height - width, width: cell.frame.size.width, height: cell.frame.size.height)
-        
-        border.borderWidth = width
-        cell.layer.addSublayer(border)
-        cell.layer.masksToBounds = true
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -240,41 +222,5 @@ class ProfileTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
