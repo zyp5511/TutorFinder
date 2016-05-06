@@ -41,6 +41,8 @@ class UserProfileTableViewController: UITableViewController {
     
     @IBOutlet weak var rating5: UIImageView!
     
+    var studentID : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if (student.gender == "Male")
@@ -64,6 +66,7 @@ class UserProfileTableViewController: UITableViewController {
         userDescription.text = student.descriptions
         userAvailability.userInteractionEnabled = false
         userDescription.userInteractionEnabled = false
+        studentID = String(student._id)
         
         let rating = Int(student.rating)
         
@@ -100,6 +103,13 @@ class UserProfileTableViewController: UITableViewController {
         }
         else {
             rating5.image = UIImage(named:"fullstar")
+        }
+
+        if ((studentID == "1") || (studentID ==  "2") || (studentID == "3") || (studentID == "4") || (studentID == "5") || (studentID == "6") || (studentID == "7") || (studentID == "8")){
+            useravatar.image = UIImage(named: studentID)
+        }
+        else {
+            useravatar.image = UIImage(named: "default")
         }
 
         print(email)

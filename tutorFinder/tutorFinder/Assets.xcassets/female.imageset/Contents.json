@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "female.png",
+      "filename" : "female_update.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "female-1.png",
+      "filename" : "female_update-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "female-2.png",
+      "filename" : "female_update-2.png",
       "scale" : "3x"
     }
   ],

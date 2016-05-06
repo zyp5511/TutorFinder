@@ -1439,15 +1439,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zQQ-SF-ryB">
-                                                    <rect key="frame" x="158" y="55" width="50" height="50"/>
+                                                    <rect key="frame" x="170" y="70" width="35" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="fug-eG-VrS"/>
-                                                        <constraint firstAttribute="height" constant="50" id="nSj-s8-gqA"/>
+                                                        <constraint firstAttribute="width" constant="35" id="fug-eG-VrS"/>
+                                                        <constraint firstAttribute="height" constant="35" id="nSj-s8-gqA"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="zQQ-SF-ryB" firstAttribute="leading" secondItem="8Qf-7H-tF4" secondAttribute="trailing" constant="38" id="60U-7l-NfP"/>
+                                                <constraint firstItem="zQQ-SF-ryB" firstAttribute="leading" secondItem="8Qf-7H-tF4" secondAttribute="trailing" constant="50" id="60U-7l-NfP"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="6UU-lE-NEl" secondAttribute="bottom" constant="20" id="DB0-HD-TaA"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="CXl-Oj-3Rq" secondAttribute="bottom" constant="20" id="FA0-yF-5m5"/>
                                                 <constraint firstItem="1Q6-dq-Wur" firstAttribute="leading" secondItem="6UU-lE-NEl" secondAttribute="trailing" constant="5" id="JpC-oT-S8U"/>
