@@ -32,7 +32,8 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
     
     var majorList : [String] = ["A","B"]
     var chosenMajor = "(empty)"
-    
+
+
     override func viewDidLoad() {
         setupMajorlist()
         super.viewDidLoad()
@@ -100,14 +101,15 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
 
     
     func loadUserInformation(){
-        
         if (currentUser.gender == "Male")
         {
             gender1.image = UIImage(named:"male")
         }
-        else
+        else if (currentUser.gender == "Female")
         {
             gender1.image = UIImage(named:"female")
+        }else {
+            gender1.image = UIImage(named:"unknownGen")
         }
         
         name1.text = currentUser.username    // cannot be changed
@@ -185,12 +187,22 @@ class EditingTableViewController: UITableViewController, UIPickerViewDelegate, U
         self.currentUser.username = temp2
         self.currentUser.saveWithSuccess({ () -> Void in
             NSLog("sucessfully saved")
-            self.loadUserInformation()
+                self.loadUserInformation()
+            let alertController = UIAlertController(title: "Save Successfully", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
             }, failure: { (error: NSError!) -> Void in
                 NSLog(error.description)
+                
+                let alertController = UIAlertController(title: "Error Saving", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+
         })
-        
-        
+        //Congratulate!
+    
        // print("SUccess Changed")
     }
     

@@ -189,15 +189,23 @@ class ProfileTableViewController: UITableViewController {
     }
     
     @IBAction func updateAvailability(sender: UIButton) {
-
             self.currentUser.availability = self.availability8.text
             self.currentUser.saveWithSuccess({ () -> Void in
                     NSLog("sucessfully saved")
+                let alertController = UIAlertController(title: "Save Successfully", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
                     }, failure: { (error: NSError!) -> Void in
                         NSLog(error.description)
+                        let alertController = UIAlertController(title: "Error Saving", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        
             })
-
+        
         loadUserInformation()
+    
+
     }
 
     
