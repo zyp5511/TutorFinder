@@ -11,7 +11,7 @@ import UIKit
 class FilterTableViewController: UITableViewController{
 
     @IBOutlet weak var done: UIButton!
-    let col1 = ["Distance", "Gender","Education","Field"]
+    let col1 = ["Distance", "gender","degree","major"]
     var col2 = [["< 10 Miles", "< 50 Miles", "< 100 Miles", "> 100 Miles"],
                 ["Female", "Male", "Unknown" ],
                 ["Ph.D", "Master", "Bachelor"],

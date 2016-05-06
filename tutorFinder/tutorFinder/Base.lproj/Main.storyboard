@@ -1164,6 +1164,7 @@
         <scene sceneID="5U3-Co-LGz">
             <objects>
                 <tabBarController id="Ftn-Bd-Na3" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Pga-7X-4zL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

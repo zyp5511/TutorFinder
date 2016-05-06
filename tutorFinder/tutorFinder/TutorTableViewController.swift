@@ -19,7 +19,7 @@ class TutorTableViewController: UITableViewController {
     let DefaultUsername = NSUserDefaults.standardUserDefaults().stringForKey("username") as String!
     var emailAdd = String()
     var clickedStudent = Student()
-    
+    var degreeDict:NSDictionary=["Bachelor":["Bachelor","Master","Ph.D"],"Master":["Master","Ph.D"],"Ph.D":"Ph.D"]
     var distanceDict:NSDictionary=["< 10 Miles":"10","< 50 Miles":"50","< 100 Miles":"100","> 100 Miles":"9999"]
     var filter: [String : String] = [:]
     var value = [0,0,0,0]
@@ -70,11 +70,11 @@ class TutorTableViewController: UITableViewController {
             let excludeSelf:NSDictionary = ["id":["neq":currentID]]
             var newFilter:NSDictionary = ["where":excludeSelf]
             if !self.filter.values.isEmpty{
-                let degree:NSString = self.filter["Education"]!
-                let genderFilter:NSDictionary = ["gender":self.filter["Gender"]!]
+                let degree:NSString = self.filter["degree"]!
+                let genderFilter:NSDictionary = ["gender":self.filter["gender"]!]
                 let degreeFilter:NSDictionary = ["degree":degree.lowercaseString]
-                let majorFilter:NSDictionary = ["major":self.filter["Field"]!]
-                newFilter = ["where":["and":[genderFilter,degreeFilter,excludeSelf]],"order":"ID ASC"]
+                let majorFilter:NSDictionary = ["major":self.filter["major"]!]
+                newFilter = ["where":["and":[genderFilter,degreeFilter,excludeSelf]],"order":"id ASC"]
             }
             NSLog(newFilter.description)
             BackendUtilities.sharedInstance.studentsRepo.findWithFilter(newFilter as [NSObject : AnyObject],

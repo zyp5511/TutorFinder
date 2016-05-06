@@ -25,6 +25,7 @@ class Student : LBUser {
     var securityQuestion : String!
     var securityAnswer : String!
     var major: String!
+    var distance: CLLocationDistance!
     //  var realm: String!
     //  var status : String!
     //credential, chanllege, emailVerified,email, created, lastUpdated, id
@@ -32,4 +33,7 @@ class Student : LBUser {
 
     
 }
+
+
+
  
